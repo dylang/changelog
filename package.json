@@ -1,0 +1,42 @@
+
+{
+    "name":         "changelog",
+    "version":      "0.0.1",
+    "description":  "Command line script and library to produce a changelog for npm packages and github projects.",
+    "keywords":     [ "changes", "history", "what's new", "change set" ],
+    "preferGlobal": true,
+    "homepage":     "http://github.com/dylang/changelog",
+    "author":       "Dylan Greene <dylang@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url":  "https://github.com/dylang/changelog.git"
+    },
+    "bugs": {
+        "mail": "dylang@gmail.com",
+        "web":  "http://github.com/dylang/changelog/issues"
+    },
+    "directories": {
+        "lib": "./lib",
+        "bin": "./bin"
+    },
+    "main":     "changelog",
+    "bin": {
+        "changelog": "./bin/changelog.js"
+    },
+    "dependencies": {
+        "logging":      "*",
+        "step":         "*",
+        "request":      "*",
+        "wordwrap":     "*",
+        "cli":          "*"
+    },
+    "devDependencies": {
+        "logging":      "*"
+    },
+    "engines": {
+        "node":     "0.4 || 0.5"
+    }, "licenses":[{
+        "type":     "MIT",
+        "url":      "http://github.com/dylang/changelog/raw/master/LICENSE"
+    }]
+}

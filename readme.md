@@ -20,16 +20,35 @@ Node Package
 
     $ changelog request
 
-    2.0.2 / 2011-07-29
-    ==================
+    Upcoming / 2011-08-02
+    =====================
 
-    * Return destination stream from pipe().
+      * Merge pull request #53 from benatkin/parse-json
+        Parse json: Issue #51
+      * support JSON APIs that don't set the write content type
+      * allow empty string
+      * implement parsing json response when json is truthy
+      * add failing test for issue #51
+      * Clearer spacing. Slightly more consistent.
+      * Style fixes. Bye Bye semi-colons. Mostly lined up with npm style.
+      * Return destination stream from pipe().
 
     2.0.1 / 2011-07-21
     ==================
 
-    * Drastically improved header handling.
-    * valid semver.
+      * Drastically improved header handling.
+      * valid semver.
+
+    2.0.0 / 2011-07-21
+    ==================
+
+      * w00t! request 2.0
+      * If the error is handled and not throw we would still process redirects.
+        Fixes #34.
+      * Add body property to resp when we have it as a shorthand. fixes #28
+      * Adding reference to Request instance on response to make it easier on
+        inline callbacks. fixes #43.
+
     ---cut for space---
 
 Github Repo
@@ -55,10 +74,13 @@ Github Repo
       * child_process_uv: add exec, fix simple/test-child-process-exec-cwd
       * Forgot to add child_process_uv.js
       * initial pass at lib/child_process_uv.js
+
       ---cut for space---
 
-Node API
-========
+Changelog API
+=============
+
+Changelog can be easily integrated into other tools.
 
     var Changelog = require('changelog');
 
@@ -101,6 +123,7 @@ Future
  * Option to show code diff.
  * Ability to set the start and end version.
  * Use Git tags to detect versions
+ * If the package.json does not have a propper repoistory link then show the author's name and email and suggest contacting the author.
 
 Install
 =======

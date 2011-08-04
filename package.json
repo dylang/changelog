@@ -1,8 +1,8 @@
 
 {
     "name":         "changelog",
-    "version":      "0.0.3",
-    "description":  "Command line util and api that returns a changelog for modules in npm and repos on github.com.",
+    "version":      "0.0.4",
+    "description":  "Command line util and api that returns a changelog for modules in npm and repos on github.",
     "keywords":     [ "changes", "history", "what's new", "change set" ],
     "preferGlobal": true,
     "homepage":     "http://github.com/dylang/changelog",

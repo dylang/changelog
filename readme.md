@@ -10,7 +10,7 @@ Command-line Usage
 
  * Github urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `github.com/dylang/changelog`.
  * Node projects without the `repository url` defined in the `package.json` will not work.
-
+ * The default output format is Markdown.  Use `--json` to get JSON output. 
 
 Examples
 ========
@@ -97,10 +97,10 @@ Future
  * Integrate into `git pull`?
  * Warn when there are more than 100 commits available.
  * Support paging Github's API to aquire more than 100 commits.
- * Output options: --json, --markdown --text --rss --atom 
+ * Additional output options: --text --rss --atom
  * Option to show code diff.
  * Ability to set the start and end version.
- * Output errors via standard error, etc.
+ * Use Git tags to detect versions
 
 Install
 =======

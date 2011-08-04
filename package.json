@@ -2,7 +2,7 @@
 {
     "name":         "changelog",
     "version":      "0.0.2",
-    "description":  "Command line script and library to produce a changelog for npm packages and github projects.",
+    "description":  "Command line util and api that returns a changelog for modules in npm and repos on github.com.",
     "keywords":     [ "changes", "history", "what's new", "change set" ],
     "preferGlobal": true,
     "homepage":     "http://github.com/dylang/changelog",

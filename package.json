@@ -28,7 +28,8 @@
         "step":         "*",
         "request":      "*",
         "wordwrap":     "*",
-        "cli":          "*"
+        "cli":          "*",
+        "semver":       "*"
     },
     "devDependencies": {
         "logging":      "*"

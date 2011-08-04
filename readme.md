@@ -125,7 +125,6 @@ Future
  * Use Git tags to detect versions
  * Add examples
  * Add header and/or footer to the markdown output
- * use node-semver to compare versions
  * If the package.json does not have a propper repoistory link then show the author's name and email and suggest contacting the author.
 
 Install

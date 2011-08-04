@@ -119,10 +119,13 @@ Future
  * Integrate into `git pull`?
  * Warn when there are more than 100 commits available.
  * Support paging Github's API to aquire more than 100 commits.
- * Additional output options: --text --rss --atom
+ * Additional output options: --text --rss --atom --html
  * Option to show code diff.
  * Ability to set the start and end version.
  * Use Git tags to detect versions
+ * Add examples
+ * Add header and/or footer to the markdown output
+ * use node-semver to compare versions
  * If the package.json does not have a propper repoistory link then show the author's name and email and suggest contacting the author.
 
 Install
@@ -133,6 +136,10 @@ Using [npm](http://npmjs.org) just do:
     npm-g install changelog
 
 The `-g` installs changelog globally so you can use the changelog command anywhere.
+
+To make sure you have the latest version:
+
+    npm-g update
 
 About
 =====

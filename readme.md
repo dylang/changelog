@@ -1,7 +1,7 @@
 Changelog
 =========
 
-Command line app and library to produce a changelog for npm packages and github projects.
+Command line util and api that returns a changelog for modules in npm and repos on github.com.
 
 Command-line Usage
 ==================
@@ -109,9 +109,10 @@ Using [npm](http://npmjs.org) just do:
 
     npm-g install changelog
 
-The `-g` installs changelog globally so you can use the command line version anywhere.
+The `-g` installs changelog globally so you can use the changelog command anywhere.
 
 About
 =====
 
 [Dylan Greene](http://github.com/dylang) built this because he was always curious what was changed when doing `npm update`.
+The name has nothing to do with [TheChangelog](http://thechangelog.com/), a podcast Dylan was listening to while creating this tool.

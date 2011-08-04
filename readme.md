@@ -97,10 +97,10 @@ Future
  * Integrate into `git pull`?
  * Warn when there are more than 100 commits available.
  * Support paging Github's API to aquire more than 100 commits.
- * Colorful output mode.
+ * Output options: --json, --markdown --text --rss --atom 
  * Option to show code diff.
  * Ability to set the start and end version.
- * RSS feed.
+ * Output errors via standard error, etc.
 
 Install
 =======

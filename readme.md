@@ -1,7 +1,7 @@
 Changelog
 =========
 
-Generates a changelog formated in your choice of color, markdown, or json for any npm module or github.com repo.
+Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.
 
 Command-line Usage
 ==================

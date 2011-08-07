@@ -1,8 +1,8 @@
 
 {
     "name":         "changelog",
-    "version":      "0.0.5",
-    "description":  "Command line util and api that returns a changelog for modules in npm and repos on github.",
+    "version":      "0.0.6",
+    "description":  "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.",
     "keywords":     [ "changes", "history", "what's new", "change set" ],
     "preferGlobal": true,
     "homepage":     "http://github.com/dylang/changelog",
@@ -24,12 +24,12 @@
         "changelog": "./bin/changelog.js"
     },
     "dependencies": {
-        "logging":      "*",
         "step":         "*",
         "request":      "*",
         "wordwrap":     "*",
         "cli":          "*",
-        "semver":       "*"
+        "semver":       "*",
+        "logging":      "*"
     },
     "devDependencies": {
         "logging":      "*"

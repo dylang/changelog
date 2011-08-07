@@ -29,6 +29,22 @@ Options
  * `-d`, `--debug`            Enable debugging
  * `-h`, `--help`             Display help and usage details
 
+Install
+=======
+
+Using [npm](http://npmjs.org) just do:
+
+    $ npm-g install changelog
+
+The `-g` installs changelog globally so you can use `changelog` anywhere.
+
+Update
+======
+
+To make sure you have the latest version:
+
+    $ npm-g update
+
 Examples
 ========
 
@@ -130,38 +146,25 @@ How it works
 ============
 
  * Changelog uses the [Github V3 API](http://developer.github.com/) and [npmjs.org API](http://search.npmjs.org/).
- *
 
 Future
 ======
 
- * Work with more package managers such as `brew` and `gem`?  These are beyond my expertise but I would be happy to merge in pull requests.
- * Integrate into `npm update`?
- * Integrate into `git pull`?
  * Warn when there are more than 100 commits available.
  * Support paging Github's API to aquire more than 100 commits.
  * Additional output options: --rss --atom --html
  * Option to show code diff.
  * Ability to set the start and end version.
  * Use Git tags to detect versions
- * Add examples
  * Add header and/or footer to the markdown output
- * If the package.json does not have a propper repoistory link then show the author's name and email and suggest contacting the author.
+ * If the package.json does not have a propper repo link then show the author's name and email and suggest contacting the author.
 
-Install
-=======
+Want to help?
+=============
 
-Using [npm](http://npmjs.org) just do:
-
-    $ npm-g install changelog
-
-The `-g` installs changelog globally so you can use the changelog command anywhere.
-
-Update
-======
-
-To make sure you have the latest version:
-    $ npm-g update
+ * Work with more package managers such as `brew` and `gem`?  These are beyond my expertise but I would be happy to merge in pull requests.
+ * Integrate into `npm update`?
+ * Integrate into `git pull`?
 
 About
 =====

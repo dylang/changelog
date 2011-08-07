@@ -1,16 +1,33 @@
 Changelog
 =========
 
-Command line util and api that returns a changelog for modules in npm and repos on github.com.
+Generates a changelog formated in your choice of color, markdown, or json for any npm module or github.com repo.
 
 Command-line Usage
 ==================
 
-    Usage: changelog {npm package name or github repo url}
+npm
+---
 
- * Github urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `github.com/dylang/changelog`.
- * Node projects without the `repository url` defined in the `package.json` will not work.
- * The default output format is Markdown.  Use `--json` to get JSON output. 
+    $ changelog {npm module name} [options]
+
+`npm module`: The module name, such as `express`.  Works on any npm module with a github.com repo specified in the module's package.json.
+
+github repo url
+---------------
+
+    $ changelog {Github.com repo url} [options]
+
+`Github.com repo url`: Urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `github.com/dylang/changelog`.
+
+Options
+-------
+
+ * `-c`, `--color`            Output as Color (default)
+ * `-m`, `--markdown`         Output as Github-flavored Markdown
+ * `-j`, `--json`             Output as JSON
+ * `-d`, `--debug`            Enable debugging
+ * `-h`, `--help`             Display help and usage details
 
 Examples
 ========
@@ -18,7 +35,7 @@ Examples
 Node Package
 ------------
 
-    $ changelog request
+    $ changelog request --markdown
 
     Upcoming / 2011-08-02
     =====================
@@ -54,7 +71,7 @@ Node Package
 Github Repo
 -----------
 
-    $ changelog https://github.com/joyent/node
+    $ changelog https://github.com/joyent/node --markdown
 
     2011-08-01
     ==========
@@ -87,29 +104,33 @@ Changelog can be easily integrated into other tools.
     Changelog.npm('request', callback);
     Changelog.github('joyent/node', callback);
 
-    function callback(err, changelog) {
-        //changelog is an array of "versions"
+    function callback(err, data) {
+
+        //Check err for errors or just throw
+        if (err) throw err;
+
         //With npm each "version" corresponds to all changes for that build pushed on npm
         //With github each "version" is one GMT day of changes
-        changelog.forEach(function(version) {
-            console.log(version.version); //npm only
+        data.versions.forEach(function(version) {
+            console.log(version.version); //currently npm projects only
             console.log(version.date);    //JS Date
+
             //version.changes is an array of commit messages for that version
             version.changes.forEach(function(change) {
                 console.log(' * ' + change);
             });
         });
+
+        //Information about the project
+        console.log(data.project);
     }
 
 
 How it works
 ============
 
- * Changelog works with Node packages by looking at the `repository` url. Packages without this set will not work.
- * Changes are collected using a single `Github V3 API call` that returns 100 changes. This means it will currently not show more than 100 changes.
- * Changelog attempts to guestimate the approprate version number for each Github commit message based on the timestamp of the change and packages are published.
- * It will not work with packages in other repos such as `BitBucket`.
- * Changelog cannot access history for private repos.
+ * Changelog uses the [Github V3 API](http://developer.github.com/) and [npmjs.org API](http://search.npmjs.org/).
+ *
 
 Future
 ======
@@ -119,7 +140,7 @@ Future
  * Integrate into `git pull`?
  * Warn when there are more than 100 commits available.
  * Support paging Github's API to aquire more than 100 commits.
- * Additional output options: --text --rss --atom --html
+ * Additional output options: --rss --atom --html
  * Option to show code diff.
  * Ability to set the start and end version.
  * Use Git tags to detect versions
@@ -132,16 +153,18 @@ Install
 
 Using [npm](http://npmjs.org) just do:
 
-    npm-g install changelog
+    $ npm-g install changelog
 
 The `-g` installs changelog globally so you can use the changelog command anywhere.
 
-To make sure you have the latest version:
+Update
+======
 
-    npm-g update
+To make sure you have the latest version:
+    $ npm-g update
 
 About
 =====
 
 [Dylan Greene](http://github.com/dylang) built this because he was always curious what was changed when doing `npm update`.
-The name has nothing to do with [TheChangelog](http://thechangelog.com/), a podcast Dylan was listening to while creating this tool.
+This module is inspired by but not related to [TheChangelog](http://thechangelog.com/).

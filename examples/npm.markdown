@@ -1,7 +1,25 @@
-Upcoming / 2011-08-06
-=====================
+1.0.23 / 2011-08-07
+===================
 
+  * update which (trivial)
+  * debuggery
+  * v1.0.23
+  * Remove base64 module. Just use the Buffer directly
+  * .js extensions on require() calls in npm.js
+  * Abstract out 'which'
   * make doc
+  * Remove minimatch.js, using dep now
+  * Handle git+ urls in the name@url case
+  * Close [#1225](https://github.com/isaacs/npm/issues/1225) Add git url support. Experimental
+  * unbreak ini stuff. no longer using '-' key
+  * Use standalone ini parser
+  * Add proto-list as dep and submodule
+  * update rimraf
+  * Allow private per-package confs
+    Just prefix them with a _.  Transparent to the receiving module.
+  * Use rimraf instead of local thing
+  * fixup rimraf
+  * Add rimraf submodule
   * minor faq fixes
   * Put .js on filenames
   * Question about Capitalization
@@ -124,22 +142,3 @@ Upcoming / 2011-08-06
   * Add node -v and npm -v to error output
   * Add more 'don't do this' around setting global config
   * Better default usage output
-  * Put date on user object
-  * Close [#1128](https://github.com/isaacs/npm/issues/1128) Use -o instead of --no-same-owner
-  * Don't bundle extraneous deps. Just causes clutter.
-  * creds aren't encrypted any more
-  * Close [#1119](https://github.com/isaacs/npm/issues/1119) Always assume url-deps are valid
-  * Print cwd on failure
-  * Close [#1109](https://github.com/isaacs/npm/issues/1109) Treat . as a directory
-  * Close [#1109](https://github.com/isaacs/npm/issues/1109) Object.keys on non-object in cache.js
-  * Close [#1117](https://github.com/isaacs/npm/issues/1117) Alias 'docs' command to 'home'
-  * Added quotation marks around $node to allow for node.js installation paths with whitespace.
-  * Close [#1104](https://github.com/isaacs/npm/issues/1104) Don't put undefined in file list
-  * npm submodule command
-    This is experimental.
-  * Dumb typo.
-  * Files shall end in \n
-  * Remove install message script. No longer used.
-  * Fix the FIXME in validWd
-  * Style, and remove an unnecessary chdir
-  * Close [#1092](https://github.com/isaacs/npm/issues/1092) Use git:// url for submodule

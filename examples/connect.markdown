@@ -1,8 +1,19 @@
-Upcoming / 2011-08-05
+Upcoming / 2011-08-09
 =====================
 
-  * Changed: 301 redirect in `static()` to postfix "/" on directory. Closes
-    [#289](https://github.com/senchalabs/connect/issues/289)
+  * Added support for custom ETag in `connect.static.send()`
+  * Revert "Added in option, etag, for control of ETag header if desired"
+    This reverts commit a11399928547074d16fdebba049d268e000cf94c.
+  * Merge pull request [#338](https://github.com/senchalabs/connect/issues/338) from coolaj86/master
+    Fixed `vhost()` case sensitivity [coolaj86]
+  * host should be case-insensitive
+  * Merge pull request [#337](https://github.com/senchalabs/connect/issues/337) from tomjnsn/master
+    Added `ETag` option for `connect.static.send()` [tomjnsn]
+  * Added in option, etag, for control of ETag header if desired
+    pass in option, etag, along with maxAge and hidden to have a specific
+    ETag header returned back otherwise it will use the util.etag() method
+    on the stat of the file to generate the ETag
+  * Changed: 301 redirect in `static()` to postfix "/" on directory. Closes [#289](https://github.com/senchalabs/connect/issues/289)
   * Allow retval `== null` from logger callback
   * Release 1.6.1
 
@@ -94,8 +105,7 @@ Upcoming / 2011-08-05
   * Update comments for directory().
   * Get rid of private filtering function. Take care of the filtering right at the public function.
   * Allow a filtering capability in directory middleware.
-  * Added ability to define `logger()` tokens and formats. Closes
-    [#309](https://github.com/senchalabs/connect/issues/309)
+  * Added ability to define `logger()` tokens and formats. Closes [#309](https://github.com/senchalabs/connect/issues/309)
     includes the following additional changes:
     - formats are pre-compiled to a function, much like a little template language
     - added 3 pre-defined formats for various needs "dev" is nice colored output when in development :)
@@ -133,14 +143,4 @@ Upcoming / 2011-08-05
   * query docs
   * Added malicious path check to `directory()` middleware
   * Added `utils.forbidden(res)`
-  * docs
-  * Merge branch 'feature/query'
-  * Added `connect.query()` middleware
-  * added directory tests
-
-1.5.0 / 2011-06-21
-==================
-
-  * Release 1.5.0
-  * caching icons
   * docs

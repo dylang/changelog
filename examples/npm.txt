@@ -1,5 +1,23 @@
-[0;34mUpcoming / 2011-08-06[0m
+[0;34m1.0.23 / 2011-08-07[0m
+[0m  • update which (trivial)[0m
+[0m  • debuggery[0m
+[0m  • v1.0.23[0m
+[0m  • Remove base64 module. Just use the Buffer directly[0m
+[0m  • .js extensions on require() calls in npm.js[0m
+[0m  • Abstract out 'which'[0m
 [0m  • make doc[0m
+[0m  • Remove minimatch.js, using dep now[0m
+[0m  • Handle git+ urls in the name@url case[0m
+[0m  • Close [0;36m#1225[0m Add git url support. Experimental[0m
+[0m  • unbreak ini stuff. no longer using '-' key[0m
+[0m  • Use standalone ini parser[0m
+[0m  • Add proto-list as dep and submodule[0m
+[0m  • update rimraf[0m
+[0m  • Allow private per-package confs
+    Just prefix them with a _.  Transparent to the receiving module.[0m
+[0m  • Use rimraf instead of local thing[0m
+[0m  • fixup rimraf[0m
+[0m  • Add rimraf submodule[0m
 [0m  • minor faq fixes[0m
 [0m  • Put .js on filenames[0m
 [0m  • Question about Capitalization[0m
@@ -110,22 +128,3 @@
 [0m  • Add node -v and npm -v to error output[0m
 [0m  • Add more 'don't do this' around setting global config[0m
 [0m  • Better default usage output[0m
-[0m  • Put date on user object[0m
-[0m  • Close [0;36m#1128[0m Use -o instead of --no-same-owner[0m
-[0m  • Don't bundle extraneous deps. Just causes clutter.[0m
-[0m  • creds aren't encrypted any more[0m
-[0m  • Close [0;36m#1119[0m Always assume url-deps are valid[0m
-[0m  • Print cwd on failure[0m
-[0m  • Close [0;36m#1109[0m Treat . as a directory[0m
-[0m  • Close [0;36m#1109[0m Object.keys on non-object in cache.js[0m
-[0m  • Close [0;36m#1117[0m Alias 'docs' command to 'home'[0m
-[0m  • Added quotation marks around $node to allow for node.js installation paths with whitespace.[0m
-[0m  • Close [0;36m#1104[0m Don't put undefined in file list[0m
-[0m  • npm submodule command
-    This is experimental.[0m
-[0m  • Dumb typo.[0m
-[0m  • Files shall end in \n[0m
-[0m  • Remove install message script. No longer used.[0m
-[0m  • Fix the FIXME in validWd[0m
-[0m  • Style, and remove an unnecessary chdir[0m
-[0m  • Close [0;36m#1092[0m Use git:// url for submodule[0m

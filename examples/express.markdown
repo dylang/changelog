@@ -59,8 +59,7 @@
   * Changed `app.locals` to match `res.locals`
   * Removed `app.dynamicLocals()`. Closes [#756](https://github.com/visionmedia/express/issues/756)
   * utilize connects new `query()` middleware
-  * Replaced `res.local[s]()` with `res.locals` function. Closes
-    [#757](https://github.com/visionmedia/express/issues/757)
+  * Replaced `res.local[s]()` with `res.locals` function. Closes [#757](https://github.com/visionmedia/express/issues/757)
   * misc
   * Removed "view options" setting. Closes [#748](https://github.com/visionmedia/express/issues/748)
   * docs for previous commit

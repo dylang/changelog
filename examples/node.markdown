@@ -1,9 +1,101 @@
+2011-08-09
+==========
+
+  * Make test-sync-fileread pass even when git cr/lf conversion is enabled
+  * Open files in binary mode, on msvc too
+  * Remove unnecessary line
+  * Fix test-net-server-on-fd-0 for windows by removing assert
+    Rename to regression test for GH-746 as the fd 0 behavior was not what the
+    bug report was about.
+  * Add fixed tests to test-uv
+  * Fix dd command tests for Windows
+  * Fix test/simple/test-repl
+  * Improve win compat of test-repl
+  * crypto: fix incorrect ssl shutdown check
+  * net: fix incorrect sizeof()
+  * Improve assert error messages
+    1. actual and expected should be displayed in the same order they were given
+    2. long values should be truncated.
+  * eio: define HAVE_UTIMES 1 on cygwin, fixes build
+    Fixes [#1483](https://github.com/joyent/node/issues/1483).
+  * windows: fix test-umask
+  * Upgrade libuv to e5f513c
+  * Readd the static libpthread-win32 libraries
+  * Revert "Unify configure scripts"
+    This reverts commit 71435ede815ee2c73b09f7071ee1b6d10945d409.
+
+2011-08-08
+==========
+
+  * Make buffer.INSPECT_MAX_BYTES public for mscdex
+  * Truncate Buffer.inspect at 50 bytes
+  * Fix test-executable-path
+  * Fix test-http-upgrade-server and test-http-parser
+    Problem was introduced in last http-parser upgrade which fixed a long
+    standing bug with the upgrade event and removed several callbacks.
+  * Endian argument should be a boolean. Signed integers shouldn't run through checks for unsigned integers. Clean up jslint. Provide unchecked uint entry points.
+  * Tests should point at the build directory until GYP is default
+  * Merge branch 'gyp'
+  * Fix test-child-process-exec-cwd.
+  * Unify configure scripts
+  * Revert "Remove scons"
+    This reverts commit bd270b48a790ba00dd5a0dc9624aabbdedacaea8.
+  * Upgrade libuv to 75c10905
+  * Bring back old Makefile and configure script
+    GYP and WAF need to live in parallel for some time.
+  * Fix MSVS build
+  * Move GYP file to the project root
+  * generate-project.bat: Point at the right path
+  * sketch out configure support
+  * http2: reword confusing comment
+  * Improve util.format() compatibility with browser.
+    Fixes [#1434](https://github.com/joyent/node/issues/1434).
+
+2011-08-07
+==========
+
+  * Fixes https host header default port handling.
+  * Test for default host headers on default ports in https and http
+  * docs: rename readline.md to readline.markdown
+  * symlink in ./node and ./node_g for make users
+  * Add generate-projects.bat
+  * docs: fix typo in tls API docs
+  * Disable optimization in debug builds.
+    Enable full optimization in release builds.
+  * Silence VC++ warnings about use of badly-designed parts of the C library.
+  * Fix missing prototype warnings.
+  * Fix bad platform name.
+  * Add 'make test' and friends
+  * Make MSVS build.
+    MSVS settings don't actually need to be guarded by conditions. gyp will do
+    the right thing.
+
 2011-08-06
 ==========
 
+  * V8 GYP should attempt to not use cygwin.
+  * Modify GYP scripts for VC build
+  * Upgrade libuv - it now depends on pthreads
   * build: don't try to `ls -lh` executables that don't exist
     Avoids `ls: cannot access build/debug/node_g: No such file or directory`.
     Not an actual error but it confuses people.
+  * Complete eio upgrade
+  * clean merge scabs
+  * Upgrade libuv to 48877ed
+  * Basic VC++ compatibility work.
+  * Remove scons
+  * Bring gyp into the tools directory; handwritten makefile
+  * gyp: fix makefile build
+  * gyp fix build again
+  * gyp: Fix build
+  * add build/gyp_node build script
+  * Upgrade libuv for gyp reasons
+  * gyp: fix test runner
+  * Improve gyp build - now works kind of
+  * add deps/v8/build ???
+  * More progress with gyp
+  * WIP
+  * Upgrade libuv for gyp support
   * Upgrade http_parser to 965f91bc76b2d1601e23
   * [doc] add link to npm search in Readme.md
     Fixes [#1459](https://github.com/joyent/node/issues/1459).
@@ -76,125 +168,3 @@
 ==========
 
   * windows: remove dependency on rpcrt4 and ole32
-  * Upgrade libuv to 2e9a743
-  * windows: set stdio streams to binary mode
-  * Partial fix for test-child-process.cwd on windows
-  * win: fix test-child-process-exec-cwd
-  * win2k3: fix test-child-process-env
-  * Upgrade libuv to c35548a
-  * test: add targets `test-http2` and `test-all-http2`
-    Passes `--use-http2` to node. Fixes [#1430](https://github.com/joyent/node/issues/1430).
-  * Upgrade libuv to 404d697
-  * child_process_uv: don't attempt to pass test-child-process-deprecated-api
-  * Add test-tls-securepair-server to test-uv
-  * child_process_uv: fix test-child-process-stdin and -ipc
-  * cmake: Update for libuv.
-  * Upgrade libuv to 5af7423f
-  * fix test-child-process-env on windows
-  * Add a few more asserts to test/simple/test-child-process-stdin.js
-  * Upgrade libuv to b700896
-  * windows: Fix test-module-load-list
-  * Remove debug code
-  * child_process_uv: Handle spawn errors
-  * Upgrade libuv to 023f99a
-
-2011-07-31
-==========
-
-  * link to rpcrt4 and ole32 on win32
-  * Upgrade libuv to e9bee51
-  * child_process_uv: fix test/simple/test-child-process-env
-  * child_process_uv: fix simple/test-child-process-cwd
-  * child_process_uv: add exec, fix simple/test-child-process-exec-cwd
-  * Forgot to add child_process_uv.js
-  * initial pass at lib/child_process_uv.js
-
-2011-07-30
-==========
-
-  * Add %% escape to util.format()
-    Fixes [#1273](https://github.com/joyent/node/issues/1273).
-
-2011-07-29
-==========
-
-  * Add stdlib include for free(), fixing build on linux after f01b241
-  * add wrapper for uv_spawn
-    process.binding('process_wrap')
-  * util: add sprintf-like format() function
-    Fixes [#1407](https://github.com/joyent/node/issues/1407).
-  * Add support for TLS SNI
-    Fixes [#1411](https://github.com/joyent/node/issues/1411)
-  * Upgrade libuv to 7108ca88
-  * jslint cleanup: path.js, readline.js, repl.js, tls.js, tty_win32.js, url.js
-  * Revert "AMD compatibility for node"
-    This reverts commit 9967c369c9272335bb0343558673b689725c6d7c.
-    Conflicts:
-    test/simple/test-module-loading.js
-  * Doc improvements
-    related to [#1391](https://github.com/joyent/node/issues/1391),
-    [#1415](https://github.com/joyent/node/issues/1415).
-  * Fix http.ClientRequest crashes if end() was called twice
-    Fixes [#1417](https://github.com/joyent/node/issues/1417).
-    Fixes [#1223](https://github.com/joyent/node/issues/1223).
-
-2011-07-28
-==========
-
-  * crypto: dispose persistent properties on class destruction
-
-2011-07-27
-==========
-
-  * Fix test-module-load-list for use-uv
-  * Lazy load a few modules
-  * Add process.moduleLoadList for better startup transparency
-  * Don't always enable debug on startup
-    Improves startup time. Problem introduced in
-    4ab5476e89266194d82215214a1a870c9b79e295
-  * Speed up startup time
-    Reverts 2a05fe784d.
-  * Remove pkg-conf file
-  * Fix memleak in libeio.
-  * uv: upgrade to fc7bc2b
-  * Add missing parentheses in buffer docs.
-    Fixes [#1405](https://github.com/joyent/node/issues/1405).
-
-2011-07-26
-==========
-
-  * wrap: upgrade pipe_wrap and tcp_wrap to new libuv API
-  * stdio binding + javascript to enable process.stdin.listen()
-  * uv: upgrade to a1adfe3
-  * Fix crypto encryption/decryption with Base64.
-    Fixes [#738](https://github.com/joyent/node/issues/738).
-    Fixes [#1205](https://github.com/joyent/node/issues/1205).
-  * Include "platform.h", not <platform.h> - conflicts with system headers
-    Fixes [#1003](https://github.com/joyent/node/issues/1003).
-  * Fix test-net-stream.js
-    I broke this in 09ee293.
-  * http: add --use-http2 switch
-  * http: make http and http2 co-exist
-    http2 is currently disabled pending addition of a --use-http2 switch
-  * doc: http2 documentation
-  * http: http2 implementation
-  * Emit 'close' after all connections have closed
-    Fixes [#1383](https://github.com/joyent/node/issues/1383)
-
-2011-07-25
-==========
-
-  * cli: don't print result of --eval
-    Fixes [#572](https://github.com/joyent/node/issues/572).
-  * Doc improvements and change argument name.
-    Fixes [#1318](https://github.com/joyent/node/issues/1318).
-  * eio: remove trailing comma from enumerations
-    Fixes compile-time error in strict mode. Fixes [#567](https://github.com/joyent/node/issues/567).
-  * Docs for Socket::bytesRead, Socket::bytesWritten
-  * Add Socket::bytesRead, Socket::bytesWritten
-
-2011-07-24
-==========
-
-  * Finish removing require.paths
-    Fix require() completion bug in repl, and correct man output

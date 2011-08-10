@@ -1,7 +1,7 @@
 
 {
     "name":         "changelog",
-    "version":      "0.0.6",
+    "version":      "0.0.7",
     "description":  "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.",
     "keywords":     [ "changes", "history", "what's new", "change set" ],
     "preferGlobal": true,

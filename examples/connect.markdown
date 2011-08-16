@@ -1,6 +1,17 @@
-Upcoming / 2011-08-09
-=====================
+1.6.2 / 2011-08-15
+==================
 
+  * Merge branch 'master' of github.com:senchalabs/connect
+  * Merge pull request [#344](https://github.com/senchalabs/connect/issues/344) from marcosanson/master
+    Added: allow Cache-Control and Last-Modified header fields before sending a file [marcosanson]
+  * ability to force Cache-Control and Last-Modified header fields before send a file
+  * docs
+  * Added "immediate" option to `logger()`. Closes [#321](https://github.com/senchalabs/connect/issues/321)
+  * treat null bytes as bad requests for directory/static
+  * Fixed `connect.static()` vulernability, now stripping nullbytes
+  * refactored `uid()`
+  * Removed `req.rawBody` from `bodyParser()`
+  * cla
   * Added support for custom ETag in `connect.static.send()`
   * Revert "Added in option, etag, for control of ETag header if desired"
     This reverts commit a11399928547074d16fdebba049d268e000cf94c.
@@ -130,17 +141,3 @@ Upcoming / 2011-08-09
   * tweak previous commit a little
   * Remove chromeframe token from UA String in default fingerprint function.
     Signed-off-by: Tj Holowaychuk <tj@vision-media.ca>
-  * Fixed connect-redis example
-  * updated git summary
-  * Default logger :req[] / :res[] to "-". Closes [#303](https://github.com/senchalabs/connect/issues/303)
-  * Changed; `static.send()` ".." in path without root considered malicious
-
-1.5.1 / 2011-06-21
-==================
-
-  * Release 1.5.1
-  * fixed static tests
-  * query docs
-  * Added malicious path check to `directory()` middleware
-  * Added `utils.forbidden(res)`
-  * docs

@@ -1,3 +1,27 @@
+Upcoming / 2011-08-15
+=====================
+
+  * Fixed `res.redirect()` on windows due to `join()` usage. Closes [#808](https://github.com/visionmedia/express/issues/808)
+  * russian docs
+  * link to russian docs booyah!
+  * Added support for multiple callbacks for `app.param()`. Closes [#801](https://github.com/visionmedia/express/issues/801)
+    you can also make several calls to `app.param()` for the same
+    param name, which is equivalent to passing multiple in
+    a single call
+  * added another test
+  * Added test for `app.param(fn)`
+  * expose list of http methods supported
+  * Added `res.get(field)` as an alternative to `res.header(field)`
+  * Added `res.set(field, val)` as an alternative to `res.header()`
+  * another sidebar
+  * sidebar example
+  * better layout control example
+  * fixed app.locals precedence
+  * Removed default local "app"
+  * make `req.notify()` arity based
+  * prepping blog example for new express
+  * use "dev" logger in blog example
+
 2.4.4 / 2011-08-05
 ==================
 
@@ -101,35 +125,3 @@
   * `app.local()` and `res.local()` return for chaining
   * Added `app.local(name, val)`
   * `app.helpers` -> `app.locals`
-  * `app.dynamicHelpers` -> `app.dynamicLocals`
-  * Removed `res.send()` with no args support for 204
-    just use:
-    res.send(204)
-  * Removed `res.helpers()` alias of `res.locals()`
-  * removed old `app.error()` docs
-  * removed old error handling docs
-  * removed use of `app.error()` in examples
-  * Removed `app.error()`. Closes [#733](https://github.com/visionmedia/express/issues/733)
-    use trailing middleware with arity of 4 as
-    shown in this issue. They are functionally
-    equivalent
-  * Merge branch 'master' of github.com:visionmedia/express
-  * expresso 0.8.1
-  * Merge pull request [#746](https://github.com/visionmedia/express/issues/746) from redsquirrel/patch-1
-    typo
-  * its is possessive, it's is shorthand for: it is
-  * Added docs for `status` option special-case. Closes [#739](https://github.com/visionmedia/express/issues/739)
-
-2.4.2 / 2011-07-06
-==================
-
-  * Release 2.4.2
-  * Revert "removed jsonp stripping"
-    This reverts commit 0ae18bca6075c8f6d9a7d58405c5f52c1ae61958.
-  * docs
-  * docs for multiple envs in app.configure() calls
-
-2.4.1 / 2011-07-06
-==================
-
-  * Release 2.4.1

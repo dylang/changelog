@@ -22,7 +22,5 @@ echo NPM as markdown
 ./bin/changelog.js npm --markdown > ./examples/npm.markdown
 echo NPM as JSON
 ./bin/changelog.js npm --json > ./examples/npm.json
-echo NPM as color text
-./bin/changelog.js npm --color > ./examples/npm.txt
 
 echo Complete

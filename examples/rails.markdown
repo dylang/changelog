@@ -1,155 +1,149 @@
-2011-08-09
+2011-08-16
 ==========
 
-  * Remove lame comment.
-  * rake assets:precompile defaults to production env
-  * adding missing require to fist railties tests
-  * Okay, the new incompatible arel is now called 2.2 and the sun shines upon thee once more
-  * Merge pull request [#2465](https://github.com/rails/rails/issues/2465) from pivotal-casebook/patch-3
-    Further monkey-patching to avoid deprecation warnings
-  * deprecating process_view_paths
-  * avoid object creation via useless duping and freezing
-  * just use map and case / when rather than modifying the iterating array
-  * only typecast what we need to typecast
-  * Favor composition over inheritance.
-  * Array[#](https://github.com/rails/rails/issues/)+ automatically dups, no double duping
-  * Just remove the sort_locals method
-  * the freeze trick does nothing on arrays used as hash keys.
-  * use functional style to build a list of template objects
-  * refactor the optimized build_query a bit
-  * reduce file stats by improving our dir glob pattern
-  * hash on the template directory in order to improve cache hits
-  * use meaningful names with our variables
+  * Revert "Merge pull request [#2543](https://github.com/rails/rails/issues/2543) from htanata/unused_require_in_ar_test"
+    This reverts commit 87152f2604e73b218df90befda576f0acfed0bbf, reversing
+    changes made to 0d3615f04c79f6e90d8ab33fdfc920b8faac9cb8.
+  * Merge pull request [#2543](https://github.com/rails/rails/issues/2543) from htanata/unused_require_in_ar_test
+    Remove unused require in activerecord/test/cases/attribute_methods_test.rb
+  * Remove unused require.
 
-2011-08-08
+2011-08-15
 ==========
 
-  * use binread to read the files
-  * backporting IO[#](https://github.com/rails/rails/issues/)binread for 1.8 users
-  * be explicit about arguments passed around
-  * Remove TODO comment I didn't mean to commit
-  * Bump arel version
-  * Fully marshal AR::Base objects. Fixes [#2431](https://github.com/rails/rails/issues/2431).
-  * Make it the responsibility of the connection to hold onto an ARel visitor for generating SQL. This improves the code architecture generally, and solves some problems with marshalling. Adapter
-    authors please take note: you now need to define an Adapter.visitor_for method, but it degrades gracefully with a deprecation warning for now.
-  * Merge pull request [#2426](https://github.com/rails/rails/issues/2426) from pivotal-casebook/fix-build
-    Make rails gem build directory consistent with actionpack, etc.
-  * Merge pull request [#2466](https://github.com/rails/rails/issues/2466) from rsim/fix_test_disable_referential_integrity
-    Fixed test_disable_referential_integrity on Oracle
-  * Fixed test_disable_referential_integrity on Oracle
-    On Oracle disable_referential_integrity before execution of block will disable foreign key constraints and after block will enable them but when constraints are enabled then they are validated.
-    Therefore created record with invalid foreign key should be deleted before enabling foreign key constraints.
-  * Further monkey-patching to avoid deprecation warnings
-  * Initialize config.assets.version the same way it's done in Sprockets
-  * Merge pull request [#2448](https://github.com/rails/rails/issues/2448) from igrigorik/master
-    Asset pipeline fixes: clear out tmp cache and use environment in digest generation
+  * Fix tzinfo require (it broke test_raises_when_an_invalid_timezone_is_defined_in_the_config in railties)
+  * Fix wrap_parameters initializer template
+  * Be more lazy about creating time zone objects. Decreases startup time by about 10%. ([#734](https://github.com/rails/rails/issues/734))
+  * Don't refer to ActionController::Base in the wrap_parameters initializer - use config object instead. Cuts about 15% off the load time. ([#734](https://github.com/rails/rails/issues/734))
+  * Bump arel dependency
+  * Use new SelectManager[#](https://github.com/rails/rails/issues/)source method
+  * Use new SelectManager[#](https://github.com/rails/rails/issues/)projections= method
+  * use update.key instead of update.ast.key. make better use of select manager.
+  * Use a SelectCore rather than a full SelectManager
+  * Refactor building the update manager
+  * Support for multi-table updates with limits, offsets and orders
+  * Support updates with joins. Fixes [#522](https://github.com/rails/rails/issues/522).
+  * Added Array[#](https://github.com/rails/rails/issues/)prepend as an alias for Array[#](https://github.com/rails/rails/issues/)unshift and Array[#](https://github.com/rails/rails/issues/)append as
+    an alias for Array[#](https://github.com/rails/rails/issues/)<< [DHH]
+  * Merge pull request [#2539](https://github.com/rails/rails/issues/2539) from arunagw/delegate_expl
+    Delegate expl
+  * Requiring delegate.
+  * Removing unnecessary require, solve 'circular require considered harmful' warning.
+  * Fix typo
+  * rake assets:precompile executes in production environment as default if RAILS_ENV was not provided
+  * Merge pull request [#2536](https://github.com/rails/rails/issues/2536) from arunagw/unused_var
+    Unused variable removed.
+  * Update travis config on @joshk's instructions
+  * Unused variable removed.
+  * Document Object[#](https://github.com/rails/rails/issues/)public_send
+  * Add a test for delegating a method ending in '=' as this is a special case.
+  * Ensure empty has_many :through association preloaded via joins is marked as loaded. Fixes [#2054](https://github.com/rails/rails/issues/2054).
+  * Merge pull request [#2534](https://github.com/rails/rails/issues/2534) from arunagw/public_send_require
+    Need to include public_send
+  * Need to include public_send
+  * Split up the definitions in Module[#](https://github.com/rails/rails/issues/)delegate depending on :allow_nil, and don't use exceptions for flow control in the :allow_nil => true case.
+  * Fix the line number in the backtrace when Module[#](https://github.com/rails/rails/issues/)delegate raises
+  * Fix private methods which are delegated to. This previously worked because Module[#](https://github.com/rails/rails/issues/)delegate previously ignored method visibility.
+  * Just do the method call directly in Module[#](https://github.com/rails/rails/issues/)delegate, if we can (we cannot for method names ending in '='). Two reasons: 1) it's faster, see
+    https://gist.github.com/1089783 and 2) more importantly, delegate should not allow you to accidentally call private or protected methods.
+  * Backport Object[#](https://github.com/rails/rails/issues/)public_send to 1.8 so that we can implement Module[#](https://github.com/rails/rails/issues/)delegate such that non-public methods raise
 
-2011-08-07
+2011-08-14
 ==========
 
-  * Merge pull request [#2451](https://github.com/rails/rails/issues/2451) from gdelfino/master
-    sqlite transactions in log files
-  * guides generation: apparently this workaround for RedCloth is not needed anymore
-  * Merge pull request [#2457](https://github.com/rails/rails/issues/2457) from Gregg/zombie_singular_fix
-    Added irregular zombie inflection, so zombies != zomby
-  * Added irregular zombie inflection, so zombies no longer gets singularized into zomby
-  * Merge pull request [#2455](https://github.com/rails/rails/issues/2455) from vijaydev/patch-7
-    Edit changelog to mention about x_sendfile_header default change
-  * edit changelog to mention about x_sendfile_header default change
-  * x_sendfile_header now defaults to nil and production.rb env file doesn't
-    set a particular value for it. This allows servers to set it through
-    X-Sendfile-Type, read
-    https://github.com/rack/rack/blob/master/lib/rack/sendfile.rb for more
-    info. Anyways you can force this value in your production.rb
-  * Test against 1.9.3 as well.
+  * Ensure changing RAILS_GROUPS will load the proper dependencies.
+  * Merge pull request [#2527](https://github.com/rails/rails/issues/2527) from cesario/fix_2511
+    Methods like status and location are interfering with redirect_to [Closes [#2511](https://github.com/rails/rails/issues/2511)]
+  * Methods like status and location are interfering with redirect_to [Closes [#2511](https://github.com/rails/rails/issues/2511)]
 
-2011-08-06
+2011-08-13
 ==========
 
-  * sqlite transactions now logged
-    motivation: http://stackoverflow.com/questions/6892630/sqlite-transactions-not-showing-in-test-log
-  * Merge pull request [#2450](https://github.com/rails/rails/issues/2450) from guilleiguaran/activesupport-gzip-1.8
-    Fix ActiveSupport::Gzip under Ruby 1.8.7. Closes [#2416](https://github.com/rails/rails/issues/2416)
-  * Fix ActiveSupport::Gzip under Ruby 1.8.7. Closes [#2416](https://github.com/rails/rails/issues/2416)
-  * Merge pull request [#2444](https://github.com/rails/rails/issues/2444) from elight/master
-    Minor refactor to delegate
-  * Use rake >= 0.9.3.beta.1 in Ruby 1.9.3
-  * use assets.version in asset checksum to allow user to easily override
-
-2011-08-05
-==========
-
-  * Refactored to more closely resemble idiom applied for on_nil
-  * Avoid generating app/views/layouts/application.html.erb on mountable engines, just generate the namespaced one
-  * Revert "Test against Rubinius"
-    This reverts commit 3cfbb3824436b2f8a37544b8ffe2f3a4605bc7c8.
-  * Merge pull request [#2442](https://github.com/rails/rails/issues/2442) from sferik/test_on_rubinius
-    Test against Rubinius
-  * Test against Rubinius
-    Happy Rubinius Day!
-  * Revert "to_key on a destroyed model should return nil". Closes [#2440](https://github.com/rails/rails/issues/2440)
-    This reverts commit c5448721b5054b8a467958d60427fdee15eac604.
-  * Fix test for Rubinius
-  * Merge pull request [#2439](https://github.com/rails/rails/issues/2439) from guilleiguaran/fix-error-on-ar-tests-rbxday
-    Fix AR test suite error under Rubinius 2.0 [#](https://github.com/rails/rails/issues/)rbxday
-  * Fix AR test suite error under Rubinius 2.0
-  * pg does not allow aliases in the having clause, but functions are fine
-
-2011-08-04
-==========
-
-  * Merge branch 'asset_hash_should_depend_on_env'
-  * Clear out tmp/cache when assets:clean is invoked.
-    Otherwise, if bad data is cached in tmp/clear then the next invocation
-    of assets:precompile (or a regular incoming request) will pickup files from
-    tmp without regenerating them from source.
-  * generate environment dependent asset digests
-    If two different environments are configured to use the pipeline, but
-    one has an extra step (such as compression) then without taking the
-    environment into account you may end up serving wrong assets
-  * Merge branch 'master' of github.com:rails/rails
-  * Revert "Explicitly included hashes in sentence regarding SQL-injection-safe forms"
-    Reason: The hash form is secure, and preferred over the array form if possible.
-    This reverts commit 6dc749596c328c44c80f898d5fa860fff6cab783.
-  * Revert "grammatical changes"
-    Reason: As discussed in GitHub, it is debatable, and present tense
-    is fine (and simple, and preferred).
-    This reverts commit 54ccda9f0a5e4a5e72a4c159dc8787faaf65e8a2.
-  * The trailing '/' isn't being picked up by Github anyway, and the link works as is.
-  * grammatical changes
-  * typo fix
-  * minor changes in migrations guide
-  * fixed incorrect tags
-  * Fix typo 'console' -> 'constant'
-  * Active Resource - guide for destroy
-  * Active Resource - guide for update/save
-  * Active Resource - guide for create
-  * Active Resource - guide for reading and writing data
-  * typo in "wont"
-  * 3.1 release notes Active Record changes, Architectural changes and
-    organizing sections.
-  * Adding more info as rake about is fixed
-  * Rack::Sendfile is no more default middleware.
-  * "blog" is more common than "weblog" these days.
-  * 3.1 release notes - added AP and Railties sections
-  * 3.1 release notes draft
-  * prefer to use if..end unless the condition is simple/compact
-  * remove some parts of the section on shortcut helpers, document custom validators
-  * make the warning clear about the effect of using validates_associated on both sides on an association.
-  * usages of active resouce
-  * configuration for active resource
-  * Introduction for active resource
-  * Active Resouce guide initial load
-  * '/' was outside of anchor tag.
-  * Superfluous "the".
-  * extra '/' removed from url, which was not linked
-  * Extra "l" removed before h2.
-  * document meta method
-  * Removed trailing slash of 'Download and installation' Github URL as per convention
-  * Explicitly included hashes in sentence regarding SQL-injection-safe forms
-  * Association and Callbacks guide: Added section on shortcut syntax 'validates'.
-  * Fix two spaces between sententes on README.rdoc.
-  * move the note after the scaffold files listing
-  * sync the getting started guide with master
+  * Merge branch 'master' of github.com:lifo/docrails
+    Conflicts:
+    RELEASING_RAILS.rdoc
+    actionpack/lib/sprockets/railtie.rb
+    actionpack/test/template/sprockets_helper_test.rb
+    activerecord/test/cases/calculations_test.rb
+    railties/guides/source/3_1_release_notes.textile
+    railties/guides/source/active_resource_basics.textile
+    railties/guides/source/command_line.textile
+  * "suits" is correct here, not "suites"
+  * Typo fix
+  * Some fixes on the 3_1_release_notes guide.
+  * update abstract_controller callbacks to document meta-programmed filters
+  * ActiveModel::Validations basic guide
+  * Document exclamation point on dynamic finders
+  * update rails on rack guide, section 2 needs to be changed or maybe deleted
+  * Revert "update rails on rack guide, section 2 needs to be changed or maybe deleted"
+    This reverts commit 7a4e545eccf834cb620df0f909ef3f4bec4e6608.
+  * comma is more appropriate here
+  * Fixed typo (attachments method name was missing an s) in Action Mailer basics guide
+  * Fixed typo
+  * [asset pipeline] update snippet to reflect patch
+    Two commented lines in example to match the
+    commit (8845ae683e2688)
+  * [asset pipeline] update to reflect new sendfile header default
+    X-Sendfile headers are now set to nil and are off by default.
+    See commit eff7fddeb26eaa346827
+  * 3.1 release notes: fixed font changes
+  * Point to current, official upgrade plugin
+  * [asset pipeline] Update Capistrano info
+    v2.8.0 of Capistrano has a recipe to handle precompile
+    and symlinking.
+  * 3.1 release notes: organize action_pack notes
+  * prototype switch
+  * expand tmp:* tasks, and a few more additions in the command line guide
+  * indentation fixes
+  * Dirty object methods added to active model basics
+  * ActiveModel::Conversion basic guide
+  * ActiveModel::Callbacks basic guide
+  * [asset pipeline] fixed example
+    Changed << to += because we are _concatenating_
+    this new array to the end of config array, NOT
+    pushing this array in it.
+  * Rubygems => RubyGems
+  * capitalize RubyGems properl
+  * rephrase "like to be"
+  * AttributeMethods refector suffix method added some usages
+  * ActiveResource::Validations module basics updated
+  * ActiveModel::AttributeMethods basic guide
+  * Adding Basic file for ActiveModel. @vatrai and @sukeerthiadiga is going to take care other detailed stuff.
   * we should not ignore all gems in here
   * Add git push and git push --tags to RELEASING_RAILS.rdoc
+  * moving CI and Sam Ruby to the top of the list.  I :heart: CI and Sam
+  * add section about notifying implementors
+  * fixing assert_difference issues on ruby 1.8
+  * fixing wrong words.  thanks @jbrown
+  * ActionView::Helpers::TextHelper[#](https://github.com/rails/rails/issues/)simple_format should not change the text in place. Now it duplicates it.
+  * adding my brain dump of the release process
+  * fix stringify_keys destructive behavior for most FormTagHelper functions
+    add four new tests to verify that the other three methods that called stringify_keys! are fixed. verified that the tests break in master without the code patch. Closes
+    [#2355](https://github.com/rails/rails/issues/2355)
+  * Quote these dates to prevent intermittent test failure. Suppose local time is 00:50 GMT+1. Without the quoting, the YAML parser would parse this as 00:50 UTC, into the local time of 01:50 GMT+1.
+    Then, it would get written into the database in local time as 01:50. When it came back out the UTC date from the database and the UTC date of two weeks ago would be compared. The former would be
+    23:50, and the latter would be 00:50, so the two dates would differ, causing the assertion to fail. Quoting it prevents the YAML parser from getting involved.
+  * Fix a bit precompile and lazy compile comments
+  * make assert_difference error message not suck
+  * accept option for recreate db for postgres (same as mysql now)
+  * Don't require assets group in production by default, you can change this default in the application.rb anyways
+  * This dep is already defined in activerecord.gemspec
+  * initializing @open_transactions in the initialize method
+  * add a migrate class method and delegate to the new instance
+  * Ensure that .up and .down work as well.
+  * Support backwards compatible interface for migration down/up with rails 3.0.x.
+  * use File.directory? as Dir.exists? is only 1.9.2+
+  * Merge pull request [#2324](https://github.com/rails/rails/issues/2324) from zenapsis/3-1-stable
+    Rails 3.1 throws a Errno::ENOTDIR if files are put in assets directories
+  * Pass options in ActiveSupport::Cache::CacheStore[#](https://github.com/rails/rails/issues/)read_multi through to the delete_entry call.
+  * Remove unnecessary require (happened after fcbde454f6)
+  * MassAssignmentProtection: consider 'id' insensetive in StrictSanitizer
+    In order to use StrictSanitizer in test mode
+    Consider :id as not sensetive attribute that can be filtered from
+    mass assignement without exception.
+  * Fix the issue where default_url_options is being cached on test cases. Closes [#1872](https://github.com/rails/rails/issues/1872). Closes [#2031](https://github.com/rails/rails/issues/2031).
+    Signed-off-by: José Valim <jose.valim@gmail.com>
+  * Rename new method to_path to to_partial_path to avoid conflicts with File[#](https://github.com/rails/rails/issues/)to_path and similar.
+  * Removing extra requires from the test. Already loaded in abstract_unit.
+  * remove extra require for 'active_support/dependencies' as it is required in abstract_unit.rb
+  * remove extra require for 'stringio' as it is required in helper.rb

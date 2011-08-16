@@ -1,3 +1,22 @@
+1.0.25 / 2011-08-15
+===================
+
+  * Support removing non-existent users from package manatainer lists
+  * Provide default cb if none supplied
+    Make it much nicer to poke around on the repl.  The default
+    callback function just dumps the data or error to stdout
+    or stderr.
+  * v1.0.25
+  * Use the non-delta uri for inital search index build
+  * Don't set agent:false if http2 is in use
+
+1.0.24 / 2011-08-010
+====================
+
+  * v1.0.24
+  * Force exit. Temporary workaround for Linux rimraf timeout issue.
+    TODO: Fix properly.
+
 1.0.23 / 2011-08-07
 ===================
 
@@ -132,13 +151,3 @@
   * docs: Open in npm search page if no repo/homepage listed
   * Close [#1152](https://github.com/isaacs/npm/issues/1152) Document prefix default better
   * Close [#1062](https://github.com/isaacs/npm/issues/1062) Add 'pack' command to create a tarball
-  * make doc
-  * Make the global/local more clear, and add example of dep sharing
-  * Don't install deps that would be satisfied by family
-    This makes it possible to 'fix' the dependencies of dependencies,
-    by specifying a precise version that the dependency can depend
-    upon.
-  * Setting to undefined is almost always a problem
-  * Add node -v and npm -v to error output
-  * Add more 'don't do this' around setting global config
-  * Better default usage output

@@ -1,3 +1,138 @@
+2011-08-16
+==========
+
+  * vm: fix incorrect dispatch of vm.runInContext for argument "filename"
+    Adds test case and documentation for vm.runInContext and vm.createContext.
+    Fixes [#1140](https://github.com/joyent/node/issues/1140).
+
+2011-08-15
+==========
+
+  * Complete GYP support for Python 2.5.2
+  * GYP Support python 2.5.2
+  * gyp: Support Linux
+  * Remove http.cat. fixes [#1447](https://github.com/joyent/node/issues/1447)
+  * Upgrade GYP to r999
+    To fix osx/make build http://codereview.chromium.org/7618052
+  * Upgrade GYP to r995
+  * Fix GYP build on OSX
+    Broken due to DOS line endings.
+    ./configure-gyp
+    make -f Makefile-gyp
+  * util: isRegExp() should not call toString() on its argument
+    An overloaded toString() method may have side effects
+    so don't call it for a simple type check.
+
+2011-08-14
+==========
+
+  * node_crypto: interface with libuv, not libev
+
+2011-08-13
+==========
+
+  * Rename gyp files to produce useful solution names.
+    Hoist common settings into common.gypi.
+    Restrict v8's common.gypi to v8 projects.
+    Ensure v8 doesn't use /MP in debug builds.
+    Add basic settings for other platforms.
+    Make uv import common.gypi properly.
+    Remove LTCG warning.
+  * path.js: correct three harmless .length typos
+    lib/path.js routines normalizeArray() and resolve() have for loops that
+    count down from end of an array.  The loop indexes are initialized using
+    "array.length" rather than "array.length-1".  The initial array element
+    accessed is always beyond the end of array and the value is 'undefined'.
+    Strangely, code exists that acts to ignore undefined values so that the
+    typos are unnoticeable.
+    Existing tests emit no errors either before or after changing to "length-1".
+    Tests _do_ start failing at "length-2". (Actually it is node that starts
+    to fail at "length-2" - that's a valid enough test...)
+  * uv: upgrade to 5899192
+  * module: fix pointer reference to out-of-scope variable
+    Reported by Tom Hughes.
+  * test: add typed arrays to known globals list
+  * small NPN doc fix
+    Fixes [#1522](https://github.com/joyent/node/issues/1522).
+
+2011-08-12
+==========
+
+  * platform: fix GetFreeMemory() on 64 bits freebsd
+    v_free_count is defined as u_int v_free_count (struct vmmeter sys/vmmeter.h:87)
+    but variable info defined as unsigned long, this cause error on 64-bits systems
+    because higher 32 bits remain uninitialized
+  * build: add src/v8_typed_array.cc to gyp sources list
+  * typed arrays: fix signed/unsigned compiler warnings
+  * typed arrays: preliminary benchmarks
+  * typed arrays: add Float64Array
+  * typed arrays: alias method subarray() to slice()
+  * typed arrays: integrate plask's typed array implementation
+  * crypto: PBKDF2 function from OpenSSL
+  * uv: upgrade to 7f82995
+  * Incorporate endianness into buffer.read* function names instead of passing in a boolean flag
+  * test: enable simple/test-http-dns-error for `make test-uv`
+  * test: add test for [#1202](https://github.com/joyent/node/issues/1202), uncatchable exception on bad host name
+  * net: defer DNS lookup error events to next tick
+    net.createConnection() creates a net.Socket object
+    and immediately calls net.Socket.connect() on it.
+    There are no event listeners registered yet so
+    defer the error event to the next tick.
+    Fixes [#1202](https://github.com/joyent/node/issues/1202).
+  * Now working on v0.5.5
+  * Bump version to v0.5.4
+  * Upgrade libuv to 65f71a2
+  * Upgrade V8 to v3.5.4
+
+2011-08-11
+==========
+
+  * Upgrade libuv to d358738
+  * Add some debug output to test-child-process-double-pipe
+  * net_uv: resume on closed net.Socket shouldn't crash
+  * build: .gitignore build/ directory
+  * Fix [#1497](https://github.com/joyent/node/issues/1497) querystring: Replace 'in' test with 'hasOwnProperty'
+  * http: destroy socket on error
+    Needs further investigation, the test passed without `--use-uv`.
+    Fixes failing test:
+    test/simple/test-http-dns-fail.js
+  * net_uv: pipes don't have getsockname
+  * net: properly export remoteAddress to user land
+    Fixes failing test:
+    test/simple/test-net-remote-address-port.js
+  * test: fix logic error in test-net-remote-address-port.js
+    The test intended to register an 'at exit' listener
+    but called `process.exit()` instead.
+
+2011-08-010
+===========
+
+  * Fix MSVS building.
+  * Upgrade libuv to ca633920f564167158d0bb82989d842a47c27d56
+  * node: propagate --use-uv to child processes
+  * uv: upgrade to e8497ae
+  * win: fix test-process-env
+    Remove support for setting process.env.TZ as it doesn't seem we can do it
+    x-platform without fixing V8.
+  * uv: upgrade to b328e4c
+  * uv: upgrade to b6b97f3
+  * tcp: propagate libuv tcp accept() errors to net_uv.js
+  * Upgrade libuv to db190c7
+  * net_uv: Handle failed shutdown req
+  * Add test-pipe-file-to-http to test-uv
+  * net_uv: fix test/simple/test-pipe-file-to-http.js
+  * test: Allow common.ddCommand to be run in presence of existing file
+  * x-platform func for spawning pwd in tests
+    Fixes test-child-process-buffering
+  * Explicitly disable cr/lf conversion for test fixtures
+    Otherwise git's autocrlf feature makes test fail on windows.
+  * Revert "Make test-sync-fileread pass even when git cr/lf conversion is enabled"
+    We'll solve this problem with a .gitattributes file.
+    This reverts commit 27ef0b0903e348cc10d0c5d2ee2ef25aa1676440.
+  * Add NPN and SNI documentation.
+    Fixes [#1420](https://github.com/joyent/node/issues/1420).
+    Fixes [#1426](https://github.com/joyent/node/issues/1426).
+
 2011-08-09
 ==========
 
@@ -62,109 +197,3 @@
   * docs: fix typo in tls API docs
   * Disable optimization in debug builds.
     Enable full optimization in release builds.
-  * Silence VC++ warnings about use of badly-designed parts of the C library.
-  * Fix missing prototype warnings.
-  * Fix bad platform name.
-  * Add 'make test' and friends
-  * Make MSVS build.
-    MSVS settings don't actually need to be guarded by conditions. gyp will do
-    the right thing.
-
-2011-08-06
-==========
-
-  * V8 GYP should attempt to not use cygwin.
-  * Modify GYP scripts for VC build
-  * Upgrade libuv - it now depends on pthreads
-  * build: don't try to `ls -lh` executables that don't exist
-    Avoids `ls: cannot access build/debug/node_g: No such file or directory`.
-    Not an actual error but it confuses people.
-  * Complete eio upgrade
-  * clean merge scabs
-  * Upgrade libuv to 48877ed
-  * Basic VC++ compatibility work.
-  * Remove scons
-  * Bring gyp into the tools directory; handwritten makefile
-  * gyp: fix makefile build
-  * gyp fix build again
-  * gyp: Fix build
-  * add build/gyp_node build script
-  * Upgrade libuv for gyp reasons
-  * gyp: fix test runner
-  * Improve gyp build - now works kind of
-  * add deps/v8/build ???
-  * More progress with gyp
-  * WIP
-  * Upgrade libuv for gyp support
-  * Upgrade http_parser to 965f91bc76b2d1601e23
-  * [doc] add link to npm search in Readme.md
-    Fixes [#1459](https://github.com/joyent/node/issues/1459).
-  * add the document of the new api routine: path.relative
-
-2011-08-05
-==========
-
-  * Make test-child-process-exec-env work on windows
-  * Child processes: support windowsVerbatimArguments option
-  * uv: fix build on systems that don't have pipe2()
-    This is libuv commit 2fbcbe9, cherry-picked for node.
-  * Doc improvements
-    Documents util.format().
-    Thanks @bnoordhuis and @shigeki.
-    Fixes [#1424](https://github.com/joyent/node/issues/1424).
-  * Upgrade libuv to c834d5de9e4747e5138bed9140320b44622ab6de
-
-2011-08-04
-==========
-
-  * Revert commits 12c8b27 and 88f416a, fixed properly in 2fe4558.
-  * uv: cherry-pick libuv commit 041d60e into node
-    Fixes execve-after-fork race in uv_spawn().
-  * child process: don't send signal if process is already terminated
-    Fixes failing test test/simple/test-exec-max-buffer.js
-  * Upgrade V8 to 3.5.3
-  * net_uv: add listenFD shim that throws when called
-  * child process: bind to libuv's kill process API
-    Fixes failing test test/simple/test-child-process-kill.js
-  * module: strip byte order marker when loading *.js and *.json files
-    BOMs make V8 raise a 'SyntaxError: Unexpected token ILLEGAL' exception.
-    Fixes [#1440](https://github.com/joyent/node/issues/1440).
-  * test: fix bad test in test-cli-eval.js
-    The test checked that stdout was empty. Forgetting to escape brackets
-    in the argument to --eval made that true on UNIX systems: the error
-    was written to stderr.
-    Props to Peter Bright for reporting the issue.
-
-2011-08-03
-==========
-
-  * ev: fix infinite loop in ev_walk()
-  * docs: add race warning to `child_process.kill()`
-  * test: fix exec-after-fork race in test/simple/test-child-process-kill.js
-
-2011-08-02
-==========
-
-  * Upgrade libuv to ec143961d135adb3f49f5a2322774ef43e2520b9
-  * Upgrade libuv to dbaddc4423d61fa16cca299650f8378cffba9cce
-  * http: make http2 the default, legacy backend is available with --use-http1
-    Fixes [#1441](https://github.com/joyent/node/issues/1441).
-  * Update tests for http2.
-  * V8: Don't use mprotect on Cygwin as virtual memory is managed directly via WinAPI calls.
-    Upstream fix: http://codereview.chromium.org/7549009
-  * Remove platform_win32_winsock
-  * Now working on v0.5.4
-  * Bump version to v0.5.3
-  * Upgrade libuv to b2ed24d
-  * Complete removal of node_child_process_win32.cc
-  * Remove node_child_process_win32.cc
-  * Merge branch 'v0.4'
-    Conflicts:
-    doc/api/crypto.markdown
-    doc/api/modules.markdown
-    src/platform_win32.cc
-
-2011-08-01
-==========
-
-  * windows: remove dependency on rpcrt4 and ole32

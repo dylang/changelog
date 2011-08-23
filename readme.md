@@ -6,17 +6,19 @@ Changelog is a command line utility (and module) that generates a changelog in m
 Command-line Usage
 ==================
 
-npm
----
+Node Modules in NPM
+-------------------
+
+Modules do not need to be installed locally to get a changelog but they must define their repository url in their package.json.
 
 ![Example using Express](https://github.com/dylang/changelog/raw/master/examples/express.png)
 
     $ changelog {npm module name} [options]
 
-`npm module`: The module name, such as `express`.  Works on any npm module with a github.com repo specified in the module's package.json.
+`npm module`: The module name, such as `express`.
 
-github repo url
----------------
+Any Public Github.com Repository
+--------------------------------
 
 ![Example using Bootstrap from Github](https://github.com/dylang/changelog/raw/master/examples/twitter-bootstrap.png)
 
@@ -28,7 +30,7 @@ Options
 -------
 
  * `-c`, `--color`            Output as Color (default)
- * `-m`, `--markdown`         Output as Github-flavored Markdown
+ * `-m`, `--markdown`         Output as Github-flavored Markdown (default when piping to a file)
  * `-j`, `--json`             Output as JSON
  * `-d`, `--debug`            Enable debugging
  * `-h`, `--help`             Display help and usage details
@@ -49,70 +51,10 @@ To make sure you have the latest version:
 
     $ npm-g update
 
-Examples
-========
+More Examples
+=============
 
-Node Package
-------------
-
-    $ changelog request --markdown
-
-    Upcoming / 2011-08-02
-    =====================
-
-      * Merge pull request #53 from benatkin/parse-json
-        Parse json: Issue #51
-      * support JSON APIs that don't set the write content type
-      * allow empty string
-      * implement parsing json response when json is truthy
-      * add failing test for issue #51
-      * Clearer spacing. Slightly more consistent.
-      * Style fixes. Bye Bye semi-colons. Mostly lined up with npm style.
-      * Return destination stream from pipe().
-
-    2.0.1 / 2011-07-21
-    ==================
-
-      * Drastically improved header handling.
-      * valid semver.
-
-    2.0.0 / 2011-07-21
-    ==================
-
-      * w00t! request 2.0
-      * If the error is handled and not throw we would still process redirects.
-        Fixes #34.
-      * Add body property to resp when we have it as a shorthand. fixes #28
-      * Adding reference to Request instance on response to make it easier on
-        inline callbacks. fixes #43.
-
-    ---cut for space---
-
-Github Repo
------------
-
-    $ changelog https://github.com/joyent/node --markdown
-
-    2011-08-01
-    ==========
-
-      * windows: Fix test-module-load-list
-      * Remove debug code
-      * child_process_uv: Handle spawn errors
-      * Upgrade libuv to 023f99a
-
-    2011-07-31
-    ==========
-
-      * link to rpcrt4 and ole32 on win32
-      * Upgrade libuv to e9bee51
-      * child_process_uv: fix test/simple/test-child-process-env
-      * child_process_uv: fix simple/test-child-process-cwd
-      * child_process_uv: add exec, fix simple/test-child-process-exec-cwd
-      * Forgot to add child_process_uv.js
-      * initial pass at lib/child_process_uv.js
-
-      ---cut for space---
+ * [More Examples](https://github.com/dylang/changelog/tree/master/examples)
 
 Changelog API
 =============
@@ -154,21 +96,20 @@ How it works
 Future
 ======
 
- * Warn when there are more than 100 commits available.
  * Support paging Github's API to aquire more than 100 commits.
- * Additional output options: --rss --atom --html
- * Option to show code diff.
  * Ability to set the start and end version.
- * Use Git tags to detect versions
- * Add header and/or footer to the markdown output
- * If the package.json does not have a propper repo link then show the author's name and email and suggest contacting the author.
+ * Use Git tags to detect versions (waiting for Github to fix [Issue #17](https://github.com/github/developer.github.com/issues/17)).
+ * Add header and/or footer to the output with module name, contributors, etc.
+ * If the package.json does not have a repository url then display the author's name and email and suggest contacting the author.
 
 Want to help?
 =============
 
- * Work with more package managers such as `brew` and `gem`?  These are beyond my expertise but I would be happy to merge in pull requests.
+I love merging in pull requests.
+
+ * Support for `brew` and `gem`?
  * Integrate into `npm update`?
- * Integrate into `git pull`?
+ * Create a `git pull` shortcut?
 
 About
 =====

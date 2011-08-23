@@ -1,6 +1,51 @@
-Upcoming / 2011-08-15
-=====================
+2.4.6 / 2011-08-22
+==================
 
+  * Fixed multiple param callback regression. Closes [#824](https://github.com/visionmedia/express/issues/824) [reported by TroyGoode]
+  * Merge branch 'master' of github.com:visionmedia/express
+  * fixed some tests
+  * Merge pull request [#821](https://github.com/visionmedia/express/issues/821) from pikeas/patch-1
+    Fixing typo: interacte -> interact
+  * Fixing typo: interacte -> interact
+  * local -> localhost
+    most people wont have things set up the same as me
+    so this is probably not a good idea :D
+  * mime 1.2.2 dep
+  * connect 1.6.2 dep
+  * Added `logger()` to generated express(1) app
+  * Added `make benchmark` for experimental continuous-benchmarking tool
+  * Release 2.4.5
+
+2.4.5 / 2011-08-19
+==================
+
+  * removed dynamicHelpers
+  * removed app.helpers() use app.locals()
+  * haha...
+  * changed -css, --template to --stylus, --ejs
+    we can add more as we go
+  * rewrote express(1) to use commander.js
+  * fixed `res.sendfile()` 404 support
+  * build `res.download()` on top of `res.sendfile()`
+    like it should have always been
+  * make `res.sendfile()` more like `res.download()`. Closes [#774](https://github.com/visionmedia/express/issues/774)
+  * refactored `res.sendfile()`
+  * OCD
+  * Refactored Route to use a single array of callbacks
+  * fixed route error handlers when errors are thrown
+  * Added support for routes to handle errors. Closes [#809](https://github.com/visionmedia/express/issues/809)
+    currently only the route end-point callbacks
+    support this, however this will change in the near future
+    to support route middleware etc
+  * Added  shorthand for the parsed request's pathname
+  * Merged basepath setting. Closes [#813](https://github.com/visionmedia/express/issues/813)
+  * qs >= 0.3.1
+  * use nextRoute() internally
+  * Changed: removed .call(self) for route callbacks
+    not sure why we had this, ive never even used it
+    and the tests dont cover it, and its slower
+  * Added `app.routes.all()`. Closes [#803](https://github.com/visionmedia/express/issues/803)
+    not a huge fan of this API-wise, but at least it is something for now
   * Fixed `res.redirect()` on windows due to `join()` usage. Closes [#808](https://github.com/visionmedia/express/issues/808)
   * russian docs
   * link to russian docs booyah!
@@ -84,44 +129,3 @@ Upcoming / 2011-08-15
   * Removed `app.dynamicLocals()`. Closes [#756](https://github.com/visionmedia/express/issues/756)
   * utilize connects new `query()` middleware
   * Replaced `res.local[s]()` with `res.locals` function. Closes [#757](https://github.com/visionmedia/express/issues/757)
-  * misc
-  * Removed "view options" setting. Closes [#748](https://github.com/visionmedia/express/issues/748)
-  * docs for previous commit
-  * Added "charset" option
-  * misc refactoring
-  * Added `app.dynamicLocal(name, fn)`
-  * `app.local()` and `res.local()` return for chaining
-  * Added `app.local(name, val)`
-  * `app.helpers` -> `app.locals`
-  * `app.dynamicHelpers` -> `app.dynamicLocals`
-  * Removed `res.send()` with no args support for 204
-    just use:
-    res.send(204)
-  * Removed `res.helpers()` alias of `res.locals()`
-  * removed old `app.error()` docs
-  * removed old error handling docs
-  * removed use of `app.error()` in examples
-  * Removed `app.error()`. Closes [#733](https://github.com/visionmedia/express/issues/733)
-    use trailing middleware with arity of 4 as
-    shown in this issue. They are functionally
-    equivalent
-  * expresso 0.8.1
-  * its is possessive, it's is shorthand for: it is
-
-2.4.3 / 2011-07-14
-==================
-
-  * Release 2.4.3
-  * Fixed options.filename, exposing to template engines
-    this is useful for performing relative
-    lookups within the template engine itself,
-    without manually specifyin the path
-  * misc
-  * Removed "view options" setting. Closes [#748](https://github.com/visionmedia/express/issues/748)
-  * docs for previous commit
-  * Added "charset" option
-  * misc refactoring
-  * Added `app.dynamicLocal(name, fn)`
-  * `app.local()` and `res.local()` return for chaining
-  * Added `app.local(name, val)`
-  * `app.helpers` -> `app.locals`

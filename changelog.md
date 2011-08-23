@@ -1,7 +1,14 @@
-Upcoming / 2011-08-010
-======================
+Upcoming / 2011-08-23
+=====================
 
+  * show full url to to github issue on command line output
+
+0.0.8 / 2011-08-16
+==================
+
+  * updated version
   * updated examples
+  * don't include ansi color codes when outputting to a file or pipe
 
 0.0.7 / 2011-08-010
 ===================

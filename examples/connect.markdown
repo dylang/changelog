@@ -1,3 +1,26 @@
+Upcoming / 2011-08-19
+=====================
+
+  * updated git summary
+  * Removed `router()` middleware. Closes [#262](https://github.com/senchalabs/connect/issues/262)
+  * replaced `utils.forbidden()` use with `next(403)`
+  * replace utils.badRequest() with `next(400)`
+  * Added Content-Length to `next(statusCode)` responses
+  * Added support for `next(statusCode)`
+    currently:
+    next(404)
+    is equivalent to:
+    res.statusCode = 404;
+    next(new Error(http.STATUS_CODES[res.statusCode]))
+    this should help prevent the need for
+    custom / verbose constructors like new errors.NotFound,
+    and provides a bit of sugar for something very common
+  * Added `connect.header()`, tiny middleware for response header debugging. Closes [#351](https://github.com/senchalabs/connect/issues/351)
+  * removed invalid range callback support, just respond
+  * removed silly submodules tim added back in the day
+    we dont and havent used these in ages
+  * qs >= 0.3.1
+
 1.6.2 / 2011-08-15
 ==================
 
@@ -129,15 +152,3 @@
   * removed migration guide from readme
   * link directories in page headings in directory middleware
   * Merge branch 'master' of github.com:senchalabs/connect
-  * added errorHandler to the docs list
-  * Sort files alphabetically in directory middleware.
-    readdir returns files in the order stored in the file system, which is not necessarily alphabetic.
-  * Merge pull request [#310](https://github.com/senchalabs/connect/issues/310) from danieldickison/master
-    Fixied `directory()` middleware urls when mounted [danieldickison]
-  * Use req.originalDir for directory links so that they work when the middleware is mounted at a sub-URL.
-  * misc refactor of parseCookie()
-  * clean up previous commit
-  * Updated cookie parser not to throw exceptions
-  * tweak previous commit a little
-  * Remove chromeframe token from UA String in default fingerprint function.
-    Signed-off-by: Tj Holowaychuk <tj@vision-media.ca>

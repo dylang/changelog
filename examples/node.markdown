@@ -1,6 +1,68 @@
+2011-08-23
+==========
+
+  * net_uv: throw when people construct net.Socket(fd)
+    Easier to catch compatibility errors.
+
+2011-08-22
+==========
+
+  * net_uv: Don't error on ECONNRESET
+    Fixes [#1571](https://github.com/joyent/node/issues/1571).
+  * Upgrade GYP to r1010
+  * gyp: -ldl on linux
+  * net_uv: handle read errors
+  * Upgrade libuv to joyent/libuv@ce20791
+  * Fixes [#1531](https://github.com/joyent/node/issues/1531)
+  * Add failing test for https2 compatibility
+    Issue [#1531](https://github.com/joyent/node/issues/1531)
+  * Update license info for openssl
+  * Upgrade to 0.9.8r.
+    Build in Win32.
+  * import openssl from chrome
+  * Doc improvements
+
+2011-08-20
+==========
+
+  * Fix [#1563](https://github.com/joyent/node/issues/1563). overflow in ChildProcess custom_fd.
+
+2011-08-19
+==========
+
+  * docs: process.memoryUsage returns memory usage measured in bytes
+
+2011-08-18
+==========
+
+  * Upgrade V8 to 3.5.6
+
+2011-08-17
+==========
+
+  * bench: make number of response body chunks configurable in http_simple
+  * Fix [#1546](https://github.com/joyent/node/issues/1546) some more. Remove expensive debug call.
+  * Close [#1544](https://github.com/joyent/node/issues/1544) Document slashesDenoteHost flag in url.parse
+  * Merge remote branch 'origin/v0.4'
+    Conflicts:
+    doc/api/tls.markdown
+  * Fixes [#1546](https://github.com/joyent/node/issues/1546). Remove expensive debug call.
+  * bench: make http_simple send chunked encoding if requested
+
 2011-08-16
 ==========
 
+  * http: improve compatibility of legacy API
+    In http1, legacy http.Client shares one connection with multiple requests.
+    But in http2, it uses concurrent connections.
+    With --use-http1, test/simple/test-http-legacy.js passes.
+    However, it fails without --use-http1 (use http2).
+    This improves compatibility of legacy http.Client API between http1 and http2.
+    Fixes [#1530](https://github.com/joyent/node/issues/1530).
+  * test: refactored http test.
+    Many http tests had used legacy http.Client.
+    This refactored it to use modern API.
+    Fixes [#1528](https://github.com/joyent/node/issues/1528).
   * vm: fix incorrect dispatch of vm.runInContext for argument "filename"
     Adds test case and documentation for vm.runInContext and vm.createContext.
     Fixes [#1140](https://github.com/joyent/node/issues/1140).
@@ -19,14 +81,22 @@
     Broken due to DOS line endings.
     ./configure-gyp
     make -f Makefile-gyp
+  * module: fix pointer reference to out-of-scope variable
+    Reported by Tom Hughes.
   * util: isRegExp() should not call toString() on its argument
     An overloaded toString() method may have side effects
     so don't call it for a simple type check.
+  * Fix docs for fs.*chown
+    Fix bad parameters of fs.chown[Sync], fs.fchown[Sync] and
+    fs.lchown[Sync] in documentation.
+    Fixes [#1533](https://github.com/joyent/node/issues/1533).
 
 2011-08-14
 ==========
 
   * node_crypto: interface with libuv, not libev
+  * Docs: Not memcpy, but memmove
+    Fixes [#1520](https://github.com/joyent/node/issues/1520).
 
 2011-08-13
 ==========
@@ -79,6 +149,9 @@
     There are no event listeners registered yet so
     defer the error event to the next tick.
     Fixes [#1202](https://github.com/joyent/node/issues/1202).
+  * build: remove 1024 char read limit from cmake file
+  * Small changes for fs.watchFile. Fixed broken markdown. Changed variable `f` to a proper filename.
+    Fixes [#1507](https://github.com/joyent/node/issues/1507).
   * Now working on v0.5.5
   * Bump version to v0.5.4
   * Upgrade libuv to 65f71a2
@@ -97,12 +170,16 @@
     Fixes failing test:
     test/simple/test-http-dns-fail.js
   * net_uv: pipes don't have getsockname
+  * Doc improvements
+    related to [#1472](https://github.com/joyent/node/issues/1472).
   * net: properly export remoteAddress to user land
     Fixes failing test:
     test/simple/test-net-remote-address-port.js
   * test: fix logic error in test-net-remote-address-port.js
     The test intended to register an 'at exit' listener
     but called `process.exit()` instead.
+  * Correct code span
+    Fixes [#1489](https://github.com/joyent/node/issues/1489).
 
 2011-08-010
 ===========
@@ -146,54 +223,3 @@
   * Fix dd command tests for Windows
   * Fix test/simple/test-repl
   * Improve win compat of test-repl
-  * crypto: fix incorrect ssl shutdown check
-  * net: fix incorrect sizeof()
-  * Improve assert error messages
-    1. actual and expected should be displayed in the same order they were given
-    2. long values should be truncated.
-  * eio: define HAVE_UTIMES 1 on cygwin, fixes build
-    Fixes [#1483](https://github.com/joyent/node/issues/1483).
-  * windows: fix test-umask
-  * Upgrade libuv to e5f513c
-  * Readd the static libpthread-win32 libraries
-  * Revert "Unify configure scripts"
-    This reverts commit 71435ede815ee2c73b09f7071ee1b6d10945d409.
-
-2011-08-08
-==========
-
-  * Make buffer.INSPECT_MAX_BYTES public for mscdex
-  * Truncate Buffer.inspect at 50 bytes
-  * Fix test-executable-path
-  * Fix test-http-upgrade-server and test-http-parser
-    Problem was introduced in last http-parser upgrade which fixed a long
-    standing bug with the upgrade event and removed several callbacks.
-  * Endian argument should be a boolean. Signed integers shouldn't run through checks for unsigned integers. Clean up jslint. Provide unchecked uint entry points.
-  * Tests should point at the build directory until GYP is default
-  * Merge branch 'gyp'
-  * Fix test-child-process-exec-cwd.
-  * Unify configure scripts
-  * Revert "Remove scons"
-    This reverts commit bd270b48a790ba00dd5a0dc9624aabbdedacaea8.
-  * Upgrade libuv to 75c10905
-  * Bring back old Makefile and configure script
-    GYP and WAF need to live in parallel for some time.
-  * Fix MSVS build
-  * Move GYP file to the project root
-  * generate-project.bat: Point at the right path
-  * sketch out configure support
-  * http2: reword confusing comment
-  * Improve util.format() compatibility with browser.
-    Fixes [#1434](https://github.com/joyent/node/issues/1434).
-
-2011-08-07
-==========
-
-  * Fixes https host header default port handling.
-  * Test for default host headers on default ports in https and http
-  * docs: rename readline.md to readline.markdown
-  * symlink in ./node and ./node_g for make users
-  * Add generate-projects.bat
-  * docs: fix typo in tls API docs
-  * Disable optimization in debug builds.
-    Enable full optimization in release builds.

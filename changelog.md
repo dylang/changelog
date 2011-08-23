@@ -1,3 +1,13 @@
+Upcoming / 2011-08-23
+=====================
+
+  * update version
+  * show the author's name if the repo url is not in the module's package.json.
+  * fix exception that happens when a module isn't found
+  * clean up readme
+  * fix screenshot urls
+  * updated examples and added screenshots
+
 0.0.9 / 2011-08-23
 ==================
 

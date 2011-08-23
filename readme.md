@@ -100,7 +100,6 @@ Future
  * Ability to set the start and end version.
  * Use Git tags to detect versions (waiting for Github to fix [Issue #17](https://github.com/github/developer.github.com/issues/17)).
  * Add header and/or footer to the output with module name, contributors, etc.
- * If the package.json does not have a repository url then display the author's name and email and suggest contacting the author.
 
 Want to help?
 =============

@@ -9,7 +9,7 @@ Command-line Usage
 npm
 ---
 
-![Example using Express](https://github.com/dgreene/changelog/raw/master/examples/express.png)
+![Example using Express](https://github.com/dylang/changelog/raw/master/examples/express.png)
 
     $ changelog {npm module name} [options]
 
@@ -18,7 +18,7 @@ npm
 github repo url
 ---------------
 
-![Example using Bootstrap from Github](https://github.com/dgreene/changelog/raw/master/examples/twitter-bootstrap.png)
+![Example using Bootstrap from Github](https://github.com/dylang/changelog/raw/master/examples/twitter-bootstrap.png)
 
     $ changelog {Github.com repo url} [options]
 

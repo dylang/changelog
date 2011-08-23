@@ -9,12 +9,16 @@ Command-line Usage
 npm
 ---
 
+![Example using Express](https://github.com/dgreene/changelog/raw/master/examples/express.png)
+
     $ changelog {npm module name} [options]
 
 `npm module`: The module name, such as `express`.  Works on any npm module with a github.com repo specified in the module's package.json.
 
 github repo url
 ---------------
+
+![Example using Bootstrap from Github](https://github.com/dgreene/changelog/raw/master/examples/twitter-bootstrap.png)
 
     $ changelog {Github.com repo url} [options]
 

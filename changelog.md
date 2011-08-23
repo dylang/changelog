@@ -1,6 +1,8 @@
-Upcoming / 2011-08-23
-=====================
+0.0.9 / 2011-08-23
+==================
 
+  * update version
+  * update examples
   * show full url to to github issue on command line output
 
 0.0.8 / 2011-08-16
@@ -15,7 +17,8 @@ Upcoming / 2011-08-23
 
   * upped version
   * added changelog for changelog
-  * run changelog in the root of a node project with a package.json and it will use it to create the changelog.
+  * run changelog in the root of a node project with a package.json and it will use it to
+    create the changelog.
 
 0.0.6 / 2011-08-06
 ==================

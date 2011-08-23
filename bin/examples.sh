@@ -15,14 +15,13 @@ echo Underscore as markdown
 echo Node as markdown
 ./bin/changelog.js github.com/joyent/node --markdown > ./examples/node.markdown
 
-echo Node as markdown
-./bin/changelog.js github.com/rails/rails --markdown > ./examples/rails.markdown
+echo Twitter Bootstrap from Github as markdown
+./bin/changelog.js https://github.com/twitter/bootstrap --markdown > ./examples/twitter-bootstrap.markdown
 
 echo NPM as markdown
 ./bin/changelog.js npm --markdown > ./examples/npm.markdown
+
 echo NPM as JSON
 ./bin/changelog.js npm --json > ./examples/npm.json
-echo NPM as Text
-./bin/changelog.js npm > ./examples/npm.txt
 
 echo Complete

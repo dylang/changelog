@@ -1,10 +1,12 @@
 2.4.6 / 2011-08-22
 ==================
 
-  * Fixed multiple param callback regression. Closes [#824](https://github.com/visionmedia/express/issues/824) [reported by TroyGoode]
+  * Fixed multiple param callback regression. Closes
+    [#824](https://github.com/visionmedia/express/issues/824) [reported by TroyGoode]
   * Merge branch 'master' of github.com:visionmedia/express
   * fixed some tests
-  * Merge pull request [#821](https://github.com/visionmedia/express/issues/821) from pikeas/patch-1
+  * Merge pull request [#821](https://github.com/visionmedia/express/issues/821) from
+    pikeas/patch-1
     Fixing typo: interacte -> interact
   * Fixing typo: interacte -> interact
   * local -> localhost
@@ -28,12 +30,14 @@
   * fixed `res.sendfile()` 404 support
   * build `res.download()` on top of `res.sendfile()`
     like it should have always been
-  * make `res.sendfile()` more like `res.download()`. Closes [#774](https://github.com/visionmedia/express/issues/774)
+  * make `res.sendfile()` more like `res.download()`. Closes
+    [#774](https://github.com/visionmedia/express/issues/774)
   * refactored `res.sendfile()`
   * OCD
   * Refactored Route to use a single array of callbacks
   * fixed route error handlers when errors are thrown
-  * Added support for routes to handle errors. Closes [#809](https://github.com/visionmedia/express/issues/809)
+  * Added support for routes to handle errors. Closes
+    [#809](https://github.com/visionmedia/express/issues/809)
     currently only the route end-point callbacks
     support this, however this will change in the near future
     to support route middleware etc
@@ -44,12 +48,15 @@
   * Changed: removed .call(self) for route callbacks
     not sure why we had this, ive never even used it
     and the tests dont cover it, and its slower
-  * Added `app.routes.all()`. Closes [#803](https://github.com/visionmedia/express/issues/803)
+  * Added `app.routes.all()`. Closes
+    [#803](https://github.com/visionmedia/express/issues/803)
     not a huge fan of this API-wise, but at least it is something for now
-  * Fixed `res.redirect()` on windows due to `join()` usage. Closes [#808](https://github.com/visionmedia/express/issues/808)
+  * Fixed `res.redirect()` on windows due to `join()` usage. Closes
+    [#808](https://github.com/visionmedia/express/issues/808)
   * russian docs
   * link to russian docs booyah!
-  * Added support for multiple callbacks for `app.param()`. Closes [#801](https://github.com/visionmedia/express/issues/801)
+  * Added support for multiple callbacks for `app.param()`. Closes
+    [#801](https://github.com/visionmedia/express/issues/801)
     you can also make several calls to `app.param()` for the same
     param name, which is equivalent to passing multiple in
     a single call
@@ -90,7 +97,8 @@
   * renamed a test
   * Merge branch 'master' of github.com:visionmedia/express
   * Fix the behavior for setting up routes with * in them.
-  * Merge pull request [#777](https://github.com/visionmedia/express/issues/777) from purohit/master
+  * Merge pull request [#777](https://github.com/visionmedia/express/issues/777) from
+    purohit/master
     Simple misspelling fix.
   * Fixing the misspelling of "manor" with "manner" in the 4 places it occurs.
   * added express-resource to readme
@@ -126,6 +134,8 @@
   * precedence test
   * view system utilizing `app.locals`
   * Changed `app.locals` to match `res.locals`
-  * Removed `app.dynamicLocals()`. Closes [#756](https://github.com/visionmedia/express/issues/756)
+  * Removed `app.dynamicLocals()`. Closes
+    [#756](https://github.com/visionmedia/express/issues/756)
   * utilize connects new `query()` middleware
-  * Replaced `res.local[s]()` with `res.locals` function. Closes [#757](https://github.com/visionmedia/express/issues/757)
+  * Replaced `res.local[s]()` with `res.locals` function. Closes
+    [#757](https://github.com/visionmedia/express/issues/757)

@@ -25,7 +25,8 @@
 2011-08-20
 ==========
 
-  * Fix [#1563](https://github.com/joyent/node/issues/1563). overflow in ChildProcess custom_fd.
+  * Fix [#1563](https://github.com/joyent/node/issues/1563). overflow in ChildProcess
+    custom_fd.
 
 2011-08-19
 ==========
@@ -41,8 +42,10 @@
 ==========
 
   * bench: make number of response body chunks configurable in http_simple
-  * Fix [#1546](https://github.com/joyent/node/issues/1546) some more. Remove expensive debug call.
-  * Close [#1544](https://github.com/joyent/node/issues/1544) Document slashesDenoteHost flag in url.parse
+  * Fix [#1546](https://github.com/joyent/node/issues/1546) some more. Remove expensive debug
+    call.
+  * Close [#1544](https://github.com/joyent/node/issues/1544) Document slashesDenoteHost flag
+    in url.parse
   * Merge remote branch 'origin/v0.4'
     Conflicts:
     doc/api/tls.markdown
@@ -140,9 +143,11 @@
   * typed arrays: integrate plask's typed array implementation
   * crypto: PBKDF2 function from OpenSSL
   * uv: upgrade to 7f82995
-  * Incorporate endianness into buffer.read* function names instead of passing in a boolean flag
+  * Incorporate endianness into buffer.read* function names instead of passing in a boolean
+    flag
   * test: enable simple/test-http-dns-error for `make test-uv`
-  * test: add test for [#1202](https://github.com/joyent/node/issues/1202), uncatchable exception on bad host name
+  * test: add test for [#1202](https://github.com/joyent/node/issues/1202), uncatchable
+    exception on bad host name
   * net: defer DNS lookup error events to next tick
     net.createConnection() creates a net.Socket object
     and immediately calls net.Socket.connect() on it.
@@ -150,7 +155,8 @@
     defer the error event to the next tick.
     Fixes [#1202](https://github.com/joyent/node/issues/1202).
   * build: remove 1024 char read limit from cmake file
-  * Small changes for fs.watchFile. Fixed broken markdown. Changed variable `f` to a proper filename.
+  * Small changes for fs.watchFile. Fixed broken markdown. Changed variable `f` to a proper
+    filename.
     Fixes [#1507](https://github.com/joyent/node/issues/1507).
   * Now working on v0.5.5
   * Bump version to v0.5.4
@@ -164,7 +170,8 @@
   * Add some debug output to test-child-process-double-pipe
   * net_uv: resume on closed net.Socket shouldn't crash
   * build: .gitignore build/ directory
-  * Fix [#1497](https://github.com/joyent/node/issues/1497) querystring: Replace 'in' test with 'hasOwnProperty'
+  * Fix [#1497](https://github.com/joyent/node/issues/1497) querystring: Replace 'in' test
+    with 'hasOwnProperty'
   * http: destroy socket on error
     Needs further investigation, the test passed without `--use-uv`.
     Fixes failing test:

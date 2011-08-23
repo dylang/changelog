@@ -1,6 +1,7 @@
 Upcoming / 2011-08-23
 =====================
 
+  * Support using 'node npm.js blah'
   * Close [#1299](https://github.com/isaacs/npm/issues/1299) Don't catch silently
   * Don't make the first arg always an array.
   * Ensure that npm.commands functions always called with an args array
@@ -16,7 +17,8 @@ Upcoming / 2011-08-23
   * v1.0.26
   * Preserve other members of command functions
   * Friendlier 'npm.install(foo)' for repl poking.
-  * Fix [#1272](https://github.com/isaacs/npm/issues/1272) Better first-class citizenship for git urls
+  * Fix [#1272](https://github.com/isaacs/npm/issues/1272) Better first-class citizenship for
+    git urls
   * Re [#1269](https://github.com/isaacs/npm/issues/1269) Install into DESTDIR if set
 
 1.0.25 / 2011-08-15
@@ -69,7 +71,8 @@ Upcoming / 2011-08-23
   * Setting the host there is the wrong thing to do
   * Set host header explicitly
   * Clean up and refactor the oversized npm.load function
-  * Close [#1214](https://github.com/isaacs/npm/issues/1214) Don't create an invalid engine range
+  * Close [#1214](https://github.com/isaacs/npm/issues/1214) Don't create an invalid engine
+    range
   * newloctimeout should not be a global.
   * Revert "Check hostkey fingerprints when registry is https"
     This reverts commit ca52fe6045d6acf37597c66d30b5c2d490b07f79.
@@ -87,7 +90,8 @@ Upcoming / 2011-08-23
   * No need to clean cache as often, makes search slow
   * Clearer messaging of cleanup prefix
   * Prefer https:// to git:// for github urls
-  * Close [#1187](https://github.com/isaacs/npm/issues/1187) Use https:// for submodules instead of git://
+  * Close [#1187](https://github.com/isaacs/npm/issues/1187) Use https:// for submodules
+    instead of git://
   * Remove mkdir walk log, add cache.add install log
 
 1.0.22 / 2011-07-24
@@ -110,7 +114,8 @@ Upcoming / 2011-08-23
   * v1.0.19
   * Close [#1175](https://github.com/isaacs/npm/issues/1175) Add --production flag
   * Better checks for proper gid/uid in mkdir
-  * Add a bunch of logging and commentary for [#1153](https://github.com/isaacs/npm/issues/1153)
+  * Add a bunch of logging and commentary for
+    [#1153](https://github.com/isaacs/npm/issues/1153)
   * Update semver to 1.0.9
   * s/sys/util/g finally
   * remove async-map file
@@ -133,7 +138,8 @@ Upcoming / 2011-08-23
   * filter out the _etag, and use couch 1.1 'update_after'
   * It is time.  Allow https for node >= 0.4.9
   * Add Trent Mick
-  * Fix [#1163](https://github.com/isaacs/npm/issues/1163): clean-old.sh breakage on ancient /bin/sh
+  * Fix [#1163](https://github.com/isaacs/npm/issues/1163): clean-old.sh breakage on ancient
+    /bin/sh
 
 1.0.18 / 2011-07-19
 ===================
@@ -148,4 +154,3 @@ Upcoming / 2011-08-23
     1. Even if the data is stale, use it, and then fetch the update.
     2. Tell couch to do the same.
   * require.paths is gone
-  * ./configure needs submodules

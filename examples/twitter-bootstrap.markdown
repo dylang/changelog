@@ -1,6 +1,11 @@
 2011-08-23
 ==========
 
+  * Merge pull request [#71](https://github.com/twitter/bootstrap/issues/71) from
+    DHS/fix-select-labels
+    Fixed empty for fields on select labels in documentation
+  * Fixed empty for fields on select labels
+    Also added id fields to selects where needed
   * add delete button + give .btn cursor:pointer
   * comment out button method with // so less doesn't compile it into source
   * append checkbox to password input [#36](https://github.com/twitter/bootstrap/issues/36)
@@ -22,8 +27,8 @@
     Fixed syntax error in patterns.less
   * Merge pull request [#58](https://github.com/twitter/bootstrap/issues/58) from
     sankage/master
-    fixed [#10](https://github.com/twitter/bootstrap/issues/10): color-stop() function
-    removed, @colorStop fixed for moz to be unitless
+    fixed [#10](https://github.com/twitter/bootstrap/issues/10): color-stop() function removed,
+    @colorStop fixed for moz to be unitless
   * changed @colorStop to be unitless
   * fixed color-stop for opera, ie10, w3c, new webkit
   * Fixed a syntax error preventing less compilation with dotless
@@ -100,7 +105,7 @@
   * try only -ms-filter
   * blah
   * just disable filter
-  * add [#](https://github.com/twitter/bootstrap/issues/) to color
+  * add # to color
   * ie8 dropdown tweaks
   * ie Xp
   * more debugging of ie nav display issues
@@ -123,11 +128,7 @@
 
   * merging in misc fixes to docs and css from other branch
   * updated compiled css
-  * updated docs to fix inconsistent display of code elements, update scaffolding to fix
-    padding issue on fluid containers, add placeholder hero unit in patterns for future use,
-    continue to refactor some rgba to hex values
+  * updated docs to fix inconsistent display of code elements, update scaffolding to fix padding
+    issue on fluid containers, add placeholder hero unit in patterns for future use, continue to
+    refactor some rgba to hex values
   * Fix broken quotes and bizarre update of HTML5 to 6.
-  * Corrected semantic definitions of strong, em and b in Typography section.
-  * Merge pull request [#21](https://github.com/twitter/bootstrap/issues/21) from
-    dliuzzi/patch-1
-    Fixed a couple of missing parentheses.

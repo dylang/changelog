@@ -1,6 +1,23 @@
-Upcoming / 2011-08-23
-=====================
+1.0.27 / 2011-08-24
+===================
 
+  * v1.0.27
+  * isRetry needs to be passed to cacheAddPublish
+  * Fixes [#1285](https://github.com/isaacs/npm/issues/1285) Run prepublish *before* adding to
+    cache
+  * Fix [#1302](https://github.com/isaacs/npm/issues/1302) Clear out the json cache on unbuild
+  * Spit out all usages when --long is set
+  * Don't deref undefined command names
+  * Allow calling camelCase or css-case for commands
+  * Add Conny
+  * Avoid git going "error: RPC failed; result=22, HTTP code = 417"
+  * If a non-writable stream is supplied to output, then die horribly
+  * Use process.stdout/err if the stdoutFD or stderrFD is supplied
+  * Don't swallow exceptions that are not properly loggable
+    Since a throw due to an ini resolve error or as a result of a
+    callback happening more than once usually indicates some kind of
+    early termination error, it's best to just throw horribly
+    in those cases.
   * Support using 'node npm.js blah'
   * Close [#1299](https://github.com/isaacs/npm/issues/1299) Don't catch silently
   * Don't make the first arg always an array.
@@ -71,8 +88,7 @@ Upcoming / 2011-08-23
   * Setting the host there is the wrong thing to do
   * Set host header explicitly
   * Clean up and refactor the oversized npm.load function
-  * Close [#1214](https://github.com/isaacs/npm/issues/1214) Don't create an invalid engine
-    range
+  * Close [#1214](https://github.com/isaacs/npm/issues/1214) Don't create an invalid engine range
   * newloctimeout should not be a global.
   * Revert "Check hostkey fingerprints when registry is https"
     This reverts commit ca52fe6045d6acf37597c66d30b5c2d490b07f79.
@@ -90,8 +106,8 @@ Upcoming / 2011-08-23
   * No need to clean cache as often, makes search slow
   * Clearer messaging of cleanup prefix
   * Prefer https:// to git:// for github urls
-  * Close [#1187](https://github.com/isaacs/npm/issues/1187) Use https:// for submodules
-    instead of git://
+  * Close [#1187](https://github.com/isaacs/npm/issues/1187) Use https:// for submodules instead
+    of git://
   * Remove mkdir walk log, add cache.add install log
 
 1.0.22 / 2011-07-24
@@ -114,8 +130,7 @@ Upcoming / 2011-08-23
   * v1.0.19
   * Close [#1175](https://github.com/isaacs/npm/issues/1175) Add --production flag
   * Better checks for proper gid/uid in mkdir
-  * Add a bunch of logging and commentary for
-    [#1153](https://github.com/isaacs/npm/issues/1153)
+  * Add a bunch of logging and commentary for [#1153](https://github.com/isaacs/npm/issues/1153)
   * Update semver to 1.0.9
   * s/sys/util/g finally
   * remove async-map file
@@ -132,25 +147,3 @@ Upcoming / 2011-08-23
     packages < 1.0.0 semver allows APIs to change freely, so those
     should be packaged with the exact version that was installed,
     as implemented by this patch.
-  * --save to devDependencies when --dev is set
-  * Clear caches on DELETE better.
-  * Don't scrub the cache on publish. Unnecessary
-  * filter out the _etag, and use couch 1.1 'update_after'
-  * It is time.  Allow https for node >= 0.4.9
-  * Add Trent Mick
-  * Fix [#1163](https://github.com/isaacs/npm/issues/1163): clean-old.sh breakage on ancient
-    /bin/sh
-
-1.0.18 / 2011-07-19
-===================
-
-  * v1.0.18
-  * Print a warning when the search index builds for the first time
-  * Make search ridiculously fast.
-    Mad props to @JasonSmith, @janl, @mikeal, and @maxogden for chipping in
-    with various CouchDB skillz and insights.
-    This is really awesome.
-  * Make searches a little faster
-    1. Even if the data is stale, use it, and then fetch the update.
-    2. Tell couch to do the same.
-  * require.paths is gone

@@ -1,6 +1,38 @@
+2011-08-24
+==========
+
+  * docs: Improved http2 agent docs
+    Fixes [#1517](https://github.com/joyent/node/issues/1517).
+  * vcbuild.bat - for building from cmd-line using msbuild
+  * tools/test.py to support marking files a libuv-broken
+    Use
+    export NODE_USE_UV=1
+    python tools/test.py --libuv simple pummel
+    To run the equivalent of "make test-uv".
+  * Mark tests which are broken in libuv
+
 2011-08-23
 ==========
 
+  * Support MSVS build directories in tools/test.py
+  * Use Object.getPrototypeOf() on the object in the REPL tab-completion.
+    Some people use __proto__ to augment an Object's prototype after it's been created.
+    This patch helps make the "new" prototype properties visible if necessary.
+    This is also more consistent with the while logic below.
+  * Upgrade V8 to 3.5.7
+  * waf: Don't build out/Debug/node_g - just out/Debug/node
+    This is to match how GYP does it.
+  * net_legacy: Fix throw typo
+    Thanks Tobi
+  * WAF builds in out/ instead of build/
+  * Have WAF variants match GYP configuration names
+  * gyp: Further fixes to target_defaults for mac
+  * gyp: Don't pass C++ flags to C compiler, and don't pass -ansi in OpenSSL builds.
+  * common.gypi: don't nest "target_defaults" within "target_defaults"
+    The "conditions" block is already within a "target_defaults", so its
+    children amend target default settings already.
+  * dns: Force the DNS module to invoke callbacks asynchronously.
+    Fixes [#1164](https://github.com/joyent/node/issues/1164).
   * net_uv: throw when people construct net.Socket(fd)
     Easier to catch compatibility errors.
 
@@ -25,8 +57,7 @@
 2011-08-20
 ==========
 
-  * Fix [#1563](https://github.com/joyent/node/issues/1563). overflow in ChildProcess
-    custom_fd.
+  * Fix [#1563](https://github.com/joyent/node/issues/1563). overflow in ChildProcess custom_fd.
 
 2011-08-19
 ==========
@@ -44,8 +75,8 @@
   * bench: make number of response body chunks configurable in http_simple
   * Fix [#1546](https://github.com/joyent/node/issues/1546) some more. Remove expensive debug
     call.
-  * Close [#1544](https://github.com/joyent/node/issues/1544) Document slashesDenoteHost flag
-    in url.parse
+  * Close [#1544](https://github.com/joyent/node/issues/1544) Document slashesDenoteHost flag in
+    url.parse
   * Merge remote branch 'origin/v0.4'
     Conflicts:
     doc/api/tls.markdown
@@ -143,8 +174,7 @@
   * typed arrays: integrate plask's typed array implementation
   * crypto: PBKDF2 function from OpenSSL
   * uv: upgrade to 7f82995
-  * Incorporate endianness into buffer.read* function names instead of passing in a boolean
-    flag
+  * Incorporate endianness into buffer.read* function names instead of passing in a boolean flag
   * test: enable simple/test-http-dns-error for `make test-uv`
   * test: add test for [#1202](https://github.com/joyent/node/issues/1202), uncatchable
     exception on bad host name
@@ -170,8 +200,8 @@
   * Add some debug output to test-child-process-double-pipe
   * net_uv: resume on closed net.Socket shouldn't crash
   * build: .gitignore build/ directory
-  * Fix [#1497](https://github.com/joyent/node/issues/1497) querystring: Replace 'in' test
-    with 'hasOwnProperty'
+  * Fix [#1497](https://github.com/joyent/node/issues/1497) querystring: Replace 'in' test with
+    'hasOwnProperty'
   * http: destroy socket on error
     Needs further investigation, the test passed without `--use-uv`.
     Fixes failing test:
@@ -203,30 +233,3 @@
   * tcp: propagate libuv tcp accept() errors to net_uv.js
   * Upgrade libuv to db190c7
   * net_uv: Handle failed shutdown req
-  * Add test-pipe-file-to-http to test-uv
-  * net_uv: fix test/simple/test-pipe-file-to-http.js
-  * test: Allow common.ddCommand to be run in presence of existing file
-  * x-platform func for spawning pwd in tests
-    Fixes test-child-process-buffering
-  * Explicitly disable cr/lf conversion for test fixtures
-    Otherwise git's autocrlf feature makes test fail on windows.
-  * Revert "Make test-sync-fileread pass even when git cr/lf conversion is enabled"
-    We'll solve this problem with a .gitattributes file.
-    This reverts commit 27ef0b0903e348cc10d0c5d2ee2ef25aa1676440.
-  * Add NPN and SNI documentation.
-    Fixes [#1420](https://github.com/joyent/node/issues/1420).
-    Fixes [#1426](https://github.com/joyent/node/issues/1426).
-
-2011-08-09
-==========
-
-  * Make test-sync-fileread pass even when git cr/lf conversion is enabled
-  * Open files in binary mode, on msvc too
-  * Remove unnecessary line
-  * Fix test-net-server-on-fd-0 for windows by removing assert
-    Rename to regression test for GH-746 as the fd 0 behavior was not what the
-    bug report was about.
-  * Add fixed tests to test-uv
-  * Fix dd command tests for Windows
-  * Fix test/simple/test-repl
-  * Improve win compat of test-repl

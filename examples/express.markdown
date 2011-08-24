@@ -48,8 +48,7 @@
   * Changed: removed .call(self) for route callbacks
     not sure why we had this, ive never even used it
     and the tests dont cover it, and its slower
-  * Added `app.routes.all()`. Closes
-    [#803](https://github.com/visionmedia/express/issues/803)
+  * Added `app.routes.all()`. Closes [#803](https://github.com/visionmedia/express/issues/803)
     not a huge fan of this API-wise, but at least it is something for now
   * Fixed `res.redirect()` on windows due to `join()` usage. Closes
     [#808](https://github.com/visionmedia/express/issues/808)

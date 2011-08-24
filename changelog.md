@@ -1,6 +1,13 @@
-Upcoming / 2011-08-23
+Upcoming / 2011-08-24
 =====================
 
+  * fixed regex for replacing github ticket numbers with url to the ticket so it wouldn't
+    blindly match #.
+
+0.1.0 / 2011-08-23
+==================
+
+  * update changelog
   * update version
   * show the author's name if the repo url is not in the module's package.json.
   * fix exception that happens when a module isn't found
@@ -27,8 +34,8 @@ Upcoming / 2011-08-23
 
   * upped version
   * added changelog for changelog
-  * run changelog in the root of a node project with a package.json and it will use it to
-    create the changelog.
+  * run changelog in the root of a node project with a package.json and it will use it to create
+    the changelog.
 
 0.0.6 / 2011-08-06
 ==================

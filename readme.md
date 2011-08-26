@@ -13,12 +13,14 @@ Modules do not need to be installed locally to get a changelog but they must def
 
 ![Example using Express](https://github.com/dylang/changelog/raw/master/examples/express.png)
 
-    $ changelog {npm module name} [options]
+    $ changelog {npm module name} [release] [options]
 
 `npm module`: The module name, such as `express`.
 
 Any Public Github.com Repository
 --------------------------------
+
+Changelog also works on any public Github repo.
 
 ![Example using Bootstrap from Github](https://github.com/dylang/changelog/raw/master/examples/twitter-bootstrap.png)
 
@@ -26,14 +28,24 @@ Any Public Github.com Repository
 
 `Github.com repo url`: Urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `github.com/dylang/changelog`.
 
-Options
--------
+Help
+----
 
- * `-c`, `--color`            Output as Color (default)
- * `-m`, `--markdown`         Output as Github-flavored Markdown (default when piping to a file)
- * `-j`, `--json`             Output as JSON
- * `-d`, `--debug`            Enable debugging
- * `-h`, `--help`             Display help and usage details
+    Usage:
+      changelog <npm module name> [release] [options]
+      changelog <github repo url> [release] [options]
+
+    Release:
+       latest   Show only the latest release.        ie: changelog express latest
+       number   Show that many recent releases.      ie: changelog express 3
+       n.n.n    Show changes for a specific release. ie: changelog express 2.4.4
+
+    Options:
+      -c, --color            Output as Color (terminal default)
+      -m, --markdown         Output as Github-flavored Markdown (file default)
+      -j, --json             Output as JSON
+      -d, --debug            Enable debugging
+      -h, --help             Display help and usage details
 
 Install
 =======
@@ -42,7 +54,7 @@ Using [npm](http://npmjs.org) just do:
 
     $ npm-g install changelog
 
-The `-g` installs changelog globally so you can use `changelog` anywhere.
+Using `npm-g` installs changelog globally so you can use `changelog` anywhere.  You can also just use `npm install changelog` if you are using it as a module for another project.
 
 Update
 ======
@@ -50,6 +62,8 @@ Update
 To make sure you have the latest version:
 
     $ npm-g update
+
+This will update all of your global modules.
 
 More Examples
 =============
@@ -63,7 +77,7 @@ Changelog can be easily integrated into other tools.
 
     var Changelog = require('changelog');
 
-    Changelog.npm('request', callback);
+    Changelog.npm('express', callback);
     Changelog.github('joyent/node', callback);
 
     function callback(err, data) {
@@ -93,18 +107,19 @@ How it works
 
  * Changelog uses the [Github V3 API](http://developer.github.com/) and [npmjs.org API](http://search.npmjs.org/).
 
-Future
-======
+Upcoming Features
+=================
 
- * Support paging Github's API to aquire more than 100 commits.
- * Ability to set the start and end version.
- * Use Git tags to detect versions (waiting for Github to fix [Issue #17](https://github.com/github/developer.github.com/issues/17)).
  * Add header and/or footer to the output with module name, contributors, etc.
+ * Support private Github repos and Github Fi.
+ * Better color choices for those with default terminal colors.
+ * Support versions/releases for Github repositories (waiting for Github to address [Github API Issue #17](https://github.com/github/developer.github.com/issues/17)).
+ * Support paging Github's API to aquire more than 100 commit messages.
 
 Want to help?
 =============
 
-I love merging in pull requests.
+Here are some ideas I have no idea how to do.
 
  * Support for `brew` and `gem`?
  * Integrate into `npm update`?
@@ -114,4 +129,4 @@ About
 =====
 
 [Dylan Greene](http://github.com/dylang) built this because he was always curious what was changed when doing `npm update`.
-This module is inspired by but not related to [TheChangelog](http://thechangelog.com/).
+This module's name is inspired by listening to [TheChangelog Podcast](http://thechangelog.com/) on the way to [work](http://opower.com).

@@ -1,8 +1,14 @@
-Upcoming / 2011-08-24
-=====================
+0.1.2 / 2011-08-26
+==================
 
-  * fixed regex for replacing github ticket numbers with url to the ticket so it wouldn't
-    blindly match #.
+  * version bump to 0.1.2
+  * added support for showing specific releases via `latest`, `n`, and `n.n.n` based on Tjholowaychuk's request.  Closes [#2](https://github.com/dylang/changelog/issues/2)
+
+0.1.1 / 2011-08-24
+==================
+
+  * updated examples and version
+  * fixed regex for replacing github ticket numbers with url to the ticket so it wouldn't blindly match #.
 
 0.1.0 / 2011-08-23
 ==================
@@ -34,8 +40,7 @@ Upcoming / 2011-08-24
 
   * upped version
   * added changelog for changelog
-  * run changelog in the root of a node project with a package.json and it will use it to create
-    the changelog.
+  * run changelog in the root of a node project with a package.json and it will use it to create the changelog.
 
 0.0.6 / 2011-08-06
 ==================

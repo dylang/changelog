@@ -1,149 +1,115 @@
-1.0.27 / 2011-08-24
+
+0.2.19 / 2011-11-20
 ===================
 
-  * v1.0.27
-  * isRetry needs to be passed to cacheAddPublish
-  * Fixes [#1285](https://github.com/isaacs/npm/issues/1285) Run prepublish *before* adding to
-    cache
-  * Fix [#1302](https://github.com/isaacs/npm/issues/1302) Clear out the json cache on unbuild
-  * Spit out all usages when --long is set
-  * Don't deref undefined command names
-  * Allow calling camelCase or css-case for commands
-  * Add Conny
-  * Avoid git going "error: RPC failed; result=22, HTTP code = 417"
-  * If a non-writable stream is supplied to output, then die horribly
-  * Use process.stdout/err if the stdoutFD or stderrFD is supplied
-  * Don't swallow exceptions that are not properly loggable
-    Since a throw due to an ini resolve error or as a result of a
-    callback happening more than once usually indicates some kind of
-    early termination error, it's best to just throw horribly
-    in those cases.
-  * Support using 'node npm.js blah'
-  * Close [#1299](https://github.com/isaacs/npm/issues/1299) Don't catch silently
-  * Don't make the first arg always an array.
-  * Ensure that npm.commands functions always called with an args array
-  * Call the cb to prefix, root, and bin with the printed value
-  * Add user info to 'scripts' helpdoc
-  * Fix [#1296](https://github.com/isaacs/npm/issues/1296) Better messaging on bad url configs
-  * Add git url info
-  * Close [#1284](https://github.com/isaacs/npm/issues/1284) Make EPIPE less noisy
-
-1.0.26 / 2011-08-17
-===================
-
-  * v1.0.26
-  * Preserve other members of command functions
-  * Friendlier 'npm.install(foo)' for repl poking.
-  * Fix [#1272](https://github.com/isaacs/npm/issues/1272) Better first-class citizenship for
-    git urls
-  * Re [#1269](https://github.com/isaacs/npm/issues/1269) Install into DESTDIR if set
-
-1.0.25 / 2011-08-15
-===================
-
-  * Support removing non-existent users from package manatainer lists
-  * Provide default cb if none supplied
-    Make it much nicer to poke around on the repl.  The default
-    callback function just dumps the data or error to stdout
-    or stderr.
-  * v1.0.25
-  * Use the non-delta uri for inital search index build
-  * Don't set agent:false if http2 is in use
-
-1.0.24 / 2011-08-010
-====================
-
-  * v1.0.24
-  * Force exit. Temporary workaround for Linux rimraf timeout issue.
-    TODO: Fix properly.
-
-1.0.23 / 2011-08-07
-===================
-
-  * update which (trivial)
-  * debuggery
-  * v1.0.23
-  * Remove base64 module. Just use the Buffer directly
-  * .js extensions on require() calls in npm.js
-  * Abstract out 'which'
-  * make doc
-  * Remove minimatch.js, using dep now
-  * Handle git+ urls in the name@url case
-  * Close [#1225](https://github.com/isaacs/npm/issues/1225) Add git url support. Experimental
-  * unbreak ini stuff. no longer using '-' key
-  * Use standalone ini parser
-  * Add proto-list as dep and submodule
+  * npm cmd files, for easier node msi building
+  * v1.0.106
+  * Correct pack/unpack queue for win32
+  * update semver
+  * Fix [#1694](https://github.com/isaacs/npm/issues/1694) Test for directory-ness rather than -e
+    shell scripting is hard.
+  * v1.0.105
+  * Pass a real mode to mkdir to avoid null-related exceptions.
+  * Workaround for node 0.6.0 on windows with large dir lists
+  * update graceful-fs
+  * Better error message on engine mismatch
+  * init: Make the engines.node default a bit looser
+  * Experimental: no node version checking on --force
+  * Fix --node-version=null regression
+  * v1.0.104
+  * Report the requested user when removal fails.
+  * Fix incorrect path returned by npm-bin
+    npm-bin returned a path using the prefix instead of the root, i.e.
+    "./.bin" instead of "./node_modules/.bin".
+  * Use npm_config_tar in install script
+  * explain config locations more clearly
+  * don't try to toString undefined
+  * Publish readme properly, and don't show in view by default
+  * Update request
+  * Print tar --version even if explicitly set
+  * Using request, don't need this now
+  * publish the readme contents in the root package doc
+  * Close [#1622](https://github.com/isaacs/npm/issues/1622) Fix incorrect check for -o tar arg
+  * Close [#1605](https://github.com/isaacs/npm/issues/1605) Don't process bad data from search result
+  * Fix [#1602](https://github.com/isaacs/npm/issues/1602) Fix [#1603](https://github.com/isaacs/npm/issues/1603) APIs must be either always sync, or always async
+  * v1.0.103
+  * update request
+  * Close [#1598](https://github.com/isaacs/npm/issues/1598) Don't set global path until after figuring out node location
+  * v1.0.102
+  * Update install instructions
+  * Merge branch 'windows-paths'
+  * fix link regression, regarding new path getters
+  * Document changed windows paths.
+  * Close [#1581](https://github.com/isaacs/npm/issues/1581) windows cmd: Look in local folder for interpreter
+  * Close [#1582](https://github.com/isaacs/npm/issues/1582) Make prefixes better on windows
+    1. Make prefixes and paths more windows-like on windows.
+    2. Abstract out all path-munging behavior to lib/npm.js where it belongs.
+  * Handle seds that don't support -e
+  * v1.0.101
+  * mkdir: A few more places where the noChmod wasn't set
+  * Close [#1509](https://github.com/isaacs/npm/issues/1509) Don't chmod the npm.prefix folder, just ensure it's there.
+  * v1.0.100
+  * Don't treat /-/xyz registry urls as packages for 404 errors
+  * Close [#1571](https://github.com/isaacs/npm/issues/1571) Also check status code on 'error' results
+  * Fix [#1564](https://github.com/isaacs/npm/issues/1564) Pre-load install.js and build.js in update command
+  * Fail faster in cases like [#1566](https://github.com/isaacs/npm/issues/1566)
+  * Add Stephen to AUTHORS
+  * Add auto-increment support to version command
+    Pass "major", "minor", or "patch" to increment the existing version
+    by that amount.
+  * v1.0.99
+  * Fix [#1555](https://github.com/isaacs/npm/issues/1555) Queue tar operations for windows
+    *Really* need to get a js tar implementation in there asap.
+  * v1.0.98
+  * Avoid accidentally opening npm.js with WSH
+  * Show reasonable error message when invoked with WSH
+  * v1.0.97
+  * Default user and group to 0 on win32, and always make String the last type
+  * Fix [#1552](https://github.com/isaacs/npm/issues/1552) Make it impossible to chown with a non-int uid/gid
+  * typo
+  * Correct 'message' doc
+  * v1.0.96
+  * Don't write log file for simple usage stuff
+  * Close [#1549](https://github.com/isaacs/npm/issues/1549) Missed a mode reference
+  * Close [#1502](https://github.com/isaacs/npm/issues/1502) Better usage message for 'version'
+  * v1.0.95
+  * Use the logprefix if colors enabled on windows
+  * Use my request fork instead of mikeal's
+  * add mmaleki
+  * Add --message option and -m shorthand
+    Specify commit message when creating a tag
+    Use --message/-m option when commiting changes in `npm version`.
+    Mention message option in `npm version` docs
+    Mention message option in doc/cli/config.md
+  * Better command line handling for windows
+  * Get window size properly
+  * Adjust npm's own 'bugs' field to conform.
+  * Standardize the 'bugs' field in package.json.
+  * Close [#1518](https://github.com/isaacs/npm/issues/1518) don't allow npm view .
+  * Add verbose log for chown in lib/cache.js
+  * Set umask before calling mkdir
+  * Apply umask correctly, completely, and remove all literal mode values
+  * Close [#1509](https://github.com/isaacs/npm/issues/1509) Add 'umask' config option
+  * Don't always assume that save() is saving 3 files. Might be only 1
+  * close [#1542](https://github.com/isaacs/npm/issues/1542) don't chown if uid/gid aren't numbers
+  * Explicitly inject builtinconfig into any npm install
+  * Some seds are simpletons
+  * typo in search.js
+  * s/stdio/tty/g
+  * Close [#1493](https://github.com/isaacs/npm/issues/1493) Return values from npm.commands.view saner
+  * Close [#1201](https://github.com/isaacs/npm/issues/1201) Specify ./node_modules in current package
   * update rimraf
-  * Allow private per-package confs
-    Just prefix them with a _.  Transparent to the receiving module.
-  * Use rimraf instead of local thing
-  * fixup rimraf
-  * Add rimraf submodule
-  * minor faq fixes
-  * Put .js on filenames
-  * Question about Capitalization
-  * Close [#1235](https://github.com/isaacs/npm/issues/1235) Swap out unicode tree chars
-  * Better error handling for adduser
-  * undefined log message error
-  * Setting the host there is the wrong thing to do
-  * Set host header explicitly
-  * Clean up and refactor the oversized npm.load function
-  * Close [#1214](https://github.com/isaacs/npm/issues/1214) Don't create an invalid engine range
-  * newloctimeout should not be a global.
-  * Revert "Check hostkey fingerprints when registry is https"
-    This reverts commit ca52fe6045d6acf37597c66d30b5c2d490b07f79.
-  * Check hostkey fingerprints when registry is https
-  * Add a --yes config flag (with -y and -n shorthands)
-  * Fix invalid array length when no search hits found
-  * Confusion about args vs conf
-  * Report 404 errors properly with non-vhosted registries
-  * Closes [#1199](https://github.com/isaacs/npm/issues/1199) Support 'npm unpublish .'
-  * Close [#1068](https://github.com/isaacs/npm/issues/1068) Add header to search output
-  * Re [#1196](https://github.com/isaacs/npm/issues/1196) Warn on non-array 'files' in json
-  * slide@1.1.3
-  * Support npm_debug env in install script
-  * Default prefix to PREFIX environ if set
-  * No need to clean cache as often, makes search slow
-  * Clearer messaging of cleanup prefix
-  * Prefer https:// to git:// for github urls
-  * Close [#1187](https://github.com/isaacs/npm/issues/1187) Use https:// for submodules instead
-    of git://
-  * Remove mkdir walk log, add cache.add install log
-
-1.0.22 / 2011-07-24
-===================
-
-  * v1.0.22
-  * Exit with the proper code on failure
-
-1.0.21 / 2011-07-24
-===================
-
-  * v1.0.21
-  * docs got messed up somehow
-  * v1.0.20
-  * doa bug, annoying.
-
-1.0.19 / 2011-07-23
-===================
-
-  * v1.0.19
-  * Close [#1175](https://github.com/isaacs/npm/issues/1175) Add --production flag
-  * Better checks for proper gid/uid in mkdir
-  * Add a bunch of logging and commentary for [#1153](https://github.com/isaacs/npm/issues/1153)
-  * Update semver to 1.0.9
-  * s/sys/util/g finally
-  * remove async-map file
-  * Use asyncMap from slide module
-  * Use chain function from slide module
-  * Add slide as dep
-  * Abstract out graceful-fs
-  * Add Felix Geisendörfer
-  * Add tildes for >=0.1.0, not 1.0.0
-  * Only use tilde range descriptor when package >=1.0
-    Problem: When using `install --save`, npm prefixed the installed
-    package version with the tilde range descriptor. This makes sense
-    for packages that follow semver and have reached 1.0.0. But for
-    packages < 1.0.0 semver allows APIs to change freely, so those
-    should be packaged with the exact version that was installed,
-    as implemented by this patch.
+  * Push -o, not [-o]
+  * Fix [#1521](https://github.com/isaacs/npm/issues/1521) Remove unnecessary shebangs
+  * Fix [#1525](https://github.com/isaacs/npm/issues/1525) Cast password to a string
+  * Be more careful about when the npm builtin config gets saved
+  * make clean removes npmrc
+  * Merge branch 'builtin-conf'
+  * Document builtin config file
+  * Output builtin config values with 'npm config ls'
+  * When installing npm, keep the builtin config
+  * Put builtinconfig file between defaults and global
+  * Write builtin config with ./configure script
+  * Ignore ./npmrc file
+  * alias show->view for @guille
+  * No need to shorten tar.name, since file list isn't there

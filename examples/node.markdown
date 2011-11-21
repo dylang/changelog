@@ -1,235 +1,237 @@
-2011-08-24
+2011-11-20
 ==========
 
-  * docs: Improved http2 agent docs
-    Fixes [#1517](https://github.com/joyent/node/issues/1517).
-  * vcbuild.bat - for building from cmd-line using msbuild
-  * tools/test.py to support marking files a libuv-broken
-    Use
-    export NODE_USE_UV=1
-    python tools/test.py --libuv simple pummel
-    To run the equivalent of "make test-uv".
-  * Mark tests which are broken in libuv
+  * test: `stdin` isn't closed after `resume()` and `pause()`
+    This works on `node v0.4.12`, but doesn't work on `node v0.6.2`
 
-2011-08-23
+2011-11-17
 ==========
 
-  * Support MSVS build directories in tools/test.py
-  * Use Object.getPrototypeOf() on the object in the REPL tab-completion.
-    Some people use __proto__ to augment an Object's prototype after it's been created.
-    This patch helps make the "new" prototype properties visible if necessary.
-    This is also more consistent with the while logic below.
-  * Upgrade V8 to 3.5.7
-  * waf: Don't build out/Debug/node_g - just out/Debug/node
-    This is to match how GYP does it.
-  * net_legacy: Fix throw typo
-    Thanks Tobi
-  * WAF builds in out/ instead of build/
-  * Have WAF variants match GYP configuration names
-  * gyp: Further fixes to target_defaults for mac
-  * gyp: Don't pass C++ flags to C compiler, and don't pass -ansi in OpenSSL builds.
-  * common.gypi: don't nest "target_defaults" within "target_defaults"
-    The "conditions" block is already within a "target_defaults", so its
-    children amend target default settings already.
-  * dns: Force the DNS module to invoke callbacks asynchronously.
-    Fixes [#1164](https://github.com/joyent/node/issues/1164).
-  * net_uv: throw when people construct net.Socket(fd)
-    Easier to catch compatibility errors.
+  * Add missing rm
+  * crypto: use the libuv rwlock API
+  * uv: upgrade to e4680cc
 
-2011-08-22
+2011-11-16
 ==========
 
-  * net_uv: Don't error on ECONNRESET
-    Fixes [#1571](https://github.com/joyent/node/issues/1571).
-  * Upgrade GYP to r1010
-  * gyp: -ldl on linux
-  * net_uv: handle read errors
-  * Upgrade libuv to joyent/libuv@ce20791
-  * Fixes [#1531](https://github.com/joyent/node/issues/1531)
-  * Add failing test for https2 compatibility
-    Issue [#1531](https://github.com/joyent/node/issues/1531)
-  * Update license info for openssl
-  * Upgrade to 0.9.8r.
-    Build in Win32.
-  * import openssl from chrome
-  * Doc improvements
+  * Force makefile generation in gyp
+  * build: fix gyp xcode project generator
+    Only attempt to generate FrameworkPhase output for code targets.
+  * build: remove v8-node.gyp
+  * crypto: make verify() return true or false, not 1 or 0
+    It's what the documentation says it should return.
+  * Merge remote branch 'origin/v0.6'
+  * Fixes [#2140](https://github.com/joyent/node/issues/2140). Fix illumos build.
+  * util: remove the line requiring events
+  * v8: add platform-solaris.cc to gyp build
+    Re-applies 77e4abbc3e66505af89c57cd7bff555890a33f3f, lost in a V8 upgrade.
+  * v8: compile with __C99FEATURES__=1 on sunos
+    Exposes INFINITY, isinf(), isfinite(), etc.
+    Re-applies d104e5b91cfa3ef3ef846d5a0ab07c0336263a92, lost in a V8 upgrade.
+  * test: add 'response body with no headers' http test
+    HTTP/0.9 - fails with a parse error
+    HTTP/1.0 - works
+    HTTP/1.1 - fails with an empty response body
+    See [#1711](https://github.com/joyent/node/issues/1711).
+  * test: add 'no response headers' http parser test
+  * docs: clarify addon docs
 
-2011-08-20
+2011-11-15
 ==========
 
-  * Fix [#1563](https://github.com/joyent/node/issues/1563). overflow in ChildProcess custom_fd.
+  * Windows: make Buffer and ObjectWrap available to compiled extensions
+    Closes GH-2036
+  * Fix strange vcbuild "label not found" error
+  * tls: make cipher list configurable
+    options.ciphers existed but didn't work, the cipher list was effectively
+    hard-coded to RC4-SHA:AES128-SHA:AES256-SHA.
+    Fixes [#2066](https://github.com/joyent/node/issues/2066).
+  * Working on v0.7.0
+  * Merge remote branch 'origin/v0.6'
+  * Upgrade libuv to 2007eb8
+  * buffer: fix minimum values for writeInt*() functions
 
-2011-08-19
+2011-11-14
 ==========
 
-  * docs: process.memoryUsage returns memory usage measured in bytes
+  * crypto: fix 'var may be used uninitialized' compiler warnings
+  * build: auto-run tools/gyp_node after ./configure
 
-2011-08-18
+2011-11-13
 ==========
 
-  * Upgrade V8 to 3.5.6
+  * Remove SCONS deprecate WAF
+    We keep around WAF for node-waf only.
+    We need great diligence by people over the next couple weeks to work out all
+    the kinks in the GYP build system. We realize that it is currently several
+    times slower than the WAF build. Please lend a hand.
+    Fixes [#1504](https://github.com/joyent/node/issues/1504)
+    Fixes [#1500](https://github.com/joyent/node/issues/1500)
+  * Upgrade V8 to 3.6.6.8
+  * Remove str.format to support python2.5.
+    Fixes [#2077](https://github.com/joyent/node/issues/2077)
+    Fixes [#2108](https://github.com/joyent/node/issues/2108)
+    Thanks to David Keegan for debugging and the patch.
+  * "Trailer" header should mention "Content-MD5" trailer name in this example.
+    Fixes [#2107](https://github.com/joyent/node/issues/2107)
 
-2011-08-17
+2011-11-12
 ==========
 
-  * bench: make number of response body chunks configurable in http_simple
-  * Fix [#1546](https://github.com/joyent/node/issues/1546) some more. Remove expensive debug
-    call.
-  * Close [#1544](https://github.com/joyent/node/issues/1544) Document slashesDenoteHost flag in
-    url.parse
-  * Merge remote branch 'origin/v0.4'
-    Conflicts:
-    doc/api/tls.markdown
-  * Fixes [#1546](https://github.com/joyent/node/issues/1546). Remove expensive debug call.
-  * bench: make http_simple send chunked encoding if requested
+  * test for REPL .save and .load and documentation updates
+  * punycode: Update to v0.1.1.
 
-2011-08-16
+2011-11-11
 ==========
 
-  * http: improve compatibility of legacy API
-    In http1, legacy http.Client shares one connection with multiple requests.
-    But in http2, it uses concurrent connections.
-    With --use-http1, test/simple/test-http-legacy.js passes.
-    However, it fails without --use-http1 (use http2).
-    This improves compatibility of legacy http.Client API between http1 and http2.
-    Fixes [#1530](https://github.com/joyent/node/issues/1530).
-  * test: refactored http test.
-    Many http tests had used legacy http.Client.
-    This refactored it to use modern API.
-    Fixes [#1528](https://github.com/joyent/node/issues/1528).
-  * vm: fix incorrect dispatch of vm.runInContext for argument "filename"
-    Adds test case and documentation for vm.runInContext and vm.createContext.
-    Fixes [#1140](https://github.com/joyent/node/issues/1140).
+  * .load, .save and local scope tab completion
+    Fixes [#2063](https://github.com/joyent/node/issues/2063).
+    REPLServer.prototype.resetContext:
+    Reset the line cache
+    REPLServer.prototype.memory (don't know if I like that name, called from finish)
+    pushes what cmd's have been executed against it into this.lines
+    pushes the "tab depth" for bufferedCommands, in this.lines.level
+    REPLServer.prototype.displayPrompt:
+    Uses "tab depth" from this.lines.level to adjust the prompt to visually
+    denote this depth e.g.
+    > asdf = function () {
+    … var inner = {
+    ….. one:1
+    REPLServer.prototype.complete:
+    Now notices if there is a bufferedCommand and attempts determine locally
+    scoped variables by removing any functions from this.lines and evaling these
+    lines in a nested REPL e.g.
+    > asdf = function () {
+    … var inner = { one: 1};
+    … inn\t
+    will complete to 'inner' and inner.o\t will complete to 'inner.one'
+    If the nested REPL still has a bufferedCommand it will falls back to the
+    default.
+    ArrayStream is a helper class for the nested REPL to get commands pushed to it.
+    new REPLServer('', new ArrayStream());
+    Finally added two new REPL commands .save and .load, each takes 1 parameter,
+    a file and attempts to save or load the file to or from the REPL
+    respectively.
+  * Tab Compete test for node REPL
+    Currently the REPL only tab completes for globally scoped variables
+  * timers: remember extra setTimeout() arguments when timeout==0
+    Fixes [#2079](https://github.com/joyent/node/issues/2079).
 
-2011-08-15
-==========
-
-  * Complete GYP support for Python 2.5.2
-  * GYP Support python 2.5.2
-  * gyp: Support Linux
-  * Remove http.cat. fixes [#1447](https://github.com/joyent/node/issues/1447)
-  * Upgrade GYP to r999
-    To fix osx/make build http://codereview.chromium.org/7618052
-  * Upgrade GYP to r995
-  * Fix GYP build on OSX
-    Broken due to DOS line endings.
-    ./configure-gyp
-    make -f Makefile-gyp
-  * module: fix pointer reference to out-of-scope variable
-    Reported by Tom Hughes.
-  * util: isRegExp() should not call toString() on its argument
-    An overloaded toString() method may have side effects
-    so don't call it for a simple type check.
-  * Fix docs for fs.*chown
-    Fix bad parameters of fs.chown[Sync], fs.fchown[Sync] and
-    fs.lchown[Sync] in documentation.
-    Fixes [#1533](https://github.com/joyent/node/issues/1533).
-
-2011-08-14
-==========
-
-  * node_crypto: interface with libuv, not libev
-  * Docs: Not memcpy, but memmove
-    Fixes [#1520](https://github.com/joyent/node/issues/1520).
-
-2011-08-13
-==========
-
-  * Rename gyp files to produce useful solution names.
-    Hoist common settings into common.gypi.
-    Restrict v8's common.gypi to v8 projects.
-    Ensure v8 doesn't use /MP in debug builds.
-    Add basic settings for other platforms.
-    Make uv import common.gypi properly.
-    Remove LTCG warning.
-  * path.js: correct three harmless .length typos
-    lib/path.js routines normalizeArray() and resolve() have for loops that
-    count down from end of an array.  The loop indexes are initialized using
-    "array.length" rather than "array.length-1".  The initial array element
-    accessed is always beyond the end of array and the value is 'undefined'.
-    Strangely, code exists that acts to ignore undefined values so that the
-    typos are unnoticeable.
-    Existing tests emit no errors either before or after changing to "length-1".
-    Tests _do_ start failing at "length-2". (Actually it is node that starts
-    to fail at "length-2" - that's a valid enough test...)
-  * uv: upgrade to 5899192
-  * module: fix pointer reference to out-of-scope variable
-    Reported by Tom Hughes.
-  * test: add typed arrays to known globals list
-  * small NPN doc fix
-    Fixes [#1522](https://github.com/joyent/node/issues/1522).
-
-2011-08-12
-==========
-
-  * platform: fix GetFreeMemory() on 64 bits freebsd
-    v_free_count is defined as u_int v_free_count (struct vmmeter sys/vmmeter.h:87)
-    but variable info defined as unsigned long, this cause error on 64-bits systems
-    because higher 32 bits remain uninitialized
-  * build: add src/v8_typed_array.cc to gyp sources list
-  * typed arrays: fix signed/unsigned compiler warnings
-  * typed arrays: preliminary benchmarks
-  * typed arrays: add Float64Array
-  * typed arrays: alias method subarray() to slice()
-  * typed arrays: integrate plask's typed array implementation
-  * crypto: PBKDF2 function from OpenSSL
-  * uv: upgrade to 7f82995
-  * Incorporate endianness into buffer.read* function names instead of passing in a boolean flag
-  * test: enable simple/test-http-dns-error for `make test-uv`
-  * test: add test for [#1202](https://github.com/joyent/node/issues/1202), uncatchable
-    exception on bad host name
-  * net: defer DNS lookup error events to next tick
-    net.createConnection() creates a net.Socket object
-    and immediately calls net.Socket.connect() on it.
-    There are no event listeners registered yet so
-    defer the error event to the next tick.
-    Fixes [#1202](https://github.com/joyent/node/issues/1202).
-  * build: remove 1024 char read limit from cmake file
-  * Small changes for fs.watchFile. Fixed broken markdown. Changed variable `f` to a proper
-    filename.
-    Fixes [#1507](https://github.com/joyent/node/issues/1507).
-  * Now working on v0.5.5
-  * Bump version to v0.5.4
-  * Upgrade libuv to 65f71a2
-  * Upgrade V8 to v3.5.4
-
-2011-08-11
-==========
-
-  * Upgrade libuv to d358738
-  * Add some debug output to test-child-process-double-pipe
-  * net_uv: resume on closed net.Socket shouldn't crash
-  * build: .gitignore build/ directory
-  * Fix [#1497](https://github.com/joyent/node/issues/1497) querystring: Replace 'in' test with
-    'hasOwnProperty'
-  * http: destroy socket on error
-    Needs further investigation, the test passed without `--use-uv`.
-    Fixes failing test:
-    test/simple/test-http-dns-fail.js
-  * net_uv: pipes don't have getsockname
-  * Doc improvements
-    related to [#1472](https://github.com/joyent/node/issues/1472).
-  * net: properly export remoteAddress to user land
-    Fixes failing test:
-    test/simple/test-net-remote-address-port.js
-  * test: fix logic error in test-net-remote-address-port.js
-    The test intended to register an 'at exit' listener
-    but called `process.exit()` instead.
-  * Correct code span
-    Fixes [#1489](https://github.com/joyent/node/issues/1489).
-
-2011-08-010
+2011-11-010
 ===========
 
-  * Fix MSVS building.
-  * Upgrade libuv to ca633920f564167158d0bb82989d842a47c27d56
-  * node: propagate --use-uv to child processes
-  * uv: upgrade to e8497ae
-  * win: fix test-process-env
-    Remove support for setting process.env.TZ as it doesn't seem we can do it
-    x-platform without fixing V8.
-  * uv: upgrade to b328e4c
-  * uv: upgrade to b6b97f3
-  * tcp: propagate libuv tcp accept() errors to net_uv.js
-  * Upgrade libuv to db190c7
-  * net_uv: Handle failed shutdown req
+  * Now working on v0.6.2
+  * Bump version to v0.6.1
+  * Add 'make dist-upload'
+  * Be consistent with v before version in packages
+  * msi changes
+    - remove license from MSI
+    - adjust path on install
+    - add message to the end
+  * Add upload command to vcbuild.bat
+  * Simplify and move getnodeversion.py
+  * debugger: correctly handle source with multi-byte characters
+  * Fixes [#2073](https://github.com/joyent/node/issues/2073). Cluster should be silent.
+  * test: add more punycode tests
+  * punycode: replace with Mathias Bynens's implementation
+    The currently bundled library doesn't pass all the test cases from RFC 3492.
+    Mathias's library does.
+    Home: https://github.com/bestiejs/punycode.js
+  * docs: dgram client should be closed in the callback
+  * dont use blue for numbers in util.inspect
+
+2011-11-010
+===========
+
+  * Improve OSX installer
+  * fix msi builder
+  * throw from stdout.end and stderr.end
+  * Add node.rc with a version resource
+    Fixes [#2059](https://github.com/joyent/node/issues/2059)
+  * bench: optimize io.c benchmark
+    Use static buffers. Most clock ticks were spent in malloc() and free() instead
+    of read() and write().
+    Fix measurements. Really fast runs would result in bogus results like:
+    Wrote 1048576000 bytes in -0.731630s using 8192 byte buffers: -1366.811093mB/s
+  * uv: upgrade to 224584c
+  * uv: upgrade to 26806e2
+  * fs: don't close uninitialized fs.watch handle
+    Makes uv_close() assert because the uv_fs_event_t struct contains garbage.
+
+2011-11-08
+==========
+
+  * make stdout stream non-destroyable
+  * make stderr stream non-destroyable
+  * bench: start (NUM_CPUS-1) workers
+    The master is a worker too so fork off one less worker.
+  * Remove stray NODE_MODULE() semi-colons.
+
+2011-11-07
+==========
+
+  * Remove 'report this bug' message from cluster master
+  * Fixes [#2047](https://github.com/joyent/node/issues/2047). Fill workers array immediately after fork
+  * Upgrade libuv to 196e145
+  * process.kill doesn't create error obj correctly
+  * Upgrade libuv to 2b7774a
+  * Fixes [#2052](https://github.com/joyent/node/issues/2052). Readline get win cols correctly
+  * crypto: use the right mutex
+  * Upgrade libuv to f1859eb
+    Fixes [#2040](https://github.com/joyent/node/issues/2040)
+    Fixes https://github.com/joyent/node/commit/0e8a55d2a22b88dc3b9b0165f344602b0fa8c977#commitcomment-69710
+  * crypto: make module thread-safe
+  * Upgrade V8 to 3.6.6.7
+  * Cluster documentation added.
+  * test: fs.realpath() should not call its callback twice
+    Test case for [#2045](https://github.com/joyent/node/issues/2045).
+  * fs: fix fs.realpath on windows to return on error
+  * fs: make mkdir() call callback if mode is omitted
+    Fixes [#2043](https://github.com/joyent/node/issues/2043).
+  * cluster: fix call to undefined function
+
+2011-11-06
+==========
+
+  * docs: minor grammar fix in cluster page
+  * build: fix race in parallel build
+    Run `make clean` first, *then* `make all`
+  * Update multi-core text on index.html
+  * Remove v0.4 links from index.html
+  * build: fix man page install path on the BSDs
+    Fixes [#2026](https://github.com/joyent/node/issues/2026).
+
+2011-11-04
+==========
+
+  * bench: update static_http_server benchmark to new API
+    Fixes [#2016](https://github.com/joyent/node/issues/2016).
+  * test: debugger-repl should wait for 'drain' event
+  * docs: use markdown for link, not html
+  * docs: fix copy/paste error, 0.6.0 is a stable release
+  * docs: minor typo fix in child process docs
+  * Now working on v0.6.1
+  * Bump version to v0.6.0
+
+2011-11-03
+==========
+
+  * docs: fix typo
+  * uv: upgrade to c468e2a
+  * fix test-module-loading on windows
+  * update fs_event_wrap.cc to work with new uv_fs_event_init api
+  * make updates to work with latest libuv api changes
+  * Upgrade libuv to 1997e10b50
+  * docs: make std*Stream spawn opts explicitly internal
+    Fixes [#1884](https://github.com/joyent/node/issues/1884).
+  * docs: fix some minor typos in the fs documentation
+    * fchmodSync: replace 'path' with 'fd'
+    * lchmod: replace 'fd' with 'path'
+    * utimes, futimes, fsync: mark 'callback' as optional
+  * bench: add http_simple cluster edition benchmark
+  * cluster: add example for message passing
+  * upgrade libuv to 82cf0b38c0
+    fixes [#2004](https://github.com/joyent/node/issues/2004)
+  * cluster: Remove eachWorker, workerCount
+    unnecessary
+  * new cluster api

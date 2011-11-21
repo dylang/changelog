@@ -1,171 +1,144 @@
-Upcoming / 2011-08-19
-=====================
 
-  * updated git summary
-  * Removed `router()` middleware. Closes
-    [#262](https://github.com/senchalabs/connect/issues/262)
-  * replaced `utils.forbidden()` use with `next(403)`
-  * replace utils.badRequest() with `next(400)`
-  * Added Content-Length to `next(statusCode)` responses
-  * Added support for `next(statusCode)`
-    currently:
-    next(404)
-    is equivalent to:
-    res.statusCode = 404;
-    next(new Error(http.STATUS_CODES[res.statusCode]))
-    this should help prevent the need for
-    custom / verbose constructors like new errors.NotFound,
-    and provides a bit of sugar for something very common
-  * Added `connect.header()`, tiny middleware for response header debugging. Closes
-    [#351](https://github.com/senchalabs/connect/issues/351)
-  * removed invalid range callback support, just respond
-  * removed silly submodules tim added back in the day
-    we dont and havent used these in ages
-  * qs >= 0.3.1
-
-1.6.2 / 2011-08-15
+1.8.0 / 2011-11-17
 ==================
 
-  * Merge branch 'master' of github.com:senchalabs/connect
-  * Merge pull request [#344](https://github.com/senchalabs/connect/issues/344) from
-    marcosanson/master
-    Added: allow Cache-Control and Last-Modified header fields before sending a file
-    [marcosanson]
-  * ability to force Cache-Control and Last-Modified header fields before send a file
-  * docs
-  * Added "immediate" option to `logger()`. Closes
-    [#321](https://github.com/senchalabs/connect/issues/321)
-  * treat null bytes as bad requests for directory/static
-  * Fixed `connect.static()` vulernability, now stripping nullbytes
-  * refactored `uid()`
-  * Removed `req.rawBody` from `bodyParser()`
-  * cla
-  * Added support for custom ETag in `connect.static.send()`
-  * Revert "Added in option, etag, for control of ETag header if desired"
-    This reverts commit a11399928547074d16fdebba049d268e000cf94c.
-  * Merge pull request [#338](https://github.com/senchalabs/connect/issues/338) from
-    coolaj86/master
-    Fixed `vhost()` case sensitivity [coolaj86]
-  * host should be case-insensitive
-  * Merge pull request [#337](https://github.com/senchalabs/connect/issues/337) from
-    tomjnsn/master
-    Added `ETag` option for `connect.static.send()` [tomjnsn]
-  * Added in option, etag, for control of ETag header if desired
-    pass in option, etag, along with maxAge and hidden to have a specific
-    ETag header returned back otherwise it will use the util.etag() method
-    on the stat of the file to generate the ETag
-  * Changed: 301 redirect in `static()` to postfix "/" on directory. Closes
-    [#289](https://github.com/senchalabs/connect/issues/289)
-  * Allow retval `== null` from logger callback
-  * Release 1.6.1
+  * specify only one weak cache field
 
-1.6.1 / 2011-08-03
+1.7.3 / 2011-11-11
 ==================
 
-  * Added `getOnly` option to `connect.static.send()`
-  * Allow status codes >= 400 in errorHandler
-  * Merge branch 'master' of github.com:senchalabs/connect
-  * Revert "Fix parsing of basic auth credentials if the password includes ':'."
-    This reverts commit 6390459f59794542853e3a2295496fd8f83e702c.
-  * Merge pull request [#327](https://github.com/senchalabs/connect/issues/327) from
-    papandreou/master
-    errorHandler middleware: Don't hardcode a status code of 500, use err.statusCode if set.
-  * Fix parsing of basic auth credentials if the password includes ':'.
-    Signed-off-by: Tj Holowaychuk <tj@vision-media.ca>
-  * Fixed a test
-  * Added response "header" event allowing augmentation
-    this will be used in the session middleware, and could
-    be used elsewhere. Ideally Node would provide a hook for us...
-  * errorHandler middleware: Use err.statusCode as the HTTP status code if set, 500 otherwise.
-  * fixed last test
-  * fixed another test
-  * uncommenting
-  * updated more tests
-  * updated some more tests
-  * updated query tests
-  * updated vhost tests
-  * updated static tests
-  * updated session tests
-  * updated router tests
-  * updated responseTime tests
-  * updated methodOverride tests
-  * updated logger tests
-  * updated errorHandler tests
-  * docs
-  * updated directory tests
-  * updated cookieParser tests
-  * Removed `compiler()` middleware
-    note that this is for 2.x only. This middleware proved to
-    be more of a PITA than anything else. While it is useful
-    for very simple and opinionated compilation, that is about it
-    and is not really well suited for a core middleware. Feel free
-    to use this code.
-  * updated bodyParser tests
-  * common.js
-  * started fixing tests
-  * qs >= 0.3.0
+  * require utils in proto.js
   * typo
-  * refactored auto-loading
-  * refactored patch.js
-  * Replaced HTTPServer and HTTPSServer with a function / proto
-  * Added X-CSRF-Token check
-  * Changed: persist csrf token. Closes
-    [#322](https://github.com/senchalabs/connect/issues/322)
-    not necessarily ideal for the cases I mentioned,
-    especially since many apps that I have seen at least
-    built with node are reasonably vulnerable to xss
-  * Merge branch 'request-handler'
-  * Merge pull request [#320](https://github.com/senchalabs/connect/issues/320) from
-    craigbarnes/typo
-    Typo
-  * Fix typo
-  * Merge pull request [#319](https://github.com/senchalabs/connect/issues/319) from
-    danieldickison/master
-    Sort files alphabetically in directory middleware.
-  * Merge branch 'master' of https://github.com/senchalabs/connect
-    Conflicts:
-    lib/middleware/directory.js
+  * Merge branch 'master' of github.com:senchalabs/connect
+  * Added utils.error(code)
+  * Removed a single next(err) special-case in static()
+  * qs >= 0.3.2
+  * Merge pull request [#403](https://github.com/senchalabs/connect/issues/403) from chowey/patch-1
+    Correctly insert "index.html" for url paths ending in "/" on Windows
+  * Correctly insert "index.html" for url paths ending in "/" on Windows
+    Since 'normalize' changes all the forward slashes to backward slashes on Windows, we need to check in the path ends in "/" BEFORE we call 'normalize'.
+  * Fixed HEAD support for 404s and 500s
 
-1.6.0 / 2011-07-010
+1.7.2 / 2011-010-24
 ===================
 
-  * Release 1.6.0
-  * Added response-time to "dev" logger format
-  * Fixed res._headers logger regression. Closes
-    [#318](https://github.com/senchalabs/connect/issues/318)
-  * Added simple csrf middleware. Closes
-    [#315](https://github.com/senchalabs/connect/issues/315)
-    we can hack on it more as needed
-  * Removed support for multiple middleware being passed to .use()
-    if you really need this you can iterate
-    and use() etc. this does not look great
-    and ive never actually seen anyone use
-    this feature. if you do let me know
-    and i will consider adding it back
+  * port redirect option from 1.x
+  * Merge pull request [#395](https://github.com/senchalabs/connect/issues/395) from zzen/master
+    Prevent multiple vhost responses
+  * Prevent vhost bubbling if request response is served
+  * Changed `header()` middleware to output the request header as well
+  * Fixed `staticCache()` Age header field
+  * Remove Content-Length when compressing
+  * Fixed `compress()` for res.end(val)
   * docs
-  * logger docs
+  * refactored compress()
+  * return from res.write/end
+  * Added first pass at `compress()`, gzip/deflate for 2.x. Closes [#374](https://github.com/senchalabs/connect/issues/374)
+  * expose the prototype
+  * Release 2.0.0alpha1
+  * update changelog
+  * "node": ">= 0.5.0 < 0.7.0"
+  * Changed: no longer lowercase cookie names
+  * fixed two tests due to removing badRequest()
+  * removed badRequest() util
+  * removed forbidden() util
+  * misc refactoring
+  * Merge branch 'master' of github.com:senchalabs/connect
+  * Merge pull request [#386](https://github.com/senchalabs/connect/issues/386) from ryanrolds/cleanup-static
+    headers, conditional range requests, tests
+  * clean up a test
+  * Merge pull request [#387](https://github.com/senchalabs/connect/issues/387) from ryanrolds/clean-staticcache
+    staticCache no longer tries to handle range requests, typos, cache uses date
+  * OCD
+  * Changed `static()`: using next(status)`
+  * Changed `limit()`: use next(status)
+  * Change `directory()`: using next(status)
+  * Changed `csrf()`: next(403) to allow error handling
+  * Added back `next(status)` support
+  * Removed `connect.session.ignore` array support
+    lame hack for something middleware wrapping can provide,
+    and this often trips people up because they will get
+    an error if they define something like GET /:slug
+    but do not have an early end-point for GET /favicon.ico
+  * fixed signed json cookie support
+  * no need to base64 signed cookies
+  * prevent unsign() from breaking on json cookie
+  * Changed: `errorHandler()` is now a development only middleware
+    most people do/should roll their own for production because:
+    a) you might want a different JSON structure
+    b) you most likely want a nice page that looks like your app
+    c) passing the options to errorHandler() is annoying
+  * Changed `errorHandler()` to respect `err.status`
+  * todo
+  * Changed `limit()`: next(err) with .status of 413
+  * Added `err.status` support
+    internals will use this to delegate error handling
+  * Changed `limit()`: respond with 413 when content-length exceeds the limit
+    we could do this with chunked as well
+    although you would be stuck waiting for a
+    potentially _massive_ body
+  * Doh, missed some changes
+  * misc refactor
+  * more util tests
+  * commented out "broken" session tests
+  * fixed a session test
+  * statiCache no longer tries to handle range requests, typos, hit uses date header for freshness
+  * headers, conditional range requests, tests
+  * use signed cookie api for session()
+    now you pass the secret to cookieParser() instead of session().
+    few things I want to revist / extend:
+    - currently the value is always base64 so not ideal for some cases
+    - the sid is now the uid, not the signed value
+  * docs for cookieParser() secret
+  * Merge branch 'feature/signed-cookies'
+  * added test for signed cookie without secret
+  * changed json cookie prefix to "j:"
+  * Added signed cookie support
+  * Added json cookie support
+    bit of a lame hack, but im open to suggestions :)
+  * removed a console.log in tests
+  * Fixed several test require()s
+  * Fixed bug in test/common.js
+  * Merge branch 'integration'
+  * ws
+  * misc
+  * refactored pull-request
+  * typo
+  * Removed old dev-deps
+  * Fixed issue with missing Date header
+  * Added cache-control obedience, conditional requests to staticCache
+  * Merge pull request [#370](https://github.com/senchalabs/connect/issues/370) from ryanrolds/misc-requested-changes
+    Improved handling of ENAMETOOLONG per [#369](https://github.com/senchalabs/connect/issues/369)
+  * Improved handling of ENAMETOOLONG per [#369](https://github.com/senchalabs/connect/issues/369)
+  * Merge pull request [#368](https://github.com/senchalabs/connect/issues/368) from ryanrolds/misc-requested-changes
+    Change talked about in [#354](https://github.com/senchalabs/connect/issues/354)
+  * Default req.body to {} per [#354](https://github.com/senchalabs/connect/issues/354)
+  * Merge branch 'master' of git://github.com/senchalabs/connect
+  * revert next(status)
+  * Revert "Added Content-Length to `next(statusCode)` responses"
+    This reverts commit fe364889c19b71cae853ba98a2f6cfc14cfd032d.
+  * Revert "replaced `utils.forbidden()` use with `next(403)`"
+    This reverts commit 7d96c75960c9a6502d44bc367c97ab8101d660e6.
+  * Revert "replace utils.badRequest() with `next(400)`"
+    This reverts commit c3136cbb657615fd7245b69dd248baf3bf90fda2.
+  * Merge pull request [#365](https://github.com/senchalabs/connect/issues/365) from msiebuhr/fix-executable-images
+    Mark images as non-executable.
+  * Mark images as non-executable.
+  * Fixed race condition causing errors reported in [#329](https://github.com/senchalabs/connect/issues/329).
+  * res.socket -> req.socket
 
-1.5.2 / 2011-07-06
+1.7.1 / 2011-09-12
 ==================
 
-  * Release 1.5.2
-  * fLogic -> filter
-  * Update comments for directory().
-  * Get rid of private filtering function. Take care of the filtering right at the public
-    function.
-  * Allow a filtering capability in directory middleware.
-  * Added ability to define `logger()` tokens and formats. Closes
-    [#309](https://github.com/senchalabs/connect/issues/309)
-    includes the following additional changes:
-    - formats are pre-compiled to a function, much like a little template language
-    - added 3 pre-defined formats for various needs "dev" is nice colored output when in
-    development :)
-    overall mostly cosmetic, though there is a small performance increase
-    by compiling these at boot
-  * Fixed quotes in docs. Closes [#312](https://github.com/senchalabs/connect/issues/312)
-  * misc refactor
-  * refactored previous merge
-  * added cli link
-  * removed migration guide from readme
-  * link directories in page headings in directory middleware
-  * Merge branch 'master' of github.com:senchalabs/connect
+  * Fixed race condition causing errors reported in [#329](https://github.com/senchalabs/connect/issues/329).
+  * Added: make `Store` inherit from `EventEmitter`
+  * fixed test from cherry-pick
+  * Added session `Store#load(sess, fn)` to fetch a `Session` instance
+  * Added backpressure support to `staticCache()`
+  * docs
+
+1.7.0 / 2011-08-31
+==================
+
+  * Revert "Added double-next reporting"
+    This reverts commit bb802470b1df8d93adb37e3bd3b8d6c93d8c6d8f.

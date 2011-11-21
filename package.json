@@ -13,7 +13,7 @@
     },
     "bugs": {
         "mail": "dylang@gmail.com",
-        "web":  "http://github.com/dylang/changelog/issues"
+        "url":  "http://github.com/dylang/changelog/issues"
     },
     "directories": {
         "lib": "./lib",
@@ -31,11 +31,8 @@
         "semver":       "*",
         "logging":      "*"
     },
-    "devDependencies": {
-        "logging":      "*"
-    },
     "engines": {
-        "node":     "0.4 || 0.5"
+        "node":     "*"
     }, "licenses":[{
         "type":     "MIT",
         "url":      "http://github.com/dylang/changelog/raw/master/LICENSE"

@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/dylang/changelog.png)](http://travis-ci.org/dylang/changelog)
 Changelog
 =========
 

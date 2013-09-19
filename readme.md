@@ -1,5 +1,7 @@
-Changelog
+Changelog [![Build Status](https://secure.travis-ci.org/dylang/changelog.png)](http://travis-ci.org/dylang/changelog)
 =========
+
+[![NPM](https://nodei.co/npm/changelog.png?downloads=true)](https://nodei.co/npm/changelog/)
 
 Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.
 
@@ -9,7 +11,7 @@ Command-line Usage
 Node Modules in NPM
 -------------------
 
-Modules do not need to be installed locally to get a changelog but they must define their repository url in their package.json.
+Modules do not need to be installed to generate changelog but they must define their `repository url` in their package.json.
 
 ![Example using Express](https://github.com/dylang/changelog/raw/master/examples/express.png)
 
@@ -116,14 +118,6 @@ Upcoming Features
  * Support versions/releases for Github repositories (waiting for Github to address [Github API Issue #17](https://github.com/github/developer.github.com/issues/17)).
  * Support paging Github's API to aquire more than 100 commit messages.
 
-Want to help?
-=============
-
-Here are some ideas I have no idea how to do.
-
- * Support for `brew` and `gem`?
- * Integrate into `npm update`?
- * Create a `git pull` shortcut?
 
 About
 =====

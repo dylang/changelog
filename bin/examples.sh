@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 echo Changelog\'s changelog
-./bin/changelog.js --markdown > ./changelog.md
+./bin/changelog.js --markdown > ./CHANGELOG.md
 
 echo Express as markdown
 ./bin/changelog.js express --markdown > ./examples/express.markdown

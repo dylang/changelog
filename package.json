@@ -1,40 +1,60 @@
-
 {
-    "name":         "changelog",
-    "version":      "0.1.3",
-    "description":  "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for modules in npmjs.org's registry as well as any public github.com repo.",
-    "keywords":     [ "changes", "history", "what's new", "change set" ],
-    "preferGlobal": true,
-    "homepage":     "http://github.com/dylang/changelog",
-    "author":       "Dylan Greene <dylang@gmail.com>",
-    "repository": {
-        "type": "git",
-        "url":  "https://github.com/dylang/changelog.git"
-    },
-    "bugs": {
-        "mail": "dylang@gmail.com",
-        "url":  "http://github.com/dylang/changelog/issues"
-    },
-    "directories": {
-        "lib": "./lib",
-        "bin": "./bin"
-    },
-    "main":     "changelog",
-    "bin": {
-        "changelog": "./bin/changelog.js"
-    },
-    "dependencies": {
-        "step":         "*",
-        "request":      "*",
-        "wordwrap":     "*",
-        "cli":          "*",
-        "semver":       "*",
-        "logging":      "*"
-    },
-    "engines": {
-        "node":     "*"
-    }, "licenses":[{
-        "type":     "MIT",
-        "url":      "http://github.com/dylang/changelog/raw/master/LICENSE"
-    }]
+  "name": "changelog",
+  "version": "0.1.3",
+  "description": "Command line tool (and Node module) that generates a changelog in color output, markdown, or json for modules in npmjs.org's registry as well as any public github.com repo.",
+  "keywords": [
+    "changelog",
+    "change log",
+    "commit messages",
+    "commits",
+    "changes",
+    "history",
+    "what's new",
+    "change set"
+  ],
+  "preferGlobal": true,
+  "homepage": "http://github.com/dylang/changelog",
+  "author": "Dylan Greene <dylang@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylang/changelog.git"
+  },
+  "bugs": {
+    "mail": "dylang@gmail.com",
+    "url": "http://github.com/dylang/changelog/issues"
+  },
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin"
+  },
+  "main": "changelog",
+  "bin": {
+    "changelog": "./bin/changelog.js"
+  },
+  "dependencies": {
+    "request": "*",
+    "wordwrap": "*",
+    "cli": "*",
+    "semver": "*",
+    "has-color": "~0.1.1",
+    "q": "~0.9.7",
+    "chai": "~1.7.2",
+    "chalk": "~0.2.1"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "devDependencies": {
+    "chai": "~1.7.2",
+    "mocha": "~1.13.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec --timeout 10000"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+    }
+  ]
 }

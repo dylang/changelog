@@ -1,4 +1,4 @@
 module.exports = {
-    npm:    require('./lib/npm'),
-    github: require('./lib/github')
+    npm:    require('./lib/datasrc/npm'),
+    github: require('./lib/datasrc/github')
 };

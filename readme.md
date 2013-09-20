@@ -35,10 +35,18 @@ Help
       changelog <npm module name> [release] [options]
       changelog <github repo url> [release] [options]
 
+    Module name:
+       $ changelog npm
+
+    Github repo:
+       $ changelog github.com/isaacs/npm
+       $ changelog isaacs/npm
+
     Release:
-       latest   DEFAULT Show only the latest release. ie: changelog express latest
-       number   Show that many recent releases.       ie: changelog express 3
-       n.n.n    Show changes for a specific release.  ie: changelog express 2.4.4
+       latest   Default: Show only the latest versions. ex: $ changelog npm latest
+       all      Show all versions.                      ex: $ changelog npm all
+       number   Show that many recent versions.         ex: $ changelog npm 3
+       n.n.n    Show changes for a specific version.    ex: $ changelog npm 1.3.11
 
     Options:
       -c, --color            Output as Color (terminal default)
@@ -100,15 +108,14 @@ How it works
 
  * Changelog uses the [Github V3 API](http://developer.github.com/) and [npmjs.org API](http://search.npmjs.org/).
 
-Upcoming Features
+Tests
 =================
 
- * Add header and/or footer to the output with module name, contributors, etc.
- * Support private Github repos and Github Fi.
- * Better color choices for those with default terminal colors.
- * Support versions/releases for Github repositories (waiting for Github to address [Github API Issue #17](https://github.com/github/developer.github.com/issues/17)).
- * Support paging Github's API to aquire more than 100 commit messages.
+`Mocha` tests are included. There aren't very many and don't mock Github or npm's registry so they could be improved.
 
+```js
+$ npm test
+```
 
 About
 =====

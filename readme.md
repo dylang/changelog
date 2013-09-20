@@ -5,6 +5,18 @@ Changelog [![Build Status](https://secure.travis-ci.org/dylang/changelog.png)](h
 
 Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.
 
+Install
+=======
+
+Using [npm](http://npmjs.org) just do:
+
+```
+$ npm -g install changelog
+```
+
+Using `npm -g` installs changelog globally so you can use `changelog` anywhere.  You can also just use `npm install changelog` if you are using it as a module for another project.
+
+
 Command-line Usage
 ==================
 
@@ -15,54 +27,53 @@ Modules do not need to be installed to generate changelog but they must define t
 
 ![Example using Express](https://github.com/dylang/changelog/raw/master/examples/express.png)
 
-    $ changelog {npm module name} [release] [options]
+```sh
+$ changelog {npm module name} [release] [options]
+```
 
-`npm module`: The module name, such as `express`.
+`npm module`: The module name, such as `express`, `npm`, `grunt`, etc.
 
 Any Public Github.com Repository
 --------------------------------
 
 Changelog also works on any public Github repo.
 
-    $ changelog {Github.com repo url} [options]
+```sh
+$ changelog {Github.com repo} [options]
+```
 
-`Github.com repo url`: Urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `github.com/dylang/changelog`.
+`Github.com repo url`: Urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `dylang/changelog`.
 
 Help
 ----
 
-    Usage:
-      changelog <npm module name> [release] [options]
-      changelog <github repo url> [release] [options]
+`changelog --help`
 
-    Module name:
-       $ changelog npm
+```
+Usage:
+  changelog <npm module name> [versions] [options]
+  changelog <github repo url> [versions] [options]
 
-    Github repo:
-       $ changelog github.com/isaacs/npm
-       $ changelog isaacs/npm
+Module name:
+   $ changelog npm
 
-    Release:
-       latest   Default: Show only the latest versions. ex: $ changelog npm latest
-       all      Show all versions.                      ex: $ changelog npm all
-       number   Show that many recent versions.         ex: $ changelog npm 3
-       n.n.n    Show changes for a specific version.    ex: $ changelog npm 1.3.11
+Github repo:
+   $ changelog github.com/isaacs/npm
+   $ changelog isaacs/npm
 
-    Options:
-      -c, --color            Output as Color (terminal default)
-      -m, --markdown         Output as Github-flavored Markdown (file default)
-      -j, --json             Output as JSON
-      -d, --debug            Enable debugging
-      -h, --help             Display help and usage details
+Versions:
+   latest   Default: Show only the latest versions. ex: $ changelog npm latest
+   all      Show all versions.                      ex: $ changelog npm all
+   number   Show that many recent versions.         ex: $ changelog npm 3
+   n.n.n    Show changes for a specific version.    ex: $ changelog npm 1.3.11
 
-Install
-=======
-
-Using [npm](http://npmjs.org) just do:
-
-    $ npm-g install changelog
-
-Using `npm-g` installs changelog globally so you can use `changelog` anywhere.  You can also just use `npm install changelog` if you are using it as a module for another project.
+Options:
+  -c, --color            Output as Color (terminal default)
+  -m, --markdown         Output as Github-flavored Markdown (file default)
+  -j, --json             Output as JSON
+  -d, --debug            Enable debugging
+  -h, --help             Display help and usage details
+```
 
 More Examples
 =============
@@ -77,7 +88,7 @@ Changelog can be easily integrated into other tools.
 ````js
 var changelog = require('changelog');
 
-changelog.generate('express')
+changelog.generate(NpmPackageName, countOrVersions)  // module name, github repo
     .then(changelog.markdown);
 
  changelog.generate('grunt')
@@ -106,7 +117,8 @@ function showChanges(data) {
 How it works
 ============
 
- * Changelog uses the [Github V3 API](http://developer.github.com/) and [npmjs.org API](http://search.npmjs.org/).
+ * Changelog uses [npmjs.org API](http://search.npmjs.org/) to get the list of versions and the publish dates.
+ * It cross-references the versions in `npm` with the commit history from the [Github's API](http://developer.github.com/).
 
 Tests
 =================
@@ -122,3 +134,29 @@ About
 
 [Dylan Greene](http://github.com/dylang) built this because he was always curious what was changed when doing `npm update`.
 This module's name is inspired by listening to [TheChangelog Podcast](http://thechangelog.com/) on the way to [work](http://opower.com).
+
+License
+=====
+
+(The MIT License)
+
+Copyright (c) 2011-2013 Dylan Greene <dylang@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

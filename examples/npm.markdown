@@ -1,115 +1,158 @@
-
-0.2.19 / 2011-11-20
+1.3.11 / 2013-09-07
 ===================
 
-  * npm cmd files, for easier node msi building
-  * v1.0.106
-  * Correct pack/unpack queue for win32
-  * update semver
-  * Fix [#1694](https://github.com/isaacs/npm/issues/1694) Test for directory-ness rather than -e
-    shell scripting is hard.
-  * v1.0.105
-  * Pass a real mode to mkdir to avoid null-related exceptions.
-  * Workaround for node 0.6.0 on windows with large dir lists
-  * update graceful-fs
-  * Better error message on engine mismatch
-  * init: Make the engines.node default a bit looser
-  * Experimental: no node version checking on --force
-  * Fix --node-version=null regression
-  * v1.0.104
-  * Report the requested user when removal fails.
-  * Fix incorrect path returned by npm-bin
-    npm-bin returned a path using the prefix instead of the root, i.e.
-    "./.bin" instead of "./node_modules/.bin".
-  * Use npm_config_tar in install script
-  * explain config locations more clearly
-  * don't try to toString undefined
-  * Publish readme properly, and don't show in view by default
-  * Update request
-  * Print tar --version even if explicitly set
-  * Using request, don't need this now
-  * publish the readme contents in the root package doc
-  * Close [#1622](https://github.com/isaacs/npm/issues/1622) Fix incorrect check for -o tar arg
-  * Close [#1605](https://github.com/isaacs/npm/issues/1605) Don't process bad data from search result
-  * Fix [#1602](https://github.com/isaacs/npm/issues/1602) Fix [#1603](https://github.com/isaacs/npm/issues/1603) APIs must be either always sync, or always async
-  * v1.0.103
-  * update request
-  * Close [#1598](https://github.com/isaacs/npm/issues/1598) Don't set global path until after figuring out node location
-  * v1.0.102
-  * Update install instructions
-  * Merge branch 'windows-paths'
-  * fix link regression, regarding new path getters
-  * Document changed windows paths.
-  * Close [#1581](https://github.com/isaacs/npm/issues/1581) windows cmd: Look in local folder for interpreter
-  * Close [#1582](https://github.com/isaacs/npm/issues/1582) Make prefixes better on windows
-    1. Make prefixes and paths more windows-like on windows.
-    2. Abstract out all path-munging behavior to lib/npm.js where it belongs.
-  * Handle seds that don't support -e
-  * v1.0.101
-  * mkdir: A few more places where the noChmod wasn't set
-  * Close [#1509](https://github.com/isaacs/npm/issues/1509) Don't chmod the npm.prefix folder, just ensure it's there.
-  * v1.0.100
-  * Don't treat /-/xyz registry urls as packages for 404 errors
-  * Close [#1571](https://github.com/isaacs/npm/issues/1571) Also check status code on 'error' results
-  * Fix [#1564](https://github.com/isaacs/npm/issues/1564) Pre-load install.js and build.js in update command
-  * Fail faster in cases like [#1566](https://github.com/isaacs/npm/issues/1566)
-  * Add Stephen to AUTHORS
-  * Add auto-increment support to version command
-    Pass "major", "minor", or "patch" to increment the existing version
-    by that amount.
-  * v1.0.99
-  * Fix [#1555](https://github.com/isaacs/npm/issues/1555) Queue tar operations for windows
-    *Really* need to get a js tar implementation in there asap.
-  * v1.0.98
-  * Avoid accidentally opening npm.js with WSH
-  * Show reasonable error message when invoked with WSH
-  * v1.0.97
-  * Default user and group to 0 on win32, and always make String the last type
-  * Fix [#1552](https://github.com/isaacs/npm/issues/1552) Make it impossible to chown with a non-int uid/gid
-  * typo
-  * Correct 'message' doc
-  * v1.0.96
-  * Don't write log file for simple usage stuff
-  * Close [#1549](https://github.com/isaacs/npm/issues/1549) Missed a mode reference
-  * Close [#1502](https://github.com/isaacs/npm/issues/1502) Better usage message for 'version'
-  * v1.0.95
-  * Use the logprefix if colors enabled on windows
-  * Use my request fork instead of mikeal's
-  * add mmaleki
-  * Add --message option and -m shorthand
-    Specify commit message when creating a tag
-    Use --message/-m option when commiting changes in `npm version`.
-    Mention message option in `npm version` docs
-    Mention message option in doc/cli/config.md
-  * Better command line handling for windows
-  * Get window size properly
-  * Adjust npm's own 'bugs' field to conform.
-  * Standardize the 'bugs' field in package.json.
-  * Close [#1518](https://github.com/isaacs/npm/issues/1518) don't allow npm view .
-  * Add verbose log for chown in lib/cache.js
-  * Set umask before calling mkdir
-  * Apply umask correctly, completely, and remove all literal mode values
-  * Close [#1509](https://github.com/isaacs/npm/issues/1509) Add 'umask' config option
-  * Don't always assume that save() is saving 3 files. Might be only 1
-  * close [#1542](https://github.com/isaacs/npm/issues/1542) don't chown if uid/gid aren't numbers
-  * Explicitly inject builtinconfig into any npm install
-  * Some seds are simpletons
-  * typo in search.js
-  * s/stdio/tty/g
-  * Close [#1493](https://github.com/isaacs/npm/issues/1493) Return values from npm.commands.view saner
-  * Close [#1201](https://github.com/isaacs/npm/issues/1201) Specify ./node_modules in current package
-  * update rimraf
-  * Push -o, not [-o]
-  * Fix [#1521](https://github.com/isaacs/npm/issues/1521) Remove unnecessary shebangs
-  * Fix [#1525](https://github.com/isaacs/npm/issues/1525) Cast password to a string
-  * Be more careful about when the npm builtin config gets saved
-  * make clean removes npmrc
-  * Merge branch 'builtin-conf'
-  * Document builtin config file
-  * Output builtin config values with 'npm config ls'
-  * When installing npm, keep the builtin config
-  * Put builtinconfig file between defaults and global
-  * Write builtin config with ./configure script
-  * Ignore ./npmrc file
-  * alias show->view for @guille
-  * No need to shorten tar.name, since file list isn't there
+  * v1.3.11
+  * request@2.27.0
+  * lru-cache@2.3.1
+  * node-gyp@0.10.10
+  * sha@1.2.3
+  * npmconf@0.1.3
+  * lockfile@0.4.2
+  * inherits-fixup
+  * inherits@2.0.1
+  * read-installed@0.2.4
+  * slide@1.1.5
+  * graceful-fs@2.0.1
+
+1.3.10 / 2013-09-05
+===================
+
+  * v1.3.10
+  * update/outdated: don't access missing package info
+avoid null dereferences checking the status of a currently installed
+package
+Fixes [#3820](https://github.com/isaacs/npm/issues/3820), a regression caused by [#3798](https://github.com/isaacs/npm/issues/3798) and [#3578](https://github.com/isaacs/npm/issues/3578)
+  * add failing test, depends on npm-registry-mock 0.3.0
+test for [#3823](https://github.com/isaacs/npm/issues/3823)
+  * read-package-json@1.1.3
+Brings along normalize-package-data@0.2.2, which closes [#3783](https://github.com/isaacs/npm/issues/3783).
+  * prune: --production option to unbuild devDependencies
+Closes [#2854](https://github.com/isaacs/npm/issues/2854).
+  * prune: check package.json before running
+Fixes [#3755](https://github.com/isaacs/npm/issues/3755).
+
+1.3.9 / 2013-08-23
+==================
+
+  * v1.3.9
+  * outdated: only test 'from' for urls
+If the 'from' value is not a url, then the fact that it changes is not
+relevant.  For example 'foo@*' and 'foo@1' and 'foo@' might all point to
+the same package.  However, a changed url IS relevant, because it
+indicates that it is now a different thing.
+Fixes [#3798](https://github.com/isaacs/npm/issues/3798), a regression caused by [#3578](https://github.com/isaacs/npm/issues/3578).
+  * remove mention of MIT license in README
+  * Document `user/repo` style GitHub URLs
+  * add missing aliases to cli doc pages
+  * npm view doc
+  * v as alias for view command
+
+1.3.8 / 2013-08-16
+==================
+
+  * v1.3.8
+  * add "repo" command
+  * doc: Clarify versions and mention prepublish
+  * use npm-registry-mock, fixes [#3633](https://github.com/isaacs/npm/issues/3633)
+  * Guard against falsey versions value.
+  * doc: Fix typo
+  * use getCacheStat before lock, fixes joyent/node[#3821](https://github.com/isaacs/npm/issues/3821)
+Previous code did not handle the cache dir's permissions consistently.
+If the first lock was done as sudo, the cache directory was not user
+writable.
+Removed the now unnecessary guard and collapsed the then function.
+  * Treat dep. as outdated if its _from changes
+This is per Isaacs comment in [#1727](https://github.com/isaacs/npm/issues/1727)
+  * doc: Remove whitespace
+  * doc: Correct links to semver(7)
+  * styling in LICENSE file
+
+1.3.7 / 2013-08-05
+==================
+
+  * v1.3.7
+  * Bump all deps
+  * init-package-json@0.0.11
+  * Avoid assert in Node v0.11 by touching internal API
+  * doc: Correct links in README
+  * doc: fix typo
+  * doc: Remove registry redirect stuff
+This hasn't worked for a loooonnng time.  It's a hazard to have
+in the docs and on th website.
+
+1.3.6 / 2013-07-27
+==================
+
+  * v1.3.6
+  * cache: Never be strict (for now)
+  * Authors: add gflarity's email address
+  * License: Artistic-2.0
+The 'MIT +no-false-attribs' license was a hacked jury-rigged thing
+that half-does what the Artistic-2.0 does much better.
+  * Remove urls from AUTHORS file
+Email address is enough.
+  * Add many authors
+Whoops, haven't been keeping up with this.
+Lots of new names!  Hooray!
+  * include sha's readable-stream optional dep
+Fix [#3698](https://github.com/isaacs/npm/issues/3698)
+  * add ECONNRESET to 'network issues' category
+  * show better error message for proxy users
+This will hopefully enable the npm users behind a proxy to help
+themselves in case of a proxy/network issue.
+
+1.3.5 / 2013-07-24
+==================
+
+  * v1.3.5
+  * install: Replace warnings, reduce strictness
+We need a more carefully considered approach here.  For now
+go back to what we had prior to 1.3
+  * bump all deps to use inherits@2
+  * fstream-npm@0.1.5
+  * read@1.0.5
+  * semver@2.0.11
+  * nopt@2.1.2
+
+1.1.70 / 2013-07-23
+===================
+
+  * Bump many deps for graceful-fs@2 upgrade
+  * doc: Remove duplicate version range line in npm-install.
+  * doc: Point at npm-ls, not npm-list
+Re isaacs/npm-www[#359](https://github.com/isaacs/npm/issues/359)
+  * doc: folders is section 5, not 7
+  * fix global leak
+  * v1.3.4
+  * build: Enforce uniqueness of man pages being installed
+  * Avoid doc collisions on npm version upgrade
+
+1.1.25 / 2013-07-12
+===================
+
+  * v1.3.3
+  * Merge branch 'manliness'
+  * delete old docs on publish
+  * doc: More config doc crosslinking
+  * doc: Correct links to misc section docs
+  * doc: Build index as 'npm-index.md'
+Otherwise, we end up creating 'man 7 index' which is weird.
+  * doc: s/npm-folders(1)/npm-folders(7)/g
+  * doc: s/npm-json(1)/package.json(5)/g
+  * doc: Update links in doc/files/
+  * doc: Correct links in doc/misc/
+  * doc: Fix links on legacy html docs
+  * makefile: spacing
+  * doc: Build index and readme html properly
+  * doc: update index builder for new format
+  * doc: move semver to misc
+  * doc: update build scripts for new structure
+  * help: Limit line length wrapping to 60
+  * help: Take an optional initial numeric section arg
+  * doc: reformat npm-scripts
+  * doc: Split config up into 3 docs
+  * doc: move npm-scripts to misc
+  * doc: Don't copy to legacy url if already something there
+  * build: Don't prepend package name onto manpages
+  * help-search: update for new doc structure
+  * help fixup

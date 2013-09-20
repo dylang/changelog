@@ -1,3 +1,8 @@
+0.1.3 / 2011-11-21
+==================
+
+  * fix bug when author doesn't include repo. make work in node 0.6.*
+
 0.1.2 / 2011-08-26
 ==================
 
@@ -35,8 +40,8 @@
   * updated examples
   * don't include ansi color codes when outputting to a file or pipe
 
-0.0.7 / 2011-08-010
-===================
+0.0.7 / 2011-08-10
+==================
 
   * upped version
   * added changelog for changelog
@@ -55,7 +60,7 @@
 
   * up version
   * handle better npm's api not being available
-    wrap text using the screen width via tty
+wrap text using the screen width via tty
   * remove node_modules from git project
 
 0.0.4 / 2011-08-04
@@ -79,7 +84,7 @@
 
   * version 0.0.2
   * use standard out and standard error for output.
-    don't bubble exceptions or repeat error messages.
+don't bubble exceptions or repeat error messages.
 
 0.0.1 / 2011-08-01
 ==================

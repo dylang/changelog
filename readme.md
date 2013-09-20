@@ -24,8 +24,6 @@ Any Public Github.com Repository
 
 Changelog also works on any public Github repo.
 
-![Example using Bootstrap from Github](https://github.com/dylang/changelog/raw/master/examples/twitter-bootstrap.png)
-
     $ changelog {Github.com repo url} [options]
 
 `Github.com repo url`: Urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `github.com/dylang/changelog`.
@@ -38,9 +36,9 @@ Help
       changelog <github repo url> [release] [options]
 
     Release:
-       latest   Show only the latest release.        ie: changelog express latest
-       number   Show that many recent releases.      ie: changelog express 3
-       n.n.n    Show changes for a specific release. ie: changelog express 2.4.4
+       latest   DEFAULT Show only the latest release. ie: changelog express latest
+       number   Show that many recent releases.       ie: changelog express 3
+       n.n.n    Show changes for a specific release.  ie: changelog express 2.4.4
 
     Options:
       -c, --color            Output as Color (terminal default)
@@ -58,15 +56,6 @@ Using [npm](http://npmjs.org) just do:
 
 Using `npm-g` installs changelog globally so you can use `changelog` anywhere.  You can also just use `npm install changelog` if you are using it as a module for another project.
 
-Update
-======
-
-To make sure you have the latest version:
-
-    $ npm-g update
-
-This will update all of your global modules.
-
 More Examples
 =============
 
@@ -77,31 +66,33 @@ Changelog API
 
 Changelog can be easily integrated into other tools.
 
-    var Changelog = require('changelog');
+````js
+var changelog = require('changelog');
 
-    Changelog.npm('express', callback);
-    Changelog.github('joyent/node', callback);
+changelog.generate('express')
+    .then(changelog.markdown);
 
-    function callback(err, data) {
+ changelog.generate('grunt')
+    .then(showChanges);
 
-        //Check err for errors or just throw
-        if (err) throw err;
+function showChanges(data) {
 
-        //With npm each "version" corresponds to all changes for that build pushed on npm
-        //With github each "version" is one GMT day of changes
-        data.versions.forEach(function(version) {
-            console.log(version.version); //currently npm projects only
-            console.log(version.date);    //JS Date
+    //With npm each "version" corresponds to all changes for that build pushed on npm
+    //With github each "version" is one GMT day of changes
+    data.versions.forEach(function(version) {
+        console.log(version.version); //currently npm projects only
+        console.log(version.date);    //JS Date
 
-            //version.changes is an array of commit messages for that version
-            version.changes.forEach(function(change) {
-                console.log(' * ' + change);
-            });
+        //version.changes is an array of commit messages for that version
+        version.changes.forEach(function(change) {
+            console.log(' * ' + change);
         });
+    });
 
-        //Information about the project
-        console.log(data.project);
-    }
+    //Information about the project
+    console.log(data.project);
+}
+````
 
 
 How it works

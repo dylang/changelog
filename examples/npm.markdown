@@ -19,28 +19,28 @@
 
   * v1.3.10
   * update/outdated: don't access missing package info
-avoid null dereferences checking the status of a currently installed
-package
-Fixes [#3820](https://github.com/isaacs/npm/issues/3820), a regression caused by [#3798](https://github.com/isaacs/npm/issues/3798) and [#3578](https://github.com/isaacs/npm/issues/3578)
+    avoid null dereferences checking the status of a currently installed
+    package
+    Fixes [#3820](https://github.com/isaacs/npm/issues/3820), a regression caused by [#3798](https://github.com/isaacs/npm/issues/3798) and [#3578](https://github.com/isaacs/npm/issues/3578)
   * add failing test, depends on npm-registry-mock 0.3.0
-test for [#3823](https://github.com/isaacs/npm/issues/3823)
+    test for [#3823](https://github.com/isaacs/npm/issues/3823)
   * read-package-json@1.1.3
-Brings along normalize-package-data@0.2.2, which closes [#3783](https://github.com/isaacs/npm/issues/3783).
+    Brings along normalize-package-data@0.2.2, which closes [#3783](https://github.com/isaacs/npm/issues/3783).
   * prune: --production option to unbuild devDependencies
-Closes [#2854](https://github.com/isaacs/npm/issues/2854).
+    Closes [#2854](https://github.com/isaacs/npm/issues/2854).
   * prune: check package.json before running
-Fixes [#3755](https://github.com/isaacs/npm/issues/3755).
+    Fixes [#3755](https://github.com/isaacs/npm/issues/3755).
 
 1.3.9 / 2013-08-23
 ==================
 
   * v1.3.9
   * outdated: only test 'from' for urls
-If the 'from' value is not a url, then the fact that it changes is not
-relevant.  For example 'foo@*' and 'foo@1' and 'foo@' might all point to
-the same package.  However, a changed url IS relevant, because it
-indicates that it is now a different thing.
-Fixes [#3798](https://github.com/isaacs/npm/issues/3798), a regression caused by [#3578](https://github.com/isaacs/npm/issues/3578).
+    If the 'from' value is not a url, then the fact that it changes is not
+    relevant.  For example 'foo@*' and 'foo@1' and 'foo@' might all point to
+    the same package.  However, a changed url IS relevant, because it
+    indicates that it is now a different thing.
+    Fixes [#3798](https://github.com/isaacs/npm/issues/3798), a regression caused by [#3578](https://github.com/isaacs/npm/issues/3578).
   * remove mention of MIT license in README
   * Document `user/repo` style GitHub URLs
   * add missing aliases to cli doc pages
@@ -57,12 +57,12 @@ Fixes [#3798](https://github.com/isaacs/npm/issues/3798), a regression caused by
   * Guard against falsey versions value.
   * doc: Fix typo
   * use getCacheStat before lock, fixes joyent/node[#3821](https://github.com/isaacs/npm/issues/3821)
-Previous code did not handle the cache dir's permissions consistently.
-If the first lock was done as sudo, the cache directory was not user
-writable.
-Removed the now unnecessary guard and collapsed the then function.
+    Previous code did not handle the cache dir's permissions consistently.
+    If the first lock was done as sudo, the cache directory was not user
+    writable.
+    Removed the now unnecessary guard and collapsed the then function.
   * Treat dep. as outdated if its _from changes
-This is per Isaacs comment in [#1727](https://github.com/isaacs/npm/issues/1727)
+    This is per Isaacs comment in [#1727](https://github.com/isaacs/npm/issues/1727)
   * doc: Remove whitespace
   * doc: Correct links to semver(7)
   * styling in LICENSE file
@@ -77,8 +77,8 @@ This is per Isaacs comment in [#1727](https://github.com/isaacs/npm/issues/1727)
   * doc: Correct links in README
   * doc: fix typo
   * doc: Remove registry redirect stuff
-This hasn't worked for a loooonnng time.  It's a hazard to have
-in the docs and on th website.
+    This hasn't worked for a loooonnng time.  It's a hazard to have
+    in the docs and on th website.
 
 1.3.6 / 2013-07-27
 ==================
@@ -87,27 +87,27 @@ in the docs and on th website.
   * cache: Never be strict (for now)
   * Authors: add gflarity's email address
   * License: Artistic-2.0
-The 'MIT +no-false-attribs' license was a hacked jury-rigged thing
-that half-does what the Artistic-2.0 does much better.
+    The 'MIT +no-false-attribs' license was a hacked jury-rigged thing
+    that half-does what the Artistic-2.0 does much better.
   * Remove urls from AUTHORS file
-Email address is enough.
+    Email address is enough.
   * Add many authors
-Whoops, haven't been keeping up with this.
-Lots of new names!  Hooray!
+    Whoops, haven't been keeping up with this.
+    Lots of new names!  Hooray!
   * include sha's readable-stream optional dep
-Fix [#3698](https://github.com/isaacs/npm/issues/3698)
+    Fix [#3698](https://github.com/isaacs/npm/issues/3698)
   * add ECONNRESET to 'network issues' category
   * show better error message for proxy users
-This will hopefully enable the npm users behind a proxy to help
-themselves in case of a proxy/network issue.
+    This will hopefully enable the npm users behind a proxy to help
+    themselves in case of a proxy/network issue.
 
 1.3.5 / 2013-07-24
 ==================
 
   * v1.3.5
   * install: Replace warnings, reduce strictness
-We need a more carefully considered approach here.  For now
-go back to what we had prior to 1.3
+    We need a more carefully considered approach here.  For now
+    go back to what we had prior to 1.3
   * bump all deps to use inherits@2
   * fstream-npm@0.1.5
   * read@1.0.5
@@ -120,7 +120,7 @@ go back to what we had prior to 1.3
   * Bump many deps for graceful-fs@2 upgrade
   * doc: Remove duplicate version range line in npm-install.
   * doc: Point at npm-ls, not npm-list
-Re isaacs/npm-www[#359](https://github.com/isaacs/npm/issues/359)
+    Re isaacs/npm-www[#359](https://github.com/isaacs/npm/issues/359)
   * doc: folders is section 5, not 7
   * fix global leak
   * v1.3.4
@@ -136,7 +136,7 @@ Re isaacs/npm-www[#359](https://github.com/isaacs/npm/issues/359)
   * doc: More config doc crosslinking
   * doc: Correct links to misc section docs
   * doc: Build index as 'npm-index.md'
-Otherwise, we end up creating 'man 7 index' which is weird.
+    Otherwise, we end up creating 'man 7 index' which is weird.
   * doc: s/npm-folders(1)/npm-folders(7)/g
   * doc: s/npm-json(1)/package.json(5)/g
   * doc: Update links in doc/files/

@@ -67,24 +67,13 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            example: {
-                files: [
-                    'Gruntfile.js',
-                    'tasks/**/*.js',
-                    'test/**/*.js'
-                ],
-                tasks: ['notify:custom_options'],
-                options: {
-                    nospawn: false
-                }
-            },
             test: {
                 files: [
                     'Gruntfile.js',
-                    'tasks/**/*.js',
-                    'test/**/*.js'
+                    'lib/**/*',
+                    'test/**/*'
                 ],
-                tasks: ['cafemocha'],
+                tasks: ['test'],
                 options: {
                     nospawn: true
                 }

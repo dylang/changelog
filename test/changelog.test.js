@@ -1,9 +1,16 @@
 "use strict";
 var expect = require('chai').expect;
+var proxyquire = require('proxyquire');
 
-var changelog = require('../lib/changelog');
+var changelog = proxyquire('../lib/changelog', {
+    request: function(options, cb) {
+        cb(null, {}, require('./fixtures/github-dylang-changelog.json'));
+        //cb(null, {}, require('./fixtures/npm-changelog.json'));
+    }
+});
 
-describe('changelog', function() {
+
+xdescribe('changelog', function() {
 
     it('should get a change log', function (done) {
         changelog.generate('changelog', 'latest').then(function (results) {

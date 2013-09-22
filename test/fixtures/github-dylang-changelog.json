@@ -1,0 +1,3433 @@
+
+[
+  {
+    "sha": "dd6538964d7b0d0df50ac8f14eab481368a4bbba",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:32:40Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:32:40Z"
+      },
+      "message": "renaming readme",
+      "tree": {
+        "sha": "3c4ed9386042542d6389a449d2ad7a9c830031ff",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/3c4ed9386042542d6389a449d2ad7a9c830031ff"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/dd6538964d7b0d0df50ac8f14eab481368a4bbba",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/dd6538964d7b0d0df50ac8f14eab481368a4bbba",
+    "html_url": "https://github.com/dylang/changelog/commit/dd6538964d7b0d0df50ac8f14eab481368a4bbba",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/dd6538964d7b0d0df50ac8f14eab481368a4bbba/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "e198d3c1f2ba91ba5c6d292f89a0202ad814fd90",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/e198d3c1f2ba91ba5c6d292f89a0202ad814fd90",
+        "html_url": "https://github.com/dylang/changelog/commit/e198d3c1f2ba91ba5c6d292f89a0202ad814fd90"
+      }
+    ]
+  },
+  {
+    "sha": "e198d3c1f2ba91ba5c6d292f89a0202ad814fd90",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:32:30Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:32:30Z"
+      },
+      "message": "renaming readme",
+      "tree": {
+        "sha": "e72793cf189fa037ca8b6e51bf589f13707607db",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/e72793cf189fa037ca8b6e51bf589f13707607db"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/e198d3c1f2ba91ba5c6d292f89a0202ad814fd90",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/e198d3c1f2ba91ba5c6d292f89a0202ad814fd90",
+    "html_url": "https://github.com/dylang/changelog/commit/e198d3c1f2ba91ba5c6d292f89a0202ad814fd90",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/e198d3c1f2ba91ba5c6d292f89a0202ad814fd90/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "e4c2ff3b580e29c96ae968a2b9979c50973f1e1d",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/e4c2ff3b580e29c96ae968a2b9979c50973f1e1d",
+        "html_url": "https://github.com/dylang/changelog/commit/e4c2ff3b580e29c96ae968a2b9979c50973f1e1d"
+      }
+    ]
+  },
+  {
+    "sha": "e4c2ff3b580e29c96ae968a2b9979c50973f1e1d",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:31:50Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:31:50Z"
+      },
+      "message": "update help",
+      "tree": {
+        "sha": "8c54b1a58470d2f2282417ebb91ce3493d72a2db",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/8c54b1a58470d2f2282417ebb91ce3493d72a2db"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/e4c2ff3b580e29c96ae968a2b9979c50973f1e1d",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/e4c2ff3b580e29c96ae968a2b9979c50973f1e1d",
+    "html_url": "https://github.com/dylang/changelog/commit/e4c2ff3b580e29c96ae968a2b9979c50973f1e1d",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/e4c2ff3b580e29c96ae968a2b9979c50973f1e1d/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "6de611263b9410bb0ab841a5de3210d355d6c6a2",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/6de611263b9410bb0ab841a5de3210d355d6c6a2",
+        "html_url": "https://github.com/dylang/changelog/commit/6de611263b9410bb0ab841a5de3210d355d6c6a2"
+      }
+    ]
+  },
+  {
+    "sha": "6de611263b9410bb0ab841a5de3210d355d6c6a2",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:31:28Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:31:28Z"
+      },
+      "message": "update readme",
+      "tree": {
+        "sha": "17158db091478d91d40b29a82ca484b78b6e5af3",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/17158db091478d91d40b29a82ca484b78b6e5af3"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/6de611263b9410bb0ab841a5de3210d355d6c6a2",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/6de611263b9410bb0ab841a5de3210d355d6c6a2",
+    "html_url": "https://github.com/dylang/changelog/commit/6de611263b9410bb0ab841a5de3210d355d6c6a2",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/6de611263b9410bb0ab841a5de3210d355d6c6a2/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "a80d72385411f6368bc66ae204e88c57f69923a7",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/a80d72385411f6368bc66ae204e88c57f69923a7",
+        "html_url": "https://github.com/dylang/changelog/commit/a80d72385411f6368bc66ae204e88c57f69923a7"
+      }
+    ]
+  },
+  {
+    "sha": "a80d72385411f6368bc66ae204e88c57f69923a7",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:21:59Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:21:59Z"
+      },
+      "message": "* updated readme",
+      "tree": {
+        "sha": "1316da91ab265a76b4e691144e5e12787da42c72",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/1316da91ab265a76b4e691144e5e12787da42c72"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/a80d72385411f6368bc66ae204e88c57f69923a7",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/a80d72385411f6368bc66ae204e88c57f69923a7",
+    "html_url": "https://github.com/dylang/changelog/commit/a80d72385411f6368bc66ae204e88c57f69923a7",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/a80d72385411f6368bc66ae204e88c57f69923a7/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "a87f27ff52a385fcba3877d2eae02ccdefd37245",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/a87f27ff52a385fcba3877d2eae02ccdefd37245",
+        "html_url": "https://github.com/dylang/changelog/commit/a87f27ff52a385fcba3877d2eae02ccdefd37245"
+      }
+    ]
+  },
+  {
+    "sha": "a87f27ff52a385fcba3877d2eae02ccdefd37245",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:20:21Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T13:20:21Z"
+      },
+      "message": "* fix some bugs in the command line script\n* update readme\n* update help\n* update examples",
+      "tree": {
+        "sha": "75ffe96707fe89bf40abac296d15a19411d65e48",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/75ffe96707fe89bf40abac296d15a19411d65e48"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/a87f27ff52a385fcba3877d2eae02ccdefd37245",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/a87f27ff52a385fcba3877d2eae02ccdefd37245",
+    "html_url": "https://github.com/dylang/changelog/commit/a87f27ff52a385fcba3877d2eae02ccdefd37245",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/a87f27ff52a385fcba3877d2eae02ccdefd37245/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "3d05377aed3e26d5254e950a125ffaaca2cf0e1b",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/3d05377aed3e26d5254e950a125ffaaca2cf0e1b",
+        "html_url": "https://github.com/dylang/changelog/commit/3d05377aed3e26d5254e950a125ffaaca2cf0e1b"
+      }
+    ]
+  },
+  {
+    "sha": "3d05377aed3e26d5254e950a125ffaaca2cf0e1b",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T04:45:51Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T04:45:51Z"
+      },
+      "message": "show error message when github api rate limiting is enabled",
+      "tree": {
+        "sha": "fb5a28222690516ae47f3ad6ac37a7f86efb87cc",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/fb5a28222690516ae47f3ad6ac37a7f86efb87cc"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/3d05377aed3e26d5254e950a125ffaaca2cf0e1b",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/3d05377aed3e26d5254e950a125ffaaca2cf0e1b",
+    "html_url": "https://github.com/dylang/changelog/commit/3d05377aed3e26d5254e950a125ffaaca2cf0e1b",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/3d05377aed3e26d5254e950a125ffaaca2cf0e1b/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "257f4e77676bb695ad7628d6751e0cc452bf83f8",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/257f4e77676bb695ad7628d6751e0cc452bf83f8",
+        "html_url": "https://github.com/dylang/changelog/commit/257f4e77676bb695ad7628d6751e0cc452bf83f8"
+      }
+    ]
+  },
+  {
+    "sha": "257f4e77676bb695ad7628d6751e0cc452bf83f8",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T04:28:30Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-20T04:28:30Z"
+      },
+      "message": "more refactoring, update tests",
+      "tree": {
+        "sha": "ff961b87efab646349490b5a6836c95a59e592f9",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/ff961b87efab646349490b5a6836c95a59e592f9"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/257f4e77676bb695ad7628d6751e0cc452bf83f8",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/257f4e77676bb695ad7628d6751e0cc452bf83f8",
+    "html_url": "https://github.com/dylang/changelog/commit/257f4e77676bb695ad7628d6751e0cc452bf83f8",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/257f4e77676bb695ad7628d6751e0cc452bf83f8/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "451877fe29b51099b487855a7e71c1cf39e80b56",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/451877fe29b51099b487855a7e71c1cf39e80b56",
+        "html_url": "https://github.com/dylang/changelog/commit/451877fe29b51099b487855a7e71c1cf39e80b56"
+      }
+    ]
+  },
+  {
+    "sha": "451877fe29b51099b487855a7e71c1cf39e80b56",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-19T13:02:20Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-19T13:02:20Z"
+      },
+      "message": "added .travis.yml.\nfixed TTL problem that made it not work in modern versions of Node. Fixes #3.\nupdated npm registry api url.\nadded tests.\nupdated readme.\nchanged from using `step` to `q`.",
+      "tree": {
+        "sha": "6f961d6e7fb578ec917eef9e4604146ee9b5bda2",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/6f961d6e7fb578ec917eef9e4604146ee9b5bda2"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/451877fe29b51099b487855a7e71c1cf39e80b56",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/451877fe29b51099b487855a7e71c1cf39e80b56",
+    "html_url": "https://github.com/dylang/changelog/commit/451877fe29b51099b487855a7e71c1cf39e80b56",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/451877fe29b51099b487855a7e71c1cf39e80b56/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "085e1d8f6ea1c8acd07ca7e8e2afd1f2c4ba2df9",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/085e1d8f6ea1c8acd07ca7e8e2afd1f2c4ba2df9",
+        "html_url": "https://github.com/dylang/changelog/commit/085e1d8f6ea1c8acd07ca7e8e2afd1f2c4ba2df9"
+      }
+    ]
+  },
+  {
+    "sha": "085e1d8f6ea1c8acd07ca7e8e2afd1f2c4ba2df9",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-17T14:43:54Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2013-09-17T14:43:54Z"
+      },
+      "message": "let the author know",
+      "tree": {
+        "sha": "1febda195404080c6760721fb844b354189256cc",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/1febda195404080c6760721fb844b354189256cc"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/085e1d8f6ea1c8acd07ca7e8e2afd1f2c4ba2df9",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/085e1d8f6ea1c8acd07ca7e8e2afd1f2c4ba2df9",
+    "html_url": "https://github.com/dylang/changelog/commit/085e1d8f6ea1c8acd07ca7e8e2afd1f2c4ba2df9",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/085e1d8f6ea1c8acd07ca7e8e2afd1f2c4ba2df9/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "66fb2242d864693c54ef74c961ef6ed9ec72d66f",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/66fb2242d864693c54ef74c961ef6ed9ec72d66f",
+        "html_url": "https://github.com/dylang/changelog/commit/66fb2242d864693c54ef74c961ef6ed9ec72d66f"
+      }
+    ]
+  },
+  {
+    "sha": "66fb2242d864693c54ef74c961ef6ed9ec72d66f",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-11-21T21:54:08Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-11-21T21:54:08Z"
+      },
+      "message": "bump version, ignore TTY.getWindowSize if it's not working.",
+      "tree": {
+        "sha": "40488754c0eb779df83c703c8b55f3af0688677c",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/40488754c0eb779df83c703c8b55f3af0688677c"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/66fb2242d864693c54ef74c961ef6ed9ec72d66f",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/66fb2242d864693c54ef74c961ef6ed9ec72d66f",
+    "html_url": "https://github.com/dylang/changelog/commit/66fb2242d864693c54ef74c961ef6ed9ec72d66f",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/66fb2242d864693c54ef74c961ef6ed9ec72d66f/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "5a05cf85d807c7d1d3339f7aadf6a8283e16bb06",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/5a05cf85d807c7d1d3339f7aadf6a8283e16bb06",
+        "html_url": "https://github.com/dylang/changelog/commit/5a05cf85d807c7d1d3339f7aadf6a8283e16bb06"
+      }
+    ]
+  },
+  {
+    "sha": "5a05cf85d807c7d1d3339f7aadf6a8283e16bb06",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-11-21T21:38:46Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-11-21T21:38:46Z"
+      },
+      "message": "fix bug when author doesn't include repo. make work in node 0.6.*",
+      "tree": {
+        "sha": "f09a6c023d1fe724fcb4a7e4f5487d597d1e4e5e",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/f09a6c023d1fe724fcb4a7e4f5487d597d1e4e5e"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/5a05cf85d807c7d1d3339f7aadf6a8283e16bb06",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/5a05cf85d807c7d1d3339f7aadf6a8283e16bb06",
+    "html_url": "https://github.com/dylang/changelog/commit/5a05cf85d807c7d1d3339f7aadf6a8283e16bb06",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/5a05cf85d807c7d1d3339f7aadf6a8283e16bb06/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "ff9e8828cabf941d5665c22ec54eb68c1b9e09c7",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/ff9e8828cabf941d5665c22ec54eb68c1b9e09c7",
+        "html_url": "https://github.com/dylang/changelog/commit/ff9e8828cabf941d5665c22ec54eb68c1b9e09c7"
+      }
+    ]
+  },
+  {
+    "sha": "ff9e8828cabf941d5665c22ec54eb68c1b9e09c7",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-26T18:57:27Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-26T18:57:27Z"
+      },
+      "message": "version bump to 0.1.2",
+      "tree": {
+        "sha": "38b43fa5c4db57e267455fbef4408278b229d9f6",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/38b43fa5c4db57e267455fbef4408278b229d9f6"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/ff9e8828cabf941d5665c22ec54eb68c1b9e09c7",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/ff9e8828cabf941d5665c22ec54eb68c1b9e09c7",
+    "html_url": "https://github.com/dylang/changelog/commit/ff9e8828cabf941d5665c22ec54eb68c1b9e09c7",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/ff9e8828cabf941d5665c22ec54eb68c1b9e09c7/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "9af4c759d2c911445e38d34ed30a33a19b17ae54",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/9af4c759d2c911445e38d34ed30a33a19b17ae54",
+        "html_url": "https://github.com/dylang/changelog/commit/9af4c759d2c911445e38d34ed30a33a19b17ae54"
+      }
+    ]
+  },
+  {
+    "sha": "9af4c759d2c911445e38d34ed30a33a19b17ae54",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-26T18:56:38Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-26T18:56:38Z"
+      },
+      "message": "added support for showing specific releases via `latest`, `n`, and `n.n.n` based on Tjholowaychuk's request.  Closes #2",
+      "tree": {
+        "sha": "7b41059a6430c513948b78f7b041ad918d0d0078",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/7b41059a6430c513948b78f7b041ad918d0d0078"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/9af4c759d2c911445e38d34ed30a33a19b17ae54",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/9af4c759d2c911445e38d34ed30a33a19b17ae54",
+    "html_url": "https://github.com/dylang/changelog/commit/9af4c759d2c911445e38d34ed30a33a19b17ae54",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/9af4c759d2c911445e38d34ed30a33a19b17ae54/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "80b2c3d95aefdcf2252f6e643852dde42f662e3c",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/80b2c3d95aefdcf2252f6e643852dde42f662e3c",
+        "html_url": "https://github.com/dylang/changelog/commit/80b2c3d95aefdcf2252f6e643852dde42f662e3c"
+      }
+    ]
+  },
+  {
+    "sha": "80b2c3d95aefdcf2252f6e643852dde42f662e3c",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-24T19:58:27Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-24T19:58:27Z"
+      },
+      "message": "updated examples and version",
+      "tree": {
+        "sha": "b55ba1fd3331f108254a5cb4b5d8537dd2443388",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/b55ba1fd3331f108254a5cb4b5d8537dd2443388"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/80b2c3d95aefdcf2252f6e643852dde42f662e3c",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/80b2c3d95aefdcf2252f6e643852dde42f662e3c",
+    "html_url": "https://github.com/dylang/changelog/commit/80b2c3d95aefdcf2252f6e643852dde42f662e3c",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/80b2c3d95aefdcf2252f6e643852dde42f662e3c/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "ece01b220b06e27d7d1e96e8ee5f5099c1d6918c",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/ece01b220b06e27d7d1e96e8ee5f5099c1d6918c",
+        "html_url": "https://github.com/dylang/changelog/commit/ece01b220b06e27d7d1e96e8ee5f5099c1d6918c"
+      }
+    ]
+  },
+  {
+    "sha": "ece01b220b06e27d7d1e96e8ee5f5099c1d6918c",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-24T19:57:44Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-24T19:57:44Z"
+      },
+      "message": "fixed regex for replacing github ticket numbers with url to the ticket so it wouldn't blindly match #.",
+      "tree": {
+        "sha": "1f54543b8a2924948f4a12e86e11cf48ec20e83a",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/1f54543b8a2924948f4a12e86e11cf48ec20e83a"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/ece01b220b06e27d7d1e96e8ee5f5099c1d6918c",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/ece01b220b06e27d7d1e96e8ee5f5099c1d6918c",
+    "html_url": "https://github.com/dylang/changelog/commit/ece01b220b06e27d7d1e96e8ee5f5099c1d6918c",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/ece01b220b06e27d7d1e96e8ee5f5099c1d6918c/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "ffc5808ab4db67aebb5f7365cf130f103d303923",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/ffc5808ab4db67aebb5f7365cf130f103d303923",
+        "html_url": "https://github.com/dylang/changelog/commit/ffc5808ab4db67aebb5f7365cf130f103d303923"
+      }
+    ]
+  },
+  {
+    "sha": "ffc5808ab4db67aebb5f7365cf130f103d303923",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T16:14:47Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T16:14:47Z"
+      },
+      "message": "update changelog",
+      "tree": {
+        "sha": "0df8812ab94f1b1c8632d9ca87c89329b3b2c769",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/0df8812ab94f1b1c8632d9ca87c89329b3b2c769"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/ffc5808ab4db67aebb5f7365cf130f103d303923",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/ffc5808ab4db67aebb5f7365cf130f103d303923",
+    "html_url": "https://github.com/dylang/changelog/commit/ffc5808ab4db67aebb5f7365cf130f103d303923",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/ffc5808ab4db67aebb5f7365cf130f103d303923/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "10e14144c82807828e3f8e6d0b0d22f3319ae1f0",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/10e14144c82807828e3f8e6d0b0d22f3319ae1f0",
+        "html_url": "https://github.com/dylang/changelog/commit/10e14144c82807828e3f8e6d0b0d22f3319ae1f0"
+      }
+    ]
+  },
+  {
+    "sha": "10e14144c82807828e3f8e6d0b0d22f3319ae1f0",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T16:14:08Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T16:14:08Z"
+      },
+      "message": "update version",
+      "tree": {
+        "sha": "8a242eff6779f60f24e361ff148063011924456d",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/8a242eff6779f60f24e361ff148063011924456d"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/10e14144c82807828e3f8e6d0b0d22f3319ae1f0",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/10e14144c82807828e3f8e6d0b0d22f3319ae1f0",
+    "html_url": "https://github.com/dylang/changelog/commit/10e14144c82807828e3f8e6d0b0d22f3319ae1f0",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/10e14144c82807828e3f8e6d0b0d22f3319ae1f0/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "9a29769eaae2727c0187dd977a8bf527544e9098",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/9a29769eaae2727c0187dd977a8bf527544e9098",
+        "html_url": "https://github.com/dylang/changelog/commit/9a29769eaae2727c0187dd977a8bf527544e9098"
+      }
+    ]
+  },
+  {
+    "sha": "9a29769eaae2727c0187dd977a8bf527544e9098",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T16:13:47Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T16:13:47Z"
+      },
+      "message": "show the author's name if the repo url is not in the module's package.json.",
+      "tree": {
+        "sha": "c1c9ff0077449b1fc652fb452adb628ba126d913",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/c1c9ff0077449b1fc652fb452adb628ba126d913"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/9a29769eaae2727c0187dd977a8bf527544e9098",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/9a29769eaae2727c0187dd977a8bf527544e9098",
+    "html_url": "https://github.com/dylang/changelog/commit/9a29769eaae2727c0187dd977a8bf527544e9098",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/9a29769eaae2727c0187dd977a8bf527544e9098/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "88d0a2bc7c7641ac4f3182aadb97aad57be1882b",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/88d0a2bc7c7641ac4f3182aadb97aad57be1882b",
+        "html_url": "https://github.com/dylang/changelog/commit/88d0a2bc7c7641ac4f3182aadb97aad57be1882b"
+      }
+    ]
+  },
+  {
+    "sha": "88d0a2bc7c7641ac4f3182aadb97aad57be1882b",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T16:06:48Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T16:06:48Z"
+      },
+      "message": "fix exception that happens when a module isn't found",
+      "tree": {
+        "sha": "48686a6f80f1928284c5454c972af733ccbdf6d0",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/48686a6f80f1928284c5454c972af733ccbdf6d0"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/88d0a2bc7c7641ac4f3182aadb97aad57be1882b",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/88d0a2bc7c7641ac4f3182aadb97aad57be1882b",
+    "html_url": "https://github.com/dylang/changelog/commit/88d0a2bc7c7641ac4f3182aadb97aad57be1882b",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/88d0a2bc7c7641ac4f3182aadb97aad57be1882b/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "fbe339cc10c4fa49438af2e4ed938d2d87f1161b",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/fbe339cc10c4fa49438af2e4ed938d2d87f1161b",
+        "html_url": "https://github.com/dylang/changelog/commit/fbe339cc10c4fa49438af2e4ed938d2d87f1161b"
+      }
+    ]
+  },
+  {
+    "sha": "fbe339cc10c4fa49438af2e4ed938d2d87f1161b",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:59:56Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:59:56Z"
+      },
+      "message": "clean up readme",
+      "tree": {
+        "sha": "6e682cb6dbd9a94b4c8bb1850693f45d7870a1bc",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/6e682cb6dbd9a94b4c8bb1850693f45d7870a1bc"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/fbe339cc10c4fa49438af2e4ed938d2d87f1161b",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/fbe339cc10c4fa49438af2e4ed938d2d87f1161b",
+    "html_url": "https://github.com/dylang/changelog/commit/fbe339cc10c4fa49438af2e4ed938d2d87f1161b",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/fbe339cc10c4fa49438af2e4ed938d2d87f1161b/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "884a0cfeeb440a326f694254434ff317e2155782",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/884a0cfeeb440a326f694254434ff317e2155782",
+        "html_url": "https://github.com/dylang/changelog/commit/884a0cfeeb440a326f694254434ff317e2155782"
+      }
+    ]
+  },
+  {
+    "sha": "884a0cfeeb440a326f694254434ff317e2155782",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:51:06Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:51:06Z"
+      },
+      "message": "fix screenshot urls",
+      "tree": {
+        "sha": "f43e1098e8f36a7134a3b5ddff54b8690691514f",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/f43e1098e8f36a7134a3b5ddff54b8690691514f"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/884a0cfeeb440a326f694254434ff317e2155782",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/884a0cfeeb440a326f694254434ff317e2155782",
+    "html_url": "https://github.com/dylang/changelog/commit/884a0cfeeb440a326f694254434ff317e2155782",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/884a0cfeeb440a326f694254434ff317e2155782/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "a021b8ab81ef2ef0ccd8e207abb7e56b6a60782e",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/a021b8ab81ef2ef0ccd8e207abb7e56b6a60782e",
+        "html_url": "https://github.com/dylang/changelog/commit/a021b8ab81ef2ef0ccd8e207abb7e56b6a60782e"
+      }
+    ]
+  },
+  {
+    "sha": "a021b8ab81ef2ef0ccd8e207abb7e56b6a60782e",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:50:02Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:50:02Z"
+      },
+      "message": "updated examples and added screenshots",
+      "tree": {
+        "sha": "6bf24f927f93180e060be9d64cd99c5530e3fbd5",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/6bf24f927f93180e060be9d64cd99c5530e3fbd5"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/a021b8ab81ef2ef0ccd8e207abb7e56b6a60782e",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/a021b8ab81ef2ef0ccd8e207abb7e56b6a60782e",
+    "html_url": "https://github.com/dylang/changelog/commit/a021b8ab81ef2ef0ccd8e207abb7e56b6a60782e",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/a021b8ab81ef2ef0ccd8e207abb7e56b6a60782e/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "564e14980dfa7a87b79d319e4ae345bc7842552f",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/564e14980dfa7a87b79d319e4ae345bc7842552f",
+        "html_url": "https://github.com/dylang/changelog/commit/564e14980dfa7a87b79d319e4ae345bc7842552f"
+      }
+    ]
+  },
+  {
+    "sha": "564e14980dfa7a87b79d319e4ae345bc7842552f",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:30:26Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:30:26Z"
+      },
+      "message": "update version",
+      "tree": {
+        "sha": "d45dc296e30181f9de8ed261905f51ec69309585",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/d45dc296e30181f9de8ed261905f51ec69309585"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/564e14980dfa7a87b79d319e4ae345bc7842552f",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/564e14980dfa7a87b79d319e4ae345bc7842552f",
+    "html_url": "https://github.com/dylang/changelog/commit/564e14980dfa7a87b79d319e4ae345bc7842552f",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/564e14980dfa7a87b79d319e4ae345bc7842552f/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "ea92d3c5eced8d739f79c52435bd0450e9de5e73",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/ea92d3c5eced8d739f79c52435bd0450e9de5e73",
+        "html_url": "https://github.com/dylang/changelog/commit/ea92d3c5eced8d739f79c52435bd0450e9de5e73"
+      }
+    ]
+  },
+  {
+    "sha": "ea92d3c5eced8d739f79c52435bd0450e9de5e73",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:28:45Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:28:45Z"
+      },
+      "message": "update examples",
+      "tree": {
+        "sha": "6a667bebb4cd570bef217120318e0d46a6a28676",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/6a667bebb4cd570bef217120318e0d46a6a28676"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/ea92d3c5eced8d739f79c52435bd0450e9de5e73",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/ea92d3c5eced8d739f79c52435bd0450e9de5e73",
+    "html_url": "https://github.com/dylang/changelog/commit/ea92d3c5eced8d739f79c52435bd0450e9de5e73",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/ea92d3c5eced8d739f79c52435bd0450e9de5e73/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "79b580499b97f2299cd528d7f29bb521554a4710",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/79b580499b97f2299cd528d7f29bb521554a4710",
+        "html_url": "https://github.com/dylang/changelog/commit/79b580499b97f2299cd528d7f29bb521554a4710"
+      }
+    ]
+  },
+  {
+    "sha": "79b580499b97f2299cd528d7f29bb521554a4710",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:21:00Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-23T15:21:00Z"
+      },
+      "message": "show full url to to github issue on command line output",
+      "tree": {
+        "sha": "daa8a5c78c28b84c5999995da21709adc9bfba10",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/daa8a5c78c28b84c5999995da21709adc9bfba10"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/79b580499b97f2299cd528d7f29bb521554a4710",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/79b580499b97f2299cd528d7f29bb521554a4710",
+    "html_url": "https://github.com/dylang/changelog/commit/79b580499b97f2299cd528d7f29bb521554a4710",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/79b580499b97f2299cd528d7f29bb521554a4710/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "51bb47ffc303ac953dac3441ec31f06ca0aefecc",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/51bb47ffc303ac953dac3441ec31f06ca0aefecc",
+        "html_url": "https://github.com/dylang/changelog/commit/51bb47ffc303ac953dac3441ec31f06ca0aefecc"
+      }
+    ]
+  },
+  {
+    "sha": "51bb47ffc303ac953dac3441ec31f06ca0aefecc",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-16T15:01:37Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-16T15:01:37Z"
+      },
+      "message": "updated version",
+      "tree": {
+        "sha": "a666e60e75affa5cbfcf5364293af5b514b3d3c1",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/a666e60e75affa5cbfcf5364293af5b514b3d3c1"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/51bb47ffc303ac953dac3441ec31f06ca0aefecc",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/51bb47ffc303ac953dac3441ec31f06ca0aefecc",
+    "html_url": "https://github.com/dylang/changelog/commit/51bb47ffc303ac953dac3441ec31f06ca0aefecc",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/51bb47ffc303ac953dac3441ec31f06ca0aefecc/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "cf18ffbde0b15c20976954d34c635b431cb5deef",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/cf18ffbde0b15c20976954d34c635b431cb5deef",
+        "html_url": "https://github.com/dylang/changelog/commit/cf18ffbde0b15c20976954d34c635b431cb5deef"
+      }
+    ]
+  },
+  {
+    "sha": "cf18ffbde0b15c20976954d34c635b431cb5deef",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-16T15:01:09Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-16T15:01:09Z"
+      },
+      "message": "updated examples",
+      "tree": {
+        "sha": "b3cacf0be3e85a643fd683eb152105df65f476b3",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/b3cacf0be3e85a643fd683eb152105df65f476b3"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/cf18ffbde0b15c20976954d34c635b431cb5deef",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/cf18ffbde0b15c20976954d34c635b431cb5deef",
+    "html_url": "https://github.com/dylang/changelog/commit/cf18ffbde0b15c20976954d34c635b431cb5deef",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/cf18ffbde0b15c20976954d34c635b431cb5deef/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "cc71f62e53aa1b12db6ca80d30c186ac7d3e2f96",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/cc71f62e53aa1b12db6ca80d30c186ac7d3e2f96",
+        "html_url": "https://github.com/dylang/changelog/commit/cc71f62e53aa1b12db6ca80d30c186ac7d3e2f96"
+      }
+    ]
+  },
+  {
+    "sha": "cc71f62e53aa1b12db6ca80d30c186ac7d3e2f96",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-16T14:59:27Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-16T14:59:27Z"
+      },
+      "message": "don't include ansi color codes when outputting to a file or pipe",
+      "tree": {
+        "sha": "785b51d220d68cc1ab5ec5ea987489ff129907b3",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/785b51d220d68cc1ab5ec5ea987489ff129907b3"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/cc71f62e53aa1b12db6ca80d30c186ac7d3e2f96",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/cc71f62e53aa1b12db6ca80d30c186ac7d3e2f96",
+    "html_url": "https://github.com/dylang/changelog/commit/cc71f62e53aa1b12db6ca80d30c186ac7d3e2f96",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/cc71f62e53aa1b12db6ca80d30c186ac7d3e2f96/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "08e9657ff9cc15e323af588a501599ae2d1f5f71",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/08e9657ff9cc15e323af588a501599ae2d1f5f71",
+        "html_url": "https://github.com/dylang/changelog/commit/08e9657ff9cc15e323af588a501599ae2d1f5f71"
+      }
+    ]
+  },
+  {
+    "sha": "08e9657ff9cc15e323af588a501599ae2d1f5f71",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-10T05:32:26Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-10T05:32:26Z"
+      },
+      "message": "updated examples",
+      "tree": {
+        "sha": "9de35cc8d766371516aa14a7725a79c69fd980e9",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/9de35cc8d766371516aa14a7725a79c69fd980e9"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/08e9657ff9cc15e323af588a501599ae2d1f5f71",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/08e9657ff9cc15e323af588a501599ae2d1f5f71",
+    "html_url": "https://github.com/dylang/changelog/commit/08e9657ff9cc15e323af588a501599ae2d1f5f71",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/08e9657ff9cc15e323af588a501599ae2d1f5f71/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "0c81e5ad784a0ada8305fedcef4287d883b1ba2e",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/0c81e5ad784a0ada8305fedcef4287d883b1ba2e",
+        "html_url": "https://github.com/dylang/changelog/commit/0c81e5ad784a0ada8305fedcef4287d883b1ba2e"
+      }
+    ]
+  },
+  {
+    "sha": "0c81e5ad784a0ada8305fedcef4287d883b1ba2e",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dgreene@dylanmac2.(none)",
+        "date": "2011-08-10T04:00:59Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dgreene@dylanmac2.(none)",
+        "date": "2011-08-10T04:00:59Z"
+      },
+      "message": "upped version",
+      "tree": {
+        "sha": "3b3841775b1dcec09dc12bb068f035e4b72b3a13",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/3b3841775b1dcec09dc12bb068f035e4b72b3a13"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/0c81e5ad784a0ada8305fedcef4287d883b1ba2e",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/0c81e5ad784a0ada8305fedcef4287d883b1ba2e",
+    "html_url": "https://github.com/dylang/changelog/commit/0c81e5ad784a0ada8305fedcef4287d883b1ba2e",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/0c81e5ad784a0ada8305fedcef4287d883b1ba2e/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "4f71a4d1021cfd2702c0cad38511ad784c07b6e1",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/4f71a4d1021cfd2702c0cad38511ad784c07b6e1",
+        "html_url": "https://github.com/dylang/changelog/commit/4f71a4d1021cfd2702c0cad38511ad784c07b6e1"
+      }
+    ]
+  },
+  {
+    "sha": "4f71a4d1021cfd2702c0cad38511ad784c07b6e1",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dgreene@dylanmac2.(none)",
+        "date": "2011-08-10T04:00:45Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dgreene@dylanmac2.(none)",
+        "date": "2011-08-10T04:00:45Z"
+      },
+      "message": "added changelog for changelog",
+      "tree": {
+        "sha": "6e227bf720f22290bc2fb578a003ed0b90716509",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/6e227bf720f22290bc2fb578a003ed0b90716509"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/4f71a4d1021cfd2702c0cad38511ad784c07b6e1",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/4f71a4d1021cfd2702c0cad38511ad784c07b6e1",
+    "html_url": "https://github.com/dylang/changelog/commit/4f71a4d1021cfd2702c0cad38511ad784c07b6e1",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/4f71a4d1021cfd2702c0cad38511ad784c07b6e1/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "27f3524f8a8e4c2201a8b821f82a2e3c266a0d0a",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/27f3524f8a8e4c2201a8b821f82a2e3c266a0d0a",
+        "html_url": "https://github.com/dylang/changelog/commit/27f3524f8a8e4c2201a8b821f82a2e3c266a0d0a"
+      }
+    ]
+  },
+  {
+    "sha": "27f3524f8a8e4c2201a8b821f82a2e3c266a0d0a",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dgreene@dylanmac2.(none)",
+        "date": "2011-08-10T03:52:06Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dgreene@dylanmac2.(none)",
+        "date": "2011-08-10T03:52:06Z"
+      },
+      "message": "run changelog in the root of a node project with a package.json and it will use it to create the changelog.",
+      "tree": {
+        "sha": "fb1c949205db932bfdeace487df57086df349682",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/fb1c949205db932bfdeace487df57086df349682"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/27f3524f8a8e4c2201a8b821f82a2e3c266a0d0a",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/27f3524f8a8e4c2201a8b821f82a2e3c266a0d0a",
+    "html_url": "https://github.com/dylang/changelog/commit/27f3524f8a8e4c2201a8b821f82a2e3c266a0d0a",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/27f3524f8a8e4c2201a8b821f82a2e3c266a0d0a/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "58e5d6857d47e757673703fcb96c777a6f62284d",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/58e5d6857d47e757673703fcb96c777a6f62284d",
+        "html_url": "https://github.com/dylang/changelog/commit/58e5d6857d47e757673703fcb96c777a6f62284d"
+      }
+    ]
+  },
+  {
+    "sha": "58e5d6857d47e757673703fcb96c777a6f62284d",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-07T03:54:14Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-07T03:54:14Z"
+      },
+      "message": "bumped version to 0.0.6",
+      "tree": {
+        "sha": "20c647b29346a4ddb1a36b6a0f33d63c724ca6bd",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/20c647b29346a4ddb1a36b6a0f33d63c724ca6bd"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/58e5d6857d47e757673703fcb96c777a6f62284d",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/58e5d6857d47e757673703fcb96c777a6f62284d",
+    "html_url": "https://github.com/dylang/changelog/commit/58e5d6857d47e757673703fcb96c777a6f62284d",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/58e5d6857d47e757673703fcb96c777a6f62284d/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "7861b653f07163437eb4c5df638e75deab1c7927",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/7861b653f07163437eb4c5df638e75deab1c7927",
+        "html_url": "https://github.com/dylang/changelog/commit/7861b653f07163437eb4c5df638e75deab1c7927"
+      }
+    ]
+  },
+  {
+    "sha": "7861b653f07163437eb4c5df638e75deab1c7927",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-07T03:45:52Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-07T03:45:52Z"
+      },
+      "message": "added lots of examples",
+      "tree": {
+        "sha": "bc3cdc00ddf478c441b51f1b5d49f115b5e79b8c",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/bc3cdc00ddf478c441b51f1b5d49f115b5e79b8c"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/7861b653f07163437eb4c5df638e75deab1c7927",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/7861b653f07163437eb4c5df638e75deab1c7927",
+    "html_url": "https://github.com/dylang/changelog/commit/7861b653f07163437eb4c5df638e75deab1c7927",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/7861b653f07163437eb4c5df638e75deab1c7927/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "54a67fbcf1c6c8136aee1007165a71bb436e7647",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/54a67fbcf1c6c8136aee1007165a71bb436e7647",
+        "html_url": "https://github.com/dylang/changelog/commit/54a67fbcf1c6c8136aee1007165a71bb436e7647"
+      }
+    ]
+  },
+  {
+    "sha": "54a67fbcf1c6c8136aee1007165a71bb436e7647",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-07T03:12:41Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-07T03:12:41Z"
+      },
+      "message": "added --color output (new default)",
+      "tree": {
+        "sha": "0c5c632c912b54491a3a32c88afc5418e2b80386",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/0c5c632c912b54491a3a32c88afc5418e2b80386"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/54a67fbcf1c6c8136aee1007165a71bb436e7647",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/54a67fbcf1c6c8136aee1007165a71bb436e7647",
+    "html_url": "https://github.com/dylang/changelog/commit/54a67fbcf1c6c8136aee1007165a71bb436e7647",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/54a67fbcf1c6c8136aee1007165a71bb436e7647/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "68031cf31ec85b672e4745672201bb971f130df5",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/68031cf31ec85b672e4745672201bb971f130df5",
+        "html_url": "https://github.com/dylang/changelog/commit/68031cf31ec85b672e4745672201bb971f130df5"
+      }
+    ]
+  },
+  {
+    "sha": "68031cf31ec85b672e4745672201bb971f130df5",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-06T20:34:42Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-06T20:34:42Z"
+      },
+      "message": "get debug output via --debug",
+      "tree": {
+        "sha": "be300abb8f862739dbfcc23b5464358130c22b9e",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/be300abb8f862739dbfcc23b5464358130c22b9e"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/68031cf31ec85b672e4745672201bb971f130df5",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/68031cf31ec85b672e4745672201bb971f130df5",
+    "html_url": "https://github.com/dylang/changelog/commit/68031cf31ec85b672e4745672201bb971f130df5",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/68031cf31ec85b672e4745672201bb971f130df5/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "b842743c333dcc4343733939a970b493e3779fab",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/b842743c333dcc4343733939a970b493e3779fab",
+        "html_url": "https://github.com/dylang/changelog/commit/b842743c333dcc4343733939a970b493e3779fab"
+      }
+    ]
+  },
+  {
+    "sha": "b842743c333dcc4343733939a970b493e3779fab",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-05T18:21:58Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-05T18:21:58Z"
+      },
+      "message": "up version",
+      "tree": {
+        "sha": "7bc21c586cf6a81a0a2bf76960f2736009e1d2f8",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/7bc21c586cf6a81a0a2bf76960f2736009e1d2f8"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/b842743c333dcc4343733939a970b493e3779fab",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/b842743c333dcc4343733939a970b493e3779fab",
+    "html_url": "https://github.com/dylang/changelog/commit/b842743c333dcc4343733939a970b493e3779fab",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/b842743c333dcc4343733939a970b493e3779fab/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "6ab41da21a2a296d7ee441198aa52e1b9ebe67c7",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/6ab41da21a2a296d7ee441198aa52e1b9ebe67c7",
+        "html_url": "https://github.com/dylang/changelog/commit/6ab41da21a2a296d7ee441198aa52e1b9ebe67c7"
+      }
+    ]
+  },
+  {
+    "sha": "6ab41da21a2a296d7ee441198aa52e1b9ebe67c7",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-05T18:21:20Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-05T18:21:20Z"
+      },
+      "message": "handle better npm's api not being available\nwrap text using the screen width via tty",
+      "tree": {
+        "sha": "8ce7fec21ee13aea1a63bab015dcd15b4cd96ccb",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/8ce7fec21ee13aea1a63bab015dcd15b4cd96ccb"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/6ab41da21a2a296d7ee441198aa52e1b9ebe67c7",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/6ab41da21a2a296d7ee441198aa52e1b9ebe67c7",
+    "html_url": "https://github.com/dylang/changelog/commit/6ab41da21a2a296d7ee441198aa52e1b9ebe67c7",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/6ab41da21a2a296d7ee441198aa52e1b9ebe67c7/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "4e619f801059650a6fac5c6cb6cf708b56d1664a",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/4e619f801059650a6fac5c6cb6cf708b56d1664a",
+        "html_url": "https://github.com/dylang/changelog/commit/4e619f801059650a6fac5c6cb6cf708b56d1664a"
+      }
+    ]
+  },
+  {
+    "sha": "4e619f801059650a6fac5c6cb6cf708b56d1664a",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T21:40:44Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T21:40:44Z"
+      },
+      "message": "remove node_modules from git project",
+      "tree": {
+        "sha": "1bfb09095091bbf43d8e52a88b4314c80baae779",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/1bfb09095091bbf43d8e52a88b4314c80baae779"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/4e619f801059650a6fac5c6cb6cf708b56d1664a",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/4e619f801059650a6fac5c6cb6cf708b56d1664a",
+    "html_url": "https://github.com/dylang/changelog/commit/4e619f801059650a6fac5c6cb6cf708b56d1664a",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/4e619f801059650a6fac5c6cb6cf708b56d1664a/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "bda623188d9d7dbd58b1030d0fb9ce1d416858b5",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/bda623188d9d7dbd58b1030d0fb9ce1d416858b5",
+        "html_url": "https://github.com/dylang/changelog/commit/bda623188d9d7dbd58b1030d0fb9ce1d416858b5"
+      }
+    ]
+  },
+  {
+    "sha": "bda623188d9d7dbd58b1030d0fb9ce1d416858b5",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T19:54:42Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T19:54:42Z"
+      },
+      "message": "update version to 0.0.4",
+      "tree": {
+        "sha": "ac46e761285b47bea138508521c6223fdf9e89e1",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/ac46e761285b47bea138508521c6223fdf9e89e1"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/bda623188d9d7dbd58b1030d0fb9ce1d416858b5",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/bda623188d9d7dbd58b1030d0fb9ce1d416858b5",
+    "html_url": "https://github.com/dylang/changelog/commit/bda623188d9d7dbd58b1030d0fb9ce1d416858b5",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/bda623188d9d7dbd58b1030d0fb9ce1d416858b5/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "01df5a95a54f486caa460ecc3574099696480228",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/01df5a95a54f486caa460ecc3574099696480228",
+        "html_url": "https://github.com/dylang/changelog/commit/01df5a95a54f486caa460ecc3574099696480228"
+      }
+    ]
+  },
+  {
+    "sha": "01df5a95a54f486caa460ecc3574099696480228",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T19:53:18Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T19:53:18Z"
+      },
+      "message": "using issac's semver to compare module version numbers",
+      "tree": {
+        "sha": "10370584233e7f7c1a1e6f45ef79f20baf8c1a9f",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/10370584233e7f7c1a1e6f45ef79f20baf8c1a9f"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/01df5a95a54f486caa460ecc3574099696480228",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/01df5a95a54f486caa460ecc3574099696480228",
+    "html_url": "https://github.com/dylang/changelog/commit/01df5a95a54f486caa460ecc3574099696480228",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/01df5a95a54f486caa460ecc3574099696480228/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "830c763644dd302ab1b11372fe5641f07b878dd7",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/830c763644dd302ab1b11372fe5641f07b878dd7",
+        "html_url": "https://github.com/dylang/changelog/commit/830c763644dd302ab1b11372fe5641f07b878dd7"
+      }
+    ]
+  },
+  {
+    "sha": "830c763644dd302ab1b11372fe5641f07b878dd7",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T14:54:59Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T14:54:59Z"
+      },
+      "message": "update readme",
+      "tree": {
+        "sha": "0738083cff93875c154870272fd595f84702f45e",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/0738083cff93875c154870272fd595f84702f45e"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/830c763644dd302ab1b11372fe5641f07b878dd7",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/830c763644dd302ab1b11372fe5641f07b878dd7",
+    "html_url": "https://github.com/dylang/changelog/commit/830c763644dd302ab1b11372fe5641f07b878dd7",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/830c763644dd302ab1b11372fe5641f07b878dd7/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "8e0fa17e166523e6a06863b4e521ba2da8038e08",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/8e0fa17e166523e6a06863b4e521ba2da8038e08",
+        "html_url": "https://github.com/dylang/changelog/commit/8e0fa17e166523e6a06863b4e521ba2da8038e08"
+      }
+    ]
+  },
+  {
+    "sha": "8e0fa17e166523e6a06863b4e521ba2da8038e08",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:34:26Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:34:26Z"
+      },
+      "message": "update readme",
+      "tree": {
+        "sha": "9177880db82784f9121042ec45b12354e46c353c",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/9177880db82784f9121042ec45b12354e46c353c"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/8e0fa17e166523e6a06863b4e521ba2da8038e08",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/8e0fa17e166523e6a06863b4e521ba2da8038e08",
+    "html_url": "https://github.com/dylang/changelog/commit/8e0fa17e166523e6a06863b4e521ba2da8038e08",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/8e0fa17e166523e6a06863b4e521ba2da8038e08/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "5b2258b082d91b127935ab9bf422861a351d2fe2",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/5b2258b082d91b127935ab9bf422861a351d2fe2",
+        "html_url": "https://github.com/dylang/changelog/commit/5b2258b082d91b127935ab9bf422861a351d2fe2"
+      }
+    ]
+  },
+  {
+    "sha": "5b2258b082d91b127935ab9bf422861a351d2fe2",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:30:38Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:30:38Z"
+      },
+      "message": "support upcoming features that are in github but not yet in npm.",
+      "tree": {
+        "sha": "3fc3d1f4280f2c07be092b0eb9e5a01afb3cb524",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/3fc3d1f4280f2c07be092b0eb9e5a01afb3cb524"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/5b2258b082d91b127935ab9bf422861a351d2fe2",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/5b2258b082d91b127935ab9bf422861a351d2fe2",
+    "html_url": "https://github.com/dylang/changelog/commit/5b2258b082d91b127935ab9bf422861a351d2fe2",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/5b2258b082d91b127935ab9bf422861a351d2fe2/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "ec600d9b482382be7a12d880395bdda3cc796478",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/ec600d9b482382be7a12d880395bdda3cc796478",
+        "html_url": "https://github.com/dylang/changelog/commit/ec600d9b482382be7a12d880395bdda3cc796478"
+      }
+    ]
+  },
+  {
+    "sha": "ec600d9b482382be7a12d880395bdda3cc796478",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:20:12Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:20:12Z"
+      },
+      "message": "up to 0.0.3",
+      "tree": {
+        "sha": "dd16c6c725ec6b5637d458f07dc72c247ab41918",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/dd16c6c725ec6b5637d458f07dc72c247ab41918"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/ec600d9b482382be7a12d880395bdda3cc796478",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/ec600d9b482382be7a12d880395bdda3cc796478",
+    "html_url": "https://github.com/dylang/changelog/commit/ec600d9b482382be7a12d880395bdda3cc796478",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/ec600d9b482382be7a12d880395bdda3cc796478/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "923b9471b32c9137d5e7229414b5def9acce37d4",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/923b9471b32c9137d5e7229414b5def9acce37d4",
+        "html_url": "https://github.com/dylang/changelog/commit/923b9471b32c9137d5e7229414b5def9acce37d4"
+      }
+    ]
+  },
+  {
+    "sha": "923b9471b32c9137d5e7229414b5def9acce37d4",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:19:25Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:19:25Z"
+      },
+      "message": "--json support",
+      "tree": {
+        "sha": "debccc798b0f53b41dcf5acb17ab03212e6edbaa",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/debccc798b0f53b41dcf5acb17ab03212e6edbaa"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/923b9471b32c9137d5e7229414b5def9acce37d4",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/923b9471b32c9137d5e7229414b5def9acce37d4",
+    "html_url": "https://github.com/dylang/changelog/commit/923b9471b32c9137d5e7229414b5def9acce37d4",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/923b9471b32c9137d5e7229414b5def9acce37d4/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "cb9dfff2ae6eff7935a8eab6054bfb07b3f0bd9c",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/cb9dfff2ae6eff7935a8eab6054bfb07b3f0bd9c",
+        "html_url": "https://github.com/dylang/changelog/commit/cb9dfff2ae6eff7935a8eab6054bfb07b3f0bd9c"
+      }
+    ]
+  },
+  {
+    "sha": "cb9dfff2ae6eff7935a8eab6054bfb07b3f0bd9c",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:04:25Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:04:25Z"
+      },
+      "message": "update readme",
+      "tree": {
+        "sha": "27169afcfb62a1cfd20b2c4f7f9a9ff3b9ce854b",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/27169afcfb62a1cfd20b2c4f7f9a9ff3b9ce854b"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/cb9dfff2ae6eff7935a8eab6054bfb07b3f0bd9c",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/cb9dfff2ae6eff7935a8eab6054bfb07b3f0bd9c",
+    "html_url": "https://github.com/dylang/changelog/commit/cb9dfff2ae6eff7935a8eab6054bfb07b3f0bd9c",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/cb9dfff2ae6eff7935a8eab6054bfb07b3f0bd9c/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "114ddf24e46c2356e9abb5c29d8dc620a5db3a12",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/114ddf24e46c2356e9abb5c29d8dc620a5db3a12",
+        "html_url": "https://github.com/dylang/changelog/commit/114ddf24e46c2356e9abb5c29d8dc620a5db3a12"
+      }
+    ]
+  },
+  {
+    "sha": "114ddf24e46c2356e9abb5c29d8dc620a5db3a12",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:00:39Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T03:00:39Z"
+      },
+      "message": "update description",
+      "tree": {
+        "sha": "136caae7d275004c64285211c13e713a65b0b1d4",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/136caae7d275004c64285211c13e713a65b0b1d4"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/114ddf24e46c2356e9abb5c29d8dc620a5db3a12",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/114ddf24e46c2356e9abb5c29d8dc620a5db3a12",
+    "html_url": "https://github.com/dylang/changelog/commit/114ddf24e46c2356e9abb5c29d8dc620a5db3a12",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/114ddf24e46c2356e9abb5c29d8dc620a5db3a12/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "10a6882316b5bb286535588b675c65567853f3c2",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/10a6882316b5bb286535588b675c65567853f3c2",
+        "html_url": "https://github.com/dylang/changelog/commit/10a6882316b5bb286535588b675c65567853f3c2"
+      }
+    ]
+  },
+  {
+    "sha": "10a6882316b5bb286535588b675c65567853f3c2",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T02:56:01Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T02:56:01Z"
+      },
+      "message": "version 0.0.2",
+      "tree": {
+        "sha": "729e6bcc9c41aca3ecc7e8e3f4c2f60facf80a9c",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/729e6bcc9c41aca3ecc7e8e3f4c2f60facf80a9c"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/10a6882316b5bb286535588b675c65567853f3c2",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/10a6882316b5bb286535588b675c65567853f3c2",
+    "html_url": "https://github.com/dylang/changelog/commit/10a6882316b5bb286535588b675c65567853f3c2",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/10a6882316b5bb286535588b675c65567853f3c2/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "ed0e3b0deef644d7b9bd2f3ec8505901d58ec62e",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/ed0e3b0deef644d7b9bd2f3ec8505901d58ec62e",
+        "html_url": "https://github.com/dylang/changelog/commit/ed0e3b0deef644d7b9bd2f3ec8505901d58ec62e"
+      }
+    ]
+  },
+  {
+    "sha": "ed0e3b0deef644d7b9bd2f3ec8505901d58ec62e",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T02:55:40Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-04T02:55:40Z"
+      },
+      "message": "use standard out and standard error for output.\ndon't bubble exceptions or repeat error messages.",
+      "tree": {
+        "sha": "bfe3fc3f269f509a05c4b2c481e9e1df00d10b46",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/bfe3fc3f269f509a05c4b2c481e9e1df00d10b46"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/ed0e3b0deef644d7b9bd2f3ec8505901d58ec62e",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/ed0e3b0deef644d7b9bd2f3ec8505901d58ec62e",
+    "html_url": "https://github.com/dylang/changelog/commit/ed0e3b0deef644d7b9bd2f3ec8505901d58ec62e",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/ed0e3b0deef644d7b9bd2f3ec8505901d58ec62e/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+      {
+        "sha": "fd59013e20084350aa764a45e5ffd749c4266cf9",
+        "url": "https://api.github.com/repos/dylang/changelog/commits/fd59013e20084350aa764a45e5ffd749c4266cf9",
+        "html_url": "https://github.com/dylang/changelog/commit/fd59013e20084350aa764a45e5ffd749c4266cf9"
+      }
+    ]
+  },
+  {
+    "sha": "fd59013e20084350aa764a45e5ffd749c4266cf9",
+    "commit": {
+      "author": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-01T20:06:07Z"
+      },
+      "committer": {
+        "name": "Dylan Greene",
+        "email": "dylang@gmail.com",
+        "date": "2011-08-01T20:06:07Z"
+      },
+      "message": "First commit",
+      "tree": {
+        "sha": "08326db6172f9bf6b15d51d5221a981604775a55",
+        "url": "https://api.github.com/repos/dylang/changelog/git/trees/08326db6172f9bf6b15d51d5221a981604775a55"
+      },
+      "url": "https://api.github.com/repos/dylang/changelog/git/commits/fd59013e20084350aa764a45e5ffd749c4266cf9",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/dylang/changelog/commits/fd59013e20084350aa764a45e5ffd749c4266cf9",
+    "html_url": "https://github.com/dylang/changelog/commit/fd59013e20084350aa764a45e5ffd749c4266cf9",
+    "comments_url": "https://api.github.com/repos/dylang/changelog/commits/fd59013e20084350aa764a45e5ffd749c4266cf9/comments",
+    "author": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "committer": {
+      "login": "dylang",
+      "id": 51505,
+      "avatar_url": "https://0.gravatar.com/avatar/d43937373428621f3edf4943527ac4fc?d=https%3A%2F%2Fidenticons.github.com%2Fa36bdfdfb17345c5aa69a1c683ac7251.png",
+      "gravatar_id": "d43937373428621f3edf4943527ac4fc",
+      "url": "https://api.github.com/users/dylang",
+      "html_url": "https://github.com/dylang",
+      "followers_url": "https://api.github.com/users/dylang/followers",
+      "following_url": "https://api.github.com/users/dylang/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dylang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dylang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dylang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dylang/orgs",
+      "repos_url": "https://api.github.com/users/dylang/repos",
+      "events_url": "https://api.github.com/users/dylang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dylang/received_events",
+      "type": "User"
+    },
+    "parents": [
+
+    ]
+  }
+]

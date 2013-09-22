@@ -1,0 +1,1266 @@
+{"_id": "changelog", "_rev": "36-579cac697b3e8761085846c146b3a6d8", "name": "changelog", "description": "Command line tool (and Node module) that generates a changelog in color output, markdown, or json for modules in npmjs.org's registry as well as any public github.com repo.", "dist-tags": {
+    "latest": "1.0.2"
+}, "versions": {
+    "0.0.1": {
+        "name": "changelog",
+        "version": "0.0.1",
+        "description": "Command line script and library to produce a changelog for npm packages and github projects.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "logging": "*",
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dylan/.npm/changelog/0.0.1/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.0.1",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.20",
+        "_nodeVersion": "v0.4.10",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "1a59755583fa593c8971ed9cf76461a8e5182aaf",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.0.1.tgz"
+        },
+        "scripts": {},
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.0.2": {
+        "name": "changelog",
+        "version": "0.0.2",
+        "description": "Command line script and library to produce a changelog for npm packages and github projects.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "logging": "*",
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dylan/.npm/changelog/0.0.2/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.0.2",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.20",
+        "_nodeVersion": "v0.4.10",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "2a8600a123f70050f3611217a5693fb15e6dd5da",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.0.2.tgz"
+        },
+        "scripts": {},
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.0.3": {
+        "name": "changelog",
+        "version": "0.0.3",
+        "description": "Command line util and api that returns a changelog for modules in npm and repos on github.com.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "logging": "*",
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dylan/.npm/changelog/0.0.3/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.0.3",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.22",
+        "_nodeVersion": "v0.4.10",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "1d54a37e448479341a0fbeab11ffb9c387c90d55",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.0.3.tgz"
+        },
+        "scripts": {},
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.0.4": {
+        "name": "changelog",
+        "version": "0.0.4",
+        "description": "Command line util and api that returns a changelog for modules in npm and repos on github.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "logging": "*",
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dylan/.npm/changelog/0.0.4/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.0.4",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.22",
+        "_nodeVersion": "v0.4.10",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "f033a6237788f88c692cb78f415e328f88fdc696",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.0.4.tgz"
+        },
+        "scripts": {},
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.0.5": {
+        "name": "changelog",
+        "version": "0.0.5",
+        "description": "Command line util and api that returns a changelog for modules in npm and repos on github.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "logging": "*",
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dylan/.npm/changelog/0.0.5/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.0.5",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.22",
+        "_nodeVersion": "v0.4.10",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "a635f61e798b6971c1adb66bc165f6bc41c6d40a",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.0.5.tgz"
+        },
+        "scripts": {},
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.0.6": {
+        "name": "changelog",
+        "version": "0.0.6",
+        "description": "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "logging": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dylan/.npm/changelog/0.0.6/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.0.6",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.22",
+        "_nodeVersion": "v0.4.10",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "f1aac0e4fc207a067f10332a1dee7d65d277e3dd",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.0.6.tgz"
+        },
+        "scripts": {},
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.0.7": {
+        "name": "changelog",
+        "version": "0.0.7",
+        "description": "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "logging": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dgreene/.npm/changelog/0.0.7/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.0.7",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.23",
+        "_nodeVersion": "v0.4.10",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "10a853120bb10353698b16afe516c2d6efb5fafa",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.0.7.tgz"
+        },
+        "scripts": {},
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.0.8": {
+        "name": "changelog",
+        "version": "0.0.8",
+        "description": "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "logging": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dgreene/.npm/changelog/0.0.8/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.0.8",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.24",
+        "_nodeVersion": "v0.4.10",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "098518e49bc9ed1522cacdd616cda4f55a290134",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.0.8.tgz"
+        },
+        "scripts": {},
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.0.9": {
+        "name": "changelog",
+        "version": "0.0.9",
+        "description": "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for modules in npmjs.org's registry as well as any public github.com repo.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "logging": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dgreene/.npm/changelog/0.0.9/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.0.9",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.26",
+        "_nodeVersion": "v0.4.11",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "8754ff8078be458efe9ef506412cce2fe306c8f1",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.0.9.tgz"
+        },
+        "scripts": {},
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.1.0": {
+        "name": "changelog",
+        "version": "0.1.0",
+        "description": "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for modules in npmjs.org's registry as well as any public github.com repo.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "logging": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dgreene/.npm/changelog/0.1.0/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.1.0",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.26",
+        "_nodeVersion": "v0.4.11",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "8fe4b7d4f67527e3148cd7e6ffc98c3cc080659d",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.1.0.tgz"
+        },
+        "scripts": {},
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.1.1": {
+        "name": "changelog",
+        "version": "0.1.1",
+        "description": "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for modules in npmjs.org's registry as well as any public github.com repo.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "logging": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dgreene/.npm/changelog/0.1.1/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.1.1",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.27",
+        "_nodeVersion": "v0.4.11",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "8d6f43ae1556187988f95e6badbd1bc4f5db2f8f",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.1.1.tgz"
+        },
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.1.2": {
+        "name": "changelog",
+        "version": "0.1.2",
+        "description": "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for modules in npmjs.org's registry as well as any public github.com repo.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "logging": "*"
+        },
+        "devDependencies": {
+            "logging": "*"
+        },
+        "engines": {
+            "node": "0.4 || 0.5"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmJsonOpts": {
+            "file": "/Users/dgreene/.npm/changelog/0.1.2/package/package.json",
+            "wscript": false,
+            "contributors": false,
+            "serverjs": false
+        },
+        "_id": "changelog@0.1.2",
+        "_engineSupported": true,
+        "_npmVersion": "1.0.27",
+        "_nodeVersion": "v0.4.11",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "ef6dfa029a8e0e4b1487bd97c0498739bd4bdf8e",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.1.2.tgz"
+        },
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "0.1.3": {
+        "name": "changelog",
+        "version": "0.1.3",
+        "description": "Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for modules in npmjs.org's registry as well as any public github.com repo.",
+        "keywords": ["changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "email": "dylang@gmail.com",
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "step": "*",
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "logging": "*"
+        },
+        "engines": {
+            "node": "*"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "_npmUser": {
+            "name": "dylang",
+            "email": "dylang@gmail.com"
+        },
+        "_id": "changelog@0.1.3",
+        "devDependencies": {},
+        "_engineSupported": true,
+        "_npmVersion": "1.0.106",
+        "_nodeVersion": "v0.6.2",
+        "_defaultsLoaded": true,
+        "dist": {
+            "shasum": "8c2f064200815ad8dddaf32371577b327649983b",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-0.1.3.tgz"
+        },
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "1.0.0": {
+        "name": "changelog",
+        "version": "1.0.0",
+        "description": "Command line tool (and Node module) that generates a changelog in color output, markdown, or json for modules in npmjs.org's registry as well as any public github.com repo.",
+        "keywords": ["changelog", "change log", "commit messages", "commits", "changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "https://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "has-color": "~0.1.1",
+            "q": "~0.9.7",
+            "chai": "~1.7.2",
+            "chalk": "~0.2.1",
+            "moment": "~2.2.1"
+        },
+        "engines": {
+            "node": "*"
+        },
+        "devDependencies": {
+            "chai": "~1.7.2",
+            "mocha": "~1.13.0"
+        },
+        "scripts": {
+            "test": "./node_modules/.bin/mocha --reporter spec --timeout 10000"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "readme": "Changelog [![Build Status](https://secure.travis-ci.org/dylang/changelog.png)](http://travis-ci.org/dylang/changelog)\n=========\n\n[![NPM](https://nodei.co/npm/changelog.png?downloads=true)](https://nodei.co/npm/changelog/)\n\nChangelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.\n\nCommand-line Usage\n==================\n\nNode Modules in NPM\n-------------------\n\nModules do not need to be installed to generate changelog but they must define their `repository url` in their package.json.\n\n![Example using Express](https://github.com/dylang/changelog/raw/master/examples/express.png)\n\n    $ changelog {npm module name} [release] [options]\n\n`npm module`: The module name, such as `express`.\n\nAny Public Github.com Repository\n--------------------------------\n\nChangelog also works on any public Github repo.\n\n![Example using Bootstrap from Github](https://github.com/dylang/changelog/raw/master/examples/twitter-bootstrap.png)\n\n    $ changelog {Github.com repo url} [options]\n\n`Github.com repo url`: Urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `github.com/dylang/changelog`.\n\nHelp\n----\n\n    Usage:\n      changelog <npm module name> [release] [options]\n      changelog <github repo url> [release] [options]\n\n    Release:\n       latest   DEFAULT Show only the latest release. ie: changelog express latest\n       number   Show that many recent releases.       ie: changelog express 3\n       n.n.n    Show changes for a specific release.  ie: changelog express 2.4.4\n\n    Options:\n      -c, --color            Output as Color (terminal default)\n      -m, --markdown         Output as Github-flavored Markdown (file default)\n      -j, --json             Output as JSON\n      -d, --debug            Enable debugging\n      -h, --help             Display help and usage details\n\nInstall\n=======\n\nUsing [npm](http://npmjs.org) just do:\n\n    $ npm-g install changelog\n\nUsing `npm-g` installs changelog globally so you can use `changelog` anywhere.  You can also just use `npm install changelog` if you are using it as a module for another project.\n\nMore Examples\n=============\n\n * [More Examples](https://github.com/dylang/changelog/tree/master/examples)\n\nChangelog API\n=============\n\nChangelog can be easily integrated into other tools.\n\n````js\nvar changelog = require('changelog');\n\nchangelog.generate('express')\n    .then(changelog.markdown);\n\n changelog.generate('grunt')\n    .then(showChanges);\n\nfunction showChanges(data) {\n\n    //With npm each \"version\" corresponds to all changes for that build pushed on npm\n    //With github each \"version\" is one GMT day of changes\n    data.versions.forEach(function(version) {\n        console.log(version.version); //currently npm projects only\n        console.log(version.date);    //JS Date\n\n        //version.changes is an array of commit messages for that version\n        version.changes.forEach(function(change) {\n            console.log(' * ' + change);\n        });\n    });\n\n    //Information about the project\n    console.log(data.project);\n}\n````\n\n\nHow it works\n============\n\n * Changelog uses the [Github V3 API](http://developer.github.com/) and [npmjs.org API](http://search.npmjs.org/).\n\nUpcoming Features\n=================\n\n * Add header and/or footer to the output with module name, contributors, etc.\n * Support private Github repos and Github Fi.\n * Better color choices for those with default terminal colors.\n * Support versions/releases for Github repositories (waiting for Github to address [Github API Issue #17](https://github.com/github/developer.github.com/issues/17)).\n * Support paging Github's API to aquire more than 100 commit messages.\n\n\nAbout\n=====\n\n[Dylan Greene](http://github.com/dylang) built this because he was always curious what was changed when doing `npm update`.\nThis module's name is inspired by listening to [TheChangelog Podcast](http://thechangelog.com/) on the way to [work](http://opower.com).",
+        "readmeFilename": "README.md",
+        "_id": "changelog@1.0.0",
+        "dist": {
+            "shasum": "8bb48e7ed350d1ed590b4795838814055e8a2b66",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-1.0.0.tgz"
+        },
+        "_from": ".",
+        "_npmVersion": "1.3.8",
+        "_npmUser": {
+            "name": "dylang",
+            "email": "dylang@gmail.com"
+        },
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "1.0.1": {
+        "name": "changelog",
+        "version": "1.0.1",
+        "description": "Command line tool (and Node module) that generates a changelog in color output, markdown, or json for modules in npmjs.org's registry as well as any public github.com repo.",
+        "keywords": ["changelog", "change log", "commit messages", "commits", "changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "https://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "has-color": "~0.1.1",
+            "q": "~0.9.7",
+            "chai": "~1.7.2",
+            "chalk": "~0.2.1",
+            "moment": "~2.2.1"
+        },
+        "engines": {
+            "node": "*"
+        },
+        "devDependencies": {
+            "chai": "~1.7.2",
+            "mocha": "~1.13.0"
+        },
+        "scripts": {
+            "test": "./node_modules/.bin/mocha --reporter spec --timeout 10000"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "readme": "Changelog [![Build Status](https://secure.travis-ci.org/dylang/changelog.png)](http://travis-ci.org/dylang/changelog)\n=========\n\n[![NPM](https://nodei.co/npm/changelog.png?downloads=true)](https://nodei.co/npm/changelog/)\n\nChangelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.\n\nCommand-line Usage\n==================\n\nNode Modules in NPM\n-------------------\n\nModules do not need to be installed to generate changelog but they must define their `repository url` in their package.json.\n\n![Example using Express](https://github.com/dylang/changelog/raw/master/examples/express.png)\n\n    $ changelog {npm module name} [release] [options]\n\n`npm module`: The module name, such as `express`.\n\nAny Public Github.com Repository\n--------------------------------\n\nChangelog also works on any public Github repo.\n\n    $ changelog {Github.com repo url} [options]\n\n`Github.com repo url`: Urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `github.com/dylang/changelog`.\n\nHelp\n----\n\n    Usage:\n      changelog <npm module name> [release] [options]\n      changelog <github repo url> [release] [options]\n\n    Module name:\n       $ changelog npm\n\n    Github repo:\n       $ changelog github.com/isaacs/npm\n       $ changelog isaacs/npm\n\n    Release:\n       latest   Default: Show only the latest versions. ex: $ changelog npm latest\n       all      Show all versions.                      ex: $ changelog npm all\n       number   Show that many recent versions.         ex: $ changelog npm 3\n       n.n.n    Show changes for a specific version.    ex: $ changelog npm 1.3.11\n\n    Options:\n      -c, --color            Output as Color (terminal default)\n      -m, --markdown         Output as Github-flavored Markdown (file default)\n      -j, --json             Output as JSON\n      -d, --debug            Enable debugging\n      -h, --help             Display help and usage details\n\nInstall\n=======\n\nUsing [npm](http://npmjs.org) just do:\n\n    $ npm-g install changelog\n\nUsing `npm-g` installs changelog globally so you can use `changelog` anywhere.  You can also just use `npm install changelog` if you are using it as a module for another project.\n\nMore Examples\n=============\n\n * [More Examples](https://github.com/dylang/changelog/tree/master/examples)\n\nChangelog API\n=============\n\nChangelog can be easily integrated into other tools.\n\n````js\nvar changelog = require('changelog');\n\nchangelog.generate('express')\n    .then(changelog.markdown);\n\n changelog.generate('grunt')\n    .then(showChanges);\n\nfunction showChanges(data) {\n\n    //With npm each \"version\" corresponds to all changes for that build pushed on npm\n    //With github each \"version\" is one GMT day of changes\n    data.versions.forEach(function(version) {\n        console.log(version.version); //currently npm projects only\n        console.log(version.date);    //JS Date\n\n        //version.changes is an array of commit messages for that version\n        version.changes.forEach(function(change) {\n            console.log(' * ' + change);\n        });\n    });\n\n    //Information about the project\n    console.log(data.project);\n}\n````\n\n\nHow it works\n============\n\n * Changelog uses the [Github V3 API](http://developer.github.com/) and [npmjs.org API](http://search.npmjs.org/).\n\nTests\n=================\n\n`Mocha` tests are included. There aren't very many and don't mock Github or npm's registry so they could be improved.\n\n```js\n$ npm test\n```\n\nAbout\n=====\n\n[Dylan Greene](http://github.com/dylang) built this because he was always curious what was changed when doing `npm update`.\nThis module's name is inspired by listening to [TheChangelog Podcast](http://thechangelog.com/) on the way to [work](http://opower.com).",
+        "readmeFilename": "README.md",
+        "_id": "changelog@1.0.1",
+        "dist": {
+            "shasum": "4354580422f9bdf29233e64c45b8680edb4cdc95",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-1.0.1.tgz"
+        },
+        "_from": ".",
+        "_npmVersion": "1.3.8",
+        "_npmUser": {
+            "name": "dylang",
+            "email": "dylang@gmail.com"
+        },
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    },
+    "1.0.2": {
+        "name": "changelog",
+        "version": "1.0.2",
+        "description": "Command line tool (and Node module) that generates a changelog in color output, markdown, or json for modules in npmjs.org's registry as well as any public github.com repo.",
+        "keywords": ["changelog", "change log", "commit messages", "commits", "changes", "history", "what's new", "change set"],
+        "preferGlobal": true,
+        "homepage": "http://github.com/dylang/changelog",
+        "author": {
+            "name": "Dylan Greene",
+            "email": "dylang@gmail.com"
+        },
+        "repository": {
+            "type": "git",
+            "url": "https://github.com/dylang/changelog.git"
+        },
+        "bugs": {
+            "url": "http://github.com/dylang/changelog/issues"
+        },
+        "directories": {
+            "lib": "./lib",
+            "bin": "./bin"
+        },
+        "main": "changelog",
+        "bin": {
+            "changelog": "./bin/changelog.js"
+        },
+        "dependencies": {
+            "request": "*",
+            "wordwrap": "*",
+            "cli": "*",
+            "semver": "*",
+            "has-color": "~0.1.1",
+            "q": "~0.9.7",
+            "chai": "~1.7.2",
+            "chalk": "~0.2.1",
+            "moment": "~2.2.1"
+        },
+        "engines": {
+            "node": "*"
+        },
+        "devDependencies": {
+            "chai": "~1.7.2",
+            "mocha": "~1.13.0"
+        },
+        "scripts": {
+            "test": "./node_modules/.bin/mocha --reporter spec --timeout 10000"
+        },
+        "licenses": [
+            {
+                "type": "MIT",
+                "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
+            }
+        ],
+        "readme": "Changelog [![Build Status](https://secure.travis-ci.org/dylang/changelog.png)](http://travis-ci.org/dylang/changelog)\n=========\n\n[![NPM](https://nodei.co/npm/changelog.png?downloads=true)](https://nodei.co/npm/changelog/)\n\nChangelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.\n\nInstall\n=======\n\nUsing [npm](http://npmjs.org) just do:\n\n```\n$ npm -g install changelog\n```\n\nUsing `npm -g` installs changelog globally so you can use `changelog` anywhere.  You can also just use `npm install changelog` if you are using it as a module for another project.\n\n\nCommand-line Usage\n==================\n\nNode Modules in NPM\n-------------------\n\nModules do not need to be installed to generate changelog but they must define their `repository url` in their package.json.\n\n![Example using Express](https://github.com/dylang/changelog/raw/master/examples/express.png)\n\n```sh\n$ changelog {npm module name} [release] [options]\n```\n\n`npm module`: The module name, such as `express`, `npm`, `grunt`, etc.\n\nAny Public Github.com Repository\n--------------------------------\n\nChangelog also works on any public Github repo.\n\n```sh\n$ changelog {Github.com repo} [options]\n```\n\n`Github.com repo url`: Urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `dylang/changelog`.\n\nHelp\n----\n\n`changelog --help`\n\n```\nUsage:\n  changelog <npm module name> [versions] [options]\n  changelog <github repo url> [versions] [options]\n\nModule name:\n   $ changelog npm\n\nGithub repo:\n   $ changelog github.com/isaacs/npm\n   $ changelog isaacs/npm\n\nVersions:\n   latest   Default: Show only the latest versions. ex: $ changelog npm latest\n   all      Show all versions.                      ex: $ changelog npm all\n   number   Show that many recent versions.         ex: $ changelog npm 3\n   n.n.n    Show changes for a specific version.    ex: $ changelog npm 1.3.11\n\nOptions:\n  -c, --color            Output as Color (terminal default)\n  -m, --markdown         Output as Github-flavored Markdown (file default)\n  -j, --json             Output as JSON\n  -d, --debug            Enable debugging\n  -h, --help             Display help and usage details\n```\n\nMore Examples\n=============\n\n * [More Examples](https://github.com/dylang/changelog/tree/master/examples)\n\nChangelog API\n=============\n\nChangelog can be easily integrated into other tools.\n\n````js\nvar changelog = require('changelog');\n\nchangelog.generate(NpmPackageName, countOrVersions)  // module name, github repo\n    .then(changelog.markdown);\n\n changelog.generate('grunt')\n    .then(showChanges);\n\nfunction showChanges(data) {\n\n    //With npm each \"version\" corresponds to all changes for that build pushed on npm\n    //With github each \"version\" is one GMT day of changes\n    data.versions.forEach(function(version) {\n        console.log(version.version); //currently npm projects only\n        console.log(version.date);    //JS Date\n\n        //version.changes is an array of commit messages for that version\n        version.changes.forEach(function(change) {\n            console.log(' * ' + change);\n        });\n    });\n\n    //Information about the project\n    console.log(data.project);\n}\n````\n\n\nHow it works\n============\n\n * Changelog uses [npmjs.org API](http://search.npmjs.org/) to get the list of versions and the publish dates.\n * It cross-references the versions in `npm` with the commit history from the [Github's API](http://developer.github.com/).\n\nTests\n=================\n\n`Mocha` tests are included. There aren't very many and don't mock Github or npm's registry so they could be improved.\n\n```js\n$ npm test\n```\n\nAbout\n=====\n\n[Dylan Greene](http://github.com/dylang) built this because he was always curious what was changed when doing `npm update`.\nThis module's name is inspired by listening to [TheChangelog Podcast](http://thechangelog.com/) on the way to [work](http://opower.com).\n\nLicense\n=====\n\n(The MIT License)\n\nCopyright (c) 2011-2013 Dylan Greene <dylang@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+        "readmeFilename": "README.md",
+        "_id": "changelog@1.0.2",
+        "dist": {
+            "shasum": "4526c7e0ed7f55cacf53c3658171aaa785adc024",
+            "tarball": "http://registry.npmjs.org/changelog/-/changelog-1.0.2.tgz"
+        },
+        "_from": ".",
+        "_npmVersion": "1.3.8",
+        "_npmUser": {
+            "name": "dylang",
+            "email": "dylang@gmail.com"
+        },
+        "maintainers": [
+            {
+                "name": "dylang",
+                "email": "dylang@gmail.com"
+            }
+        ]
+    }
+}, "maintainers": [
+    {
+        "name": "dylang",
+        "email": "dylang@gmail.com"
+    }
+], "time": {
+    "0.0.1": "2011-08-01T20:08:13.136Z",
+    "0.0.2": "2011-08-04T02:56:55.459Z",
+    "0.0.3": "2011-08-04T03:37:25.431Z",
+    "0.0.4": "2011-08-04T19:55:17.141Z",
+    "0.0.5": "2011-08-05T18:22:13.727Z",
+    "0.0.6": "2011-08-07T03:57:21.560Z",
+    "0.0.7": "2011-08-10T04:02:14.990Z",
+    "0.0.8": "2011-08-16T15:02:03.802Z",
+    "0.0.9": "2011-08-23T15:30:50.534Z",
+    "0.1.0": "2011-08-23T16:14:58.271Z",
+    "0.1.1": "2011-08-24T19:58:41.487Z",
+    "0.1.2": "2011-08-26T18:57:43.396Z",
+    "0.1.3": "2011-11-21T21:54:17.653Z",
+    "1.0.0": "2013-09-20T04:30:20.047Z",
+    "1.0.1": "2013-09-20T13:20:55.792Z",
+    "1.0.2": "2013-09-20T13:33:31.054Z"
+}, "author": {
+    "name": "Dylan Greene",
+    "email": "dylang@gmail.com"
+}, "repository": {
+    "type": "git",
+    "url": "https://github.com/dylang/changelog.git"
+}, "users": {
+    "dylang": true
+}, "_attachments": {
+    "changelog-1.0.2.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 35,
+        "digest": "md5-xYd4pB2/ydwsTyWblOWLbg==",
+        "length": 168825,
+        "stub": true
+    },
+    "changelog-1.0.1.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 33,
+        "digest": "md5-Xn2b2vfse8Fu7GOFsaVZbg==",
+        "length": 168819,
+        "stub": true
+    },
+    "changelog-1.0.0.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 31,
+        "digest": "md5-2bRkwcZW/D9IrJ6QTLSVcQ==",
+        "length": 168599,
+        "stub": true
+    },
+    "changelog-0.1.3.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 30,
+        "digest": "md5-RPCEISM7Ro0qhPHArQooXg==",
+        "length": 286720,
+        "stub": true
+    },
+    "changelog-0.1.2.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 27,
+        "digest": "md5-jZkS+exVWVcVpmDLTI6Ycg==",
+        "length": 286769,
+        "stub": true
+    },
+    "changelog-0.1.1.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 25,
+        "digest": "md5-6P2qjwsx1ZlXOjZcdS1saQ==",
+        "length": 284584,
+        "stub": true
+    },
+    "changelog-0.1.0.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 23,
+        "digest": "md5-UUmVVy1D98USN1IY/k5F1Q==",
+        "length": 284601,
+        "stub": true
+    },
+    "changelog-0.0.9.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 21,
+        "digest": "md5-TGhflbIwb7ZPFHjLixqIeQ==",
+        "length": 29154,
+        "stub": true
+    },
+    "changelog-0.0.8.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 19,
+        "digest": "md5-5AYuGTtlHYTwkHfdd9it+A==",
+        "length": 28009,
+        "stub": true
+    },
+    "changelog-0.0.7.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 17,
+        "digest": "md5-9hgsklWi9hp90s7431MoIg==",
+        "length": 27767,
+        "stub": true
+    },
+    "changelog-0.0.6.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 15,
+        "digest": "md5-OHm5q2h7RTh4C2ySClIgKA==",
+        "length": 27190,
+        "stub": true
+    },
+    "changelog-0.0.5.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 13,
+        "digest": "md5-FsDQObRV6ZZ5CFClfSmiUw==",
+        "length": 9839,
+        "stub": true
+    },
+    "changelog-0.0.4.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 11,
+        "digest": "md5-lps3EAhge0+7CFpMIsTvdg==",
+        "length": 9624,
+        "stub": true
+    },
+    "changelog-0.0.3.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 9,
+        "digest": "md5-L5/xQSW7lF1TDvPCyhVX5Q==",
+        "length": 9612,
+        "stub": true
+    },
+    "changelog-0.0.2.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 5,
+        "digest": "md5-ywgZibGi9p+7tdbd4na3FQ==",
+        "length": 8878,
+        "stub": true
+    },
+    "changelog-0.0.1.tgz": {
+        "content_type": "application/octet-stream",
+        "revpos": 3,
+        "digest": "md5-Ts+4bvzt0d3/TPU2tT/4/Q==",
+        "length": 8827,
+        "stub": true
+    }
+}}

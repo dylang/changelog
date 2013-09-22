@@ -40,19 +40,21 @@
     "q": "~0.9.7",
     "chai": "~1.7.2",
     "chalk": "~0.2.1",
-    "moment": "~2.2.1",
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.6.4",
-    "grunt-cafe-mocha": "~0.1.8",
-    "grunt-notify": "~0.2.13",
-    "grunt-contrib-watch": "~0.5.3"
+    "moment": "~2.2.1"
   },
   "engines": {
     "node": "*"
   },
   "devDependencies": {
     "chai": "~1.7.2",
-    "mocha": "~1.13.0"
+    "mocha": "~1.13.0",
+      "proxyquire": "~0.5.1",
+      "grunt": "~0.4.1",
+      "grunt-contrib-jshint": "~0.6.4",
+      "grunt-cafe-mocha": "~0.1.8",
+      "grunt-notify": "~0.2.13",
+      "grunt-contrib-watch": "~0.5.3"
+
   },
   "scripts": {
     "test": "grunt test"

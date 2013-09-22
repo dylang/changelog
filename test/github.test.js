@@ -1,7 +1,12 @@
 "use strict";
 var expect = require('chai').expect;
+var proxyquire = require('proxyquire');
 
-var github = require('../lib/datasrc/github');
+var github = proxyquire('../lib/datasrc/github', {
+    request: function(options, cb) {
+        cb(null, {}, require('./fixtures/github-dylang-changelog.json'));
+    }
+});
 
 describe('github', function () {
 
@@ -20,6 +25,4 @@ describe('github', function () {
         .catch(function(err){throw err;})
         .done(done);
     });
-
-
 });

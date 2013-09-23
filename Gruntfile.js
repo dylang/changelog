@@ -78,6 +78,12 @@ module.exports = function (grunt) {
                     nospawn: true
                 }
             }
+        },
+        readme: {
+            options: {
+                readme: 'templates/README.md.tmpl',
+                contributing: false
+            }
         }
     });
 
@@ -89,6 +95,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-cafe-mocha');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-readme');
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.

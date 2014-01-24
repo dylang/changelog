@@ -1,3 +1,15 @@
+1.0.4 / 2014-01-24
+==================
+
+  * update dependencies
+  * Uppercase changelog
+  * add json example
+  * bump version
+  * adding grunt-readme
+  * Merge pull request [#7](https://github.com/dylang/changelog/issues/7) from rimunroe/master
+    added User-Agent header to github API request
+  * added User-Agent header to GitHub API request
+
 1.0.3 / 2013-09-21
 ==================
 

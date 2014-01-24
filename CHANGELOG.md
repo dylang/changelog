@@ -1,4 +1,26 @@
-parseInt(project) NaN true
+1.0.3 / 2013-09-21
+==================
+
+  * more modularization and testing
+  * add grunt task
+
+1.0.2 / 2013-09-20
+==================
+
+  * renaming readme
+  * update help
+  * update readme
+  * * updated readme
+
+1.0.1 / 2013-09-20
+==================
+
+  * * fix some bugs in the command line script
+    * update readme
+    * update help
+    * update examples
+  * show error message when github api rate limiting is enabled
+
 1.0.0 / 2013-09-20
 ==================
 

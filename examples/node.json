@@ -1,0 +1,488 @@
+2014-01-23
+==========
+
+  * tls_wrap: propagate errors to write callbacks
+    fix [#6903](https://github.com/joyent/node/issues/6903)
+  * tls: emit `clientError` on early socket close
+    fix [#6903](https://github.com/joyent/node/issues/6903)
+
+2014-01-22
+==========
+
+  * lint: use reinterpret_cast, not C-style casts
+  * v8: upgrade to 3.22.24.17
+  * tls: process accumulated input
+    When creating TLSSocket on top of the regular socket that already
+    contains some received data, `_tls_wrap.js` should try to write all that
+    data to the internal `SSL*` instance.
+    fix [#6940](https://github.com/joyent/node/issues/6940)
+
+2014-01-21
+==========
+
+  * node: clear nextTickQueue when using domains
+    When the domain specific code was reintroduced in 828f145 the
+    conditional to check and clear the nextTickQueue if many items had run
+    was not introduced. This allows for the application to run out of memory
+    if domains are being used in an infinite recursive loop.
+  * doc: skip type parsing inside code blocks
+    Since types are denoted with curly braces it can cause erroneous
+    replaces in code blocks.
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+  * crypto: remove duplicate ERR_load_crypto_strings()
+    ERR_load_crypto_strings() registers the error strings for
+    all libcrypto functions, SSL_load_error_strings() does the
+    same, but also registers the libssl error strings.
+  * test: fix array sorting bug
+    `a === a.sort()` is always true because Array#sort() does an in-place
+    sort.  Make a copy of the array first.
+  * crypto: support custom pbkdf2 digest methods
+    Make the HMAC digest method configurable.  Update crypto.pbkdf2() and
+    crypto.pbkdf2Sync() to take an extra, optional digest argument.
+    Before this commit, SHA-1 (admittedly the most common method) was used
+    exclusively.
+    Fixes [#6553](https://github.com/joyent/node/issues/6553).
+
+2014-01-20
+==========
+
+  * node: remove asyncStack
+    Now that the context stores the active execution stack, and because
+    removeAsyncListener() always removed the AsyncListener from the queue
+    and the stack, there's no need to keep a stack around anymore. Instead
+    the active asyncQueue and the currentContext is able to handle it all.
+    Signed-off-by: Forrest L Norvell <ogd@aoaioxxysz.net>
+  * node: only run same AL once on error
+    Should have been included with 60fcc11 as it is the same type of fix.
+    Signed-off-by: Forrest L Norvell <ogd@aoaioxxysz.net>
+  * path: improve POSIX path.join() performance
+    Performance gains are ~4x (~1.5us), but still much slower than a naive
+    approach. There is some duplicate work done between join(), normalize()
+    and normalizeArray() so additional optimizations are possible.
+    Note that this only improves the POSIX implementation.
+    Thanks to @isaacs and @othiym23 for helping with this optimization.
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+  * crypto: add newline to cert and key if not present
+    After one of OpenSSL updates we have stopped accepting PEM private keys
+    and certificates that doesn't end with a newline (`\n`) character.
+    Handle this regression in `crypto.js` to make less trouble to our users.
+    fix [#6892](https://github.com/joyent/node/issues/6892)
+  * crypto: throw only in direct C++ methods
+    Do not throw in internal C++ methods, that clobbers logic and may lead
+    to the situations, where both exception was thrown and the value was
+    returned (via `args.GetReturnValue().Set()`). That doesn't play nicely
+    with v8.
+    fix [#6912](https://github.com/joyent/node/issues/6912)
+  * node: `EmitExit` should not call `exit()`
+    Before this commit `RunAtExit` and `env->Dispose()` were never reached,
+    because `EmitExit` was always colling `exit`.
+  * addons: build and test examples
+    fix [#6910](https://github.com/joyent/node/issues/6910)
+  * text: give more time to test-next-tick-error-spin
+    The previous timeout was too short for certain execution conditions
+    (Windows, debug build, first execution).
+  * test: give test-net-GH-5504 more time to run
+    On Windows debug builds, the test was failing because the timeout
+    was too short.
+  * node: compare AsyncListener instances, not uid's
+    Now that process.createAsyncListener() returns a unique object instance
+    it is no longer necessary to compare the uid's of the objects.
+    Signed-off-by: Timothy J Fontaine <tjfontaine@gmail.com>
+  * node: ensure same AL inst only runs once
+    It was possible that the same AL instance was run twice if it were both
+    attached to the currentContext then again added to the new asyncQueue
+    generated for the new stack.
+    Signed-off-by: Timothy J Fontaine <tjfontaine@gmail.com>
+  * async_wrap/timers: remove Add/RemoveAsyncListener
+    The ability to add/remove an AsyncListener to an object after its
+    creation was an artifact of trying to get AL working with the domain
+    module. Now that is no longer necessary and other features are going to
+    be implemented that would be affected by this functionality. So the code
+    will be removed for now to simplify the implementation process.
+    In the future this code will likely be reintroduced, but after some
+    other more important matters have been addressed.
+    None of this functionality was documented, as is was meant specifically
+    for domain specific implementation work arounds.
+    Signed-off-by: Timothy J Fontaine <tjfontaine@gmail.com>
+
+2014-01-19
+==========
+
+  * crypto: remove most of the `node_isolate` uses
+    All C++ code should be using `args.GetIsolate()` or `env->isolate()`.
+    Using static `node_isolate` var limits possible future functionality
+    (like multi-isolate support).
+  * test: relax timing in test-http-exit-delay
+    This test was originally intended to guard against regressions for
+    commit 16b59cbc74c8fe2f8b30f3af4c2f885b7bfb6030.
+    As such, it only needs to ensure that process exit has not been held up
+    by the date cache timer, which would fire on the next second.
+  * test: debug-signal-cluster increase timeouts
+    The test needs a little more time to run so that it passes for all
+    builds (eg: Windows, debug)
+  * debug client: connect after child is ready
+    We now wait to connect to the debuggee until we know that
+    its error stream has data, to ensure that the output message
+    "connecting..... ok" appears after "Debugger listening on port xyz"
+    I also increased the test timeout to let the more complex
+    tests finish in time on Windows
+    This change fixes the following unit tests on Windows:
+    test-debugger-repl.js test-debugger-repl-term.js test-debugger-repl-utf8.js
+    test-debugger-repl-restart.js
+  * test: move debugger repl into own section
+  * test: refactor to use common testcfg
+  * test: ignore tests when built without OpenSSL CLI
+    fix [#6880](https://github.com/joyent/node/issues/6880)
+  * lib: introduce `.setMaxSendFragment(size)`
+    fix [#6889](https://github.com/joyent/node/issues/6889)
+  * doc: tls: note that SSLv2 is disabled by default
+    As of commit 39aa894, SSLv2 support is disabled by default.  Update
+    the documentation to reflect that.
+  * doc: tls: clarify server cipher list
+    * Make it clear that ECDHE-RSA-AES128-SHA256 and AES128-GCM-SHA256 are
+    TLS v1.2 ciphers.
+    * Note that RC4 is under suspicion.
+
+2014-01-16
+==========
+
+  * src: don't mark addon_register_func as dllimport
+    addon_register_func and its cousin addon_context_register_func are type
+    definitions, dllimport and dllexport are name mangling directives, i.e.
+    they're quite unrelated concepts.  MinGW complains about mixing them
+    when cross-compiling native add-ons.
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+    Signed-off-by: Bert Belder <bertbelder@gmail.com>
+  * tls: make cert/pfx optional in tls.createServer()
+    Not all ciphers require the presence of a certificate.  Remove the
+    check in lib/_tls_wrap.js.
+    Fixes [#6887](https://github.com/joyent/node/issues/6887).
+  * tls: show human-readable error messages
+    Before this commit, verification exceptions had err.message set to the
+    OpenSSL error code (e.g. 'UNABLE_TO_VERIFY_LEAF_SIGNATURE').
+    This commit moves the error code to err.code and replaces err.message
+    with a human-readable error.  Example:
+    // before
+    {
+    message: 'UNABLE_TO_VERIFY_LEAF_SIGNATURE'
+    }
+    // after
+    {
+    code: 'UNABLE_TO_VERIFY_LEAF_SIGNATURE',
+    message: 'unable to verify the first certificate'
+    }
+    UNABLE_TO_VERIFY_LEAF_SIGNATURE is a good example of why you want this:
+    the error code suggests that it's the last certificate that fails to
+    validate while it's actually the first certificate in the chain.
+    Going by the number of mailing list posts and StackOverflow questions,
+    it's a source of confusion to many people.
+
+2014-01-14
+==========
+
+  * Merge remote-tracking branch 'origin/v0.10'
+    Conflicts:
+    lib/domain.js
+  * domains: exit() only affects active domains
+    domain.create().exit() should not clear the domain stack if the domain
+    instance does not exist within the stack.
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+  * blog: TJ is the new node core project lead
+
+2014-01-13
+==========
+
+  * gyp: fix build with python 2.6
+    fix [#6859](https://github.com/joyent/node/issues/6859)
+  * deps: update gyp to 1eae492b
+
+2014-01-12
+==========
+
+  * test: terminate gracefully in cluster-net-send
+    Killing the worker without ensuring the socket was closed
+    was causing intermittent ECONNRESET errors.
+  * Merge remote-tracking branch 'upstream/v0.10'
+  * Merge remote-tracking branch 'upstream/v0.10'
+    Conflicts:
+    deps/uv/ChangeLog
+    deps/uv/build.mk
+    deps/uv/src/version.c
+    deps/uv/test/test-ipc.c
+    deps/v8/src/objects.cc
+    src/node.cc
+    src/node_os.cc
+  * doc: streams must be open to be passed to child
+    spawn stdio options can be a 'stream', but the following code
+    fails with "Incorrect value for stdio stream: [object Object]",
+    despite being a stream. The problem is the test isn't really
+    for a stream, its for an object with a numeric `.fd` property,
+    and streams do not have an fd until their async 'open' event
+    has occurred. This is reasonable, but was not documented.
+    child_process.spawn('date', [], {stdio: [
+    'ignore',
+    fs.createWriteStream('out.txt',{flags:'a'}),
+    'ignore']})
+  * test: close debug client in test-debugger-client
+    Killing the debuggee without first closing the socket can result
+    in an ECONNRESET error.
+  * http: concatenate duplicate headers by default
+
+2014-01-11
+==========
+
+  * src: return empty set on ENOSYS for interfaces
+    If node was compiled with --no-ifaddrs to support older operating
+    systems, don't throw instead simply return an empty object
+    Fixes [#6846](https://github.com/joyent/node/issues/6846)
+
+2014-01-09
+==========
+
+  * v8: backport codereview.chromium.org/11362182
+    Keep the number of descriptors below
+    DescriptorArray::kMaxNumberOfDescriptors even for accessors
+    Review URL: https://codereview.chromium.org/11362182
+  * util: handle escaped forward slashes correctly
+    Fixes [#6835](https://github.com/joyent/node/issues/6835)
+  * doc: Fix argument typo in SimpleProtocol example
+
+2014-01-08
+==========
+
+  * domain: fix off-by-one in Domain.exit()
+    We want to clear the found domain and the domains after it.
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+  * http: use writev on chunked encoding
+    Now will process all write() that were done on a single tick in a single
+    writev().
+  * test: check RR scheduler has necessary methods
+    The RR cluster scheduler replaces the normal StreamWrap handle. Because
+    of this the AsyncListener method failed to be in place when domains were
+    in use.
+    The issue was resolved in 828f145 by reverting having domains use
+    AsyncListeners.
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+  * src: OnFatalError handler must abort()
+    We are in an unrecoverable state if v8 throws a FatalError, actually
+    ask the operating system to dump core in this case.
+    Fixes [#6836](https://github.com/joyent/node/issues/6836)
+  * node: AsyncListener use separate storage mechanism
+    Before when an AsyncListener object was created and the "create"
+    callback returned a value, it was necessary to construct a new Object
+    with the same callbacks but add a place for the new storage value.
+    Now, instead, a separate storage array is kept on the context which is
+    used for any return value of the "create" callback. This significantly
+    reduces the number of Objects that need to be created.
+    Also added a flags property to the context to quickly check if a
+    specific callback was available either on the context or on the
+    AsyncListener instance itself.
+    Few other minor changes for readability that were difficult to separate
+    into their own commit.
+    This has not been optimized yet.
+  * src: revert domain using AsyncListeners
+    This is a slightly modified revert of bc39bdd.
+    Getting domains to use AsyncListeners became too much of a challenge
+    with many edge cases. While this is still a goal, it will have to be
+    deferred for now until more test coverage can be provided.
+
+2014-01-07
+==========
+
+  * configure: always set `arm_float_abi`
+    When not specified as a configure flag, and not derived from system
+    configuration, `arm_float_abi` should be set to `'default'`.
+    fix [#6789](https://github.com/joyent/node/issues/6789)
+  * child_process: better error reporting for exec
+    Report path to executable and argv on error, stderr is not enough in
+    many cases.
+    fix [#6796](https://github.com/joyent/node/issues/6796)
+  * deps: fix openssl assembly error on ia32 win32
+    `x86masm.pl` was mistakenly using .486 instruction set, why `cpuid` (and
+    perhaps others) are requiring .686 .
+  * doc: fix typo in cluster page
+
+2014-01-06
+==========
+
+  * deps: update openssl to 1.0.1f
+  * uv: Upgrade to v0.10.22
+  * build: unconditionally disable -Werror
+    Forcibly disable -Werror, the old { 'werror': '' } hack in node.gyp
+    no longer works with newer versions of V8.
+    We support a wide range of compilers, it's simply not feasible to
+    squelch all warnings, never mind that the libraries in deps/ are
+    not under our control.
+    Fixes [#6817](https://github.com/joyent/node/issues/6817).
+
+2014-01-05
+==========
+
+  * npm: Upgrade to 1.3.23
+
+2014-01-04
+==========
+
+  * stream: writes may return false but forget to emit drain
+    If a write is above the highWaterMark, _write still manages to
+    fully send it synchronously, _writableState.length will be adjusted down
+    to 0 synchronously with the write returning false, but 'drain' will
+    not be emitted until process.nextTick.
+    If another small write which is below highWaterMark is issued before
+    process.nextTick happens, _writableState.needDrain will be reset to false,
+    and the drain event will never be fired.
+    So we should check needDrain before setting it up, which prevents it
+    from inproperly resetting to false.
+  * doc: Add forward secrecy section to TLS docs
+    This fixes confusion connected to comparison of ECDH
+    with RSA and wrong information on forward secrecy.
+  * crypto: introduce .setEngine(engine, [flags])
+
+2014-01-02
+==========
+
+  * node: properly check uid when adding AsyncListener
+    Instead of checking the uid on the array index of the queue, instead the
+    object property "uid" was checked on the queue iteself. Because this
+    will always evaluate to "undefined" the same listener could be added
+    multiple times to the same context.
+  * node: change AsyncListener API
+    There was a flaw in the old API that has been fixed. Now the
+    asyncListener callback is now the "create" object property in the
+    callback object, and is optional.
+
+2013-12-30
+==========
+
+  * Merge remote-tracking branch 'upstream/v0.10'
+  * blog: Post for v0.11.10
+  * Now working on 0.11.11
+  * Merge branch 'v0.11.10-release'
+  * 2013.12.31, Version 0.11.10 (Unstable)
+    * http_parser: update to 2.2
+    * uv: Upgrade to v0.11.17
+    * v8: Upgrade to 3.22.24.10
+    * buffer: optimize writeInt* methods (Paul Loyd)
+    * child_process: better error handling (Alexis Campailla)
+    * cluster: do not synchronously emit 'setup' event (Sam Roberts)
+    * cluster: restore backwards compatibility and various fixes (Sam Roberts)
+    * crypto: remove unnecessary OpenSSL_add_all_digests (Yorkie)
+    * crypto: support GCM authenticated encryption mode. (Ingmar Runge)
+    * dns: add resolveSoa and 'SOA' rrtype (Tuğrul Topuz)
+    * events: move EE c'tor guts to EventEmitter.init (Bert Belder)
+    * http: DELETE shouldn't default to chunked encoding (Lalit Kapoor)
+    * http: parse the status message in a http response. (Cam Swords)
+    * node: fix removing AsyncListener in callback (Vladimir Kurchatkin)
+    * node: follow specification, zero-fill ArrayBuffers (Trevor Norris)
+    * openssl: use ASM optimized routines (Fedor Indutny)
+    * process: allow nextTick infinite recursion (Trevor Norris)
+    * querystring: remove `name` from `stringify()` (Yorkie)
+    * timers: setImmediate v8 optimization fix (pflannery)
+    * tls: add serialNumber to getPeerCertificate() (Ben Noordhuis)
+    * tls: reintroduce socket.encrypted (Fedor Indutny)
+    * tls: fix handling of asterisk in SNI context (Fedor Indutny)
+    * util: Format negative zero as '-0' (David Chan)
+    * vm: fix race condition in timeout (Alexis Campailla)
+    * windows: fix dns lookup of localhost with ipv6 (Alexis Campailla)
+  * v8: Upgrade to 3.22.24.10
+  * doc: document that `process.send` is synchronous
+    Ref [#2598](https://github.com/joyent/node/issues/2598)
+  * doc: clarify process on exit safe usage
+  * docs: process.on('exit') receives exit code
+    The fact that the "exit" event passes the exit code as an argument
+    as omitted from the documentation. This adds the explanation and
+    augments the example code to show that.
+  * dns: add resolveSoa and 'SOA' rrtype
+    You can now query for SOA records by either passing 'SOA' to `resolve`
+    or by using the new `resolveSoa`
+  * Merge remote-tracking branch 'upstream/v0.10'
+    Conflicts:
+    lib/cluster.js
+    lib/dgram.js
+    lib/net.js
+  * test: fix test-cluster-eaccess to work on windows
+  * test: fix assumption of worker exit on disconnect
+    Master was disconnecting its workers as soon as they both started up.
+    Meanwhile, the workers were trying to listen. Its a race, sometimes the
+    disconnect would happen between when worker gets the response message,
+    and acks that message with a 'listening'. This worked OK after v0.11
+    introduced a behaviour where disconnect would always exit the worker,
+    but once that backwards-incompatible behaviour is removed, the worker
+    lives long enough to try and respond to the master, and child_process
+    errors at the attempt to send from a disconnected child.
+  * cluster: do not synchronously emit 'setup' event
+    This is a problem present in both v0.10, and v0.11, where the 'setup'
+    event is synchronously emitted by `cluster.setupMaster()`, a mostly
+    harmless anti-pattern.
+  * cluster: only forcibly exit worker on unclean exit
+    Fix inadvertent v0.11 changes to the definition of suicide, particularly
+    the relationship between suicide state, the disconnect event, and when
+    exit should occur.
+    In v0.10, workers don't forcibly exit on disconnect, it doesn't give
+    them time to do a graceful finish of open client connections, they exit
+    under normal node rules - when there is nothing left to do. But on
+    unexpected disconnect they do exit so the workers aren't left around
+    after the master.
+    Note that a test as-written was invalid, it failed against the v0.10
+    cluster API, demonstrating that it was an undocumented API change.
+  * cluster: disconnect callback should always occur
+    Fixes issue in 0.11 where callback doesn't occur if worker count is
+    currently zero.  In 0.10 callback occurs after worker count is zero, and
+    occurs in next tick if worker count is currently zero.
+  * cluster: replace erroneous comma with semicolon
+  * uv: Upgrade to v0.11.17
+  * cluster: report more errors to workers
+    Some errors for listening and binding to a socket were not properly
+    delivered to workers.
+    fix [#6767](https://github.com/joyent/node/issues/6767)
+  * doc: Fix doc heading for 'response' event
+    Add colon to event heading to ensure it matches other events.
+    Fixes joyent/node[#5687](https://github.com/joyent/node/issues/5687)
+
+2013-12-29
+==========
+
+  * Merge remote-tracking branch 'upstream/v0.10'
+  * deps: update gyp to 828ce09
+  * timers: setImmediate v8 optimization fix
+    Prevent v8 disabling optimization for scenario "bad value context for
+    arguments value".
+    Solves [#6631](https://github.com/joyent/node/issues/6631)
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+  * doc: Fix missing backtick in debugger doc
+  * querystring: remove `name` from `stringify()`
+    QueryString.stringify() allowed a fourth argument that was used as a
+    conditional in the return value, but was undocumented, not used by core
+    and always was always false/undefiend. So the argument and conditional
+    have been removed.
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+
+2013-12-27
+==========
+
+  * build: add settings for VS 2013 to vcbuild.bat
+    Search for VS2013 compiler 1st, before falling back to older ones. This
+    allows compiling using the latest VS2013.
+
+2013-12-26
+==========
+
+  * deps: update gyp to 828ce09
+
+2013-12-25
+==========
+
+  * doc: Missing word 'are' in documentation
+    Fix simple spelling mistake in documentation.
+    fix [#5808](https://github.com/joyent/node/issues/5808)
+
+2013-12-24
+==========
+
+  * npm: Upgrade to v1.3.22
+
+2013-12-22
+==========
+
+  * src: only access stack of non-null errors
+    Avoid segmentation fault when `null` is thrown

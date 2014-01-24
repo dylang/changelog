@@ -37,24 +37,23 @@
     "cli": "*",
     "semver": "*",
     "has-color": "~0.1.1",
-    "q": "~0.9.7",
-    "chai": "~1.7.2",
-    "chalk": "~0.2.1",
-    "moment": "~2.2.1"
+    "q": "~1.0.0",
+    "chai": "~1.8.1",
+    "chalk": "~0.4.0",
+    "moment": "~2.5.0"
   },
   "engines": {
     "node": "*"
   },
   "devDependencies": {
-    "chai": "~1.7.2",
-    "mocha": "~1.13.0",
+    "chai": "~1.8.1",
+    "mocha": "~1.17.0",
     "proxyquire": "~0.5.1",
     "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-jshint": "~0.8.0",
     "grunt-cafe-mocha": "~0.1.8",
     "grunt-notify": "~0.2.13",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-readme": "~0.1.3"
+    "grunt-contrib-watch": "~0.5.3"
   },
   "scripts": {
     "test": "grunt test"

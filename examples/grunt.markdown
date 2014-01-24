@@ -1,3 +1,41 @@
+0.4.2 / 2013-11-21
+==================
+
+  * Update CHANGELOG.
+  * Extract internal "namespace" lib to external "getobject" lib.
+  * Updating some dependencies.
+  * Adding @vladikoff to AUTHORS file.
+  * Adding CHANGELOG changes for 0.4.2. Closes gh-941.
+  * Whoops. This should be fixed in the plugin, too.
+  * Pull in WIP grunt-contrib-bump plugin.
+  * Fix IRC link in README. Closes gh-951.
+  * Added file.preserveBOM property. Closes gh-806, gh-937.
+  * Test that file methods warn. Closes gh-909.
+  * Fixed this.options() in renamed basic tasks. Closes gh-855.
+  * Automatically output options in verbose mode. Closes gh-749.
+  * Fix process.exit stdout/stderr flushing issues. Close gh-921.
+    * Created a new lib "exit" to work around Node.js issue [#3584](https://github.com/gruntjs/grunt/issues/3584).
+    * https://github.com/cowboy/node-exit
+    * It appears to work.
+    * YAY
+  * Internal "bump" task is now WIP "grunt-contrib-bump" plugin.
+  * Updated watch and nodeunit deps. Closes gh-914.
+  * Slightly better output for internal subgrunt task.
+  * Update jshint plugin.
+  * Mute log.warn during this test.
+  * Update underscore.string dependency to follow semver. Closes gh-886.
+  * Fixed a few spelling errors in code comments. Closes gh-849.
+  * Temporary "bump" workaround for isaacs/node-semver[#50](https://github.com/gruntjs/grunt/issues/50).
+  * Bumping version to 0.4.2-0.
+  * Adding "bump" task for dev. Might become a contrib plugin down the road.
+  * Actually lint broken-out tasks.
+  * Moving internal Gruntfile tasks into a subdirectory.
+  * Add grunt logo to readme
+    Closes gh-762.
+  * npmignore unneeded files
+  * quote version number for travis
+  * add node 0.10 to travis
+
 0.4.1 / 2013-03-13
 ==================
 
@@ -120,58 +158,3 @@
   * Updating file.expandMapping to properly normalize expanded Windows paths.
   * More util.spawn tests and fixes for Windows.
   * In util.spawn, only use "which" if cmd has no path component. Closes gh-576.
-  * Remove preinstall script.
-  * install grunt-cli globally for testing
-  * Bumping version to 0.4.0rc3.
-  * Moving shell auto-completion code from grunt to grunt-cli.
-
-0.4.0-rc3 / 2012-12-12
-======================
-
-  * Renamed devel branch to master!
-    * Sorry, but you're probably going to have to re-fork.
-    * FWIW, this should never happen again.
-    * <3
-  * Removing superfluous file.clearRequireCache method.
-  * Updating some "watch" task/plugin stuff.
-  * Removing init/user {% %} [% %] templates by default (they can still be added in manually if needed).
-  * Updating file.findup to use the findup-sync lib.
-  * Removing superfluous fail.warnAlternate method.
-  * Removing superfluous grunt.task.unregisterTasks method.
-  * simplify
-  * Reverting CONTRIBUTING.md to previous version 1d6bc198, gh-566 introduced an outdated copy.
-  * Bumping version, publishing 0.4.0rc2.
-
-0.4.0-rc2 / 2012-12-10
-======================
-
-  * Remove docs as they are now in the wiki. Closes gh-566.
-  * renamed grunt.file.fileMapping to grunt.file.expandMapping
-  * Adding file.fileMapping method. Closes gh-450.
-  * Bumping version to 0.4.0rc1. This is a release candidate, folks.
-
-0.4.0-rc1 / 2012-12-07
-======================
-
-  * Migrated expect script to grunt-init.
-  * Minor tweaks to the way --version --verbose is displayed.
-  * Removed obsolete grunt-init methods.
-    The following methods have been removed and are now implemented in grunt-init where appropriate:
-    * task.searchDirs
-    * task.expand
-    * task.expandDirs
-    * task.expandFiles
-    * task.getFile
-    * task.readDefaults
-    * file.userDir
-  * grunt-init is now a standalone installable module.
-    * No longer depends on grunt-init
-    * Task no longer loads init task from included grunt-init
-    * Refactored --help to allow it to be modified (as the standalone grunt-init is just a wrapper around grunt)
-  * Removing cruft in gruntfile, oops.
-  * Template errors now have stack traces visible with --stack. Closes gh-555.
-
-0.4.0-a / 2012-12-05
-====================
-
-  * Removing deprecated task this.files property, once and for all!

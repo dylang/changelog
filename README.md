@@ -1,27 +1,28 @@
-Changelog [![Build Status](https://secure.travis-ci.org/dylang/changelog.png)](http://travis-ci.org/dylang/changelog)
-=========
+<!---
 
-[![NPM](https://nodei.co/npm/changelog.png?downloads=true)](https://nodei.co/npm/changelog/)
+This file was automatically generated.
 
-Changelog is a command line utility (and module) that generates a changelog in markdown, json, or color output for Node modules in npm and any public github.com repo.
+Use `grunt readme` to regenerate.
 
-Install
-=======
+--->
+## changelog [![NPM version](https://badge.fury.io/js/changelog.png)](http://badge.fury.io/js/changelog)  [![Build Status](https://travis-ci.org/dylang/changelog.png)](https://travis-ci.org/dylang/changelog) 
 
-Using [npm](http://npmjs.org) just do:
+> Command line tool (and Node module) that generates a changelog in color output, markdown, or json for modules in npmjs.org's registry as well as any public github.com repo.
 
-```
-$ npm -g install changelog
-```
-
-Using `npm -g` installs changelog globally so you can use `changelog` anywhere.  You can also just use `npm install changelog` if you are using it as a module for another project.
+[![changelog](https://nodei.co/npm/changelog.png?downloads=true "changelog")](https://nodei.co/npm/changelog)
 
 
-Command-line Usage
-==================
 
-Node Modules in NPM
--------------------
+
+
+
+
+
+### Command-line Usage
+
+
+#### Node Modules in NPM
+
 
 Modules do not need to be installed to generate changelog but they must define their `repository url` in their package.json.
 
@@ -33,10 +34,11 @@ $ changelog {npm module name} [release] [options]
 
 `npm module`: The module name, such as `express`, `npm`, `grunt`, etc.
 
-Any Public Github.com Repository
---------------------------------
+
+#### Any Public Github.com Repository
 
 Changelog also works on any public Github repo.
+
 
 ```sh
 $ changelog {Github.com repo} [options]
@@ -44,10 +46,12 @@ $ changelog {Github.com repo} [options]
 
 `Github.com repo url`: Urls can be any format, such as `https://github.com/dylang/changelog` or `git@github.com:dylang/changelog.git` or even just `dylang/changelog`.
 
-Help
-----
+
+#### Help
+
 
 `changelog --help`
+
 
 ```
 Usage:
@@ -75,23 +79,35 @@ Options:
   -h, --help             Display help and usage details
 ```
 
-More Examples
-=============
+#### More Examples
+
 
  * [More Examples](https://github.com/dylang/changelog/tree/master/examples)
 
-Changelog API
-=============
+
+
+### Changelog API
 
 Changelog can be easily integrated into other tools.
+
+#### `changelog.generate(name, versions)
+
+* `name` string, _required_ NPM module name from registry.
+* `versions` integer or semver, _optional_ Number of versions, or the semver version to show.
+
 
 ````js
 var changelog = require('changelog');
 
-changelog.generate(NpmPackageName, countOrVersions)  // module name, github repo
+changelog.generate(NpmPackageName, countOrVersions)
     .then(changelog.markdown);
 
- changelog.generate('grunt')
+````
+
+````js
+var changelog = require('changelog');
+
+changelog.generate('grunt')
     .then(showChanges);
 
 function showChanges(data) {
@@ -114,49 +130,66 @@ function showChanges(data) {
 ````
 
 
-How it works
-============
+### How it works
 
  * Changelog uses [npmjs.org API](http://search.npmjs.org/) to get the list of versions and the publish dates.
  * It cross-references the versions in `npm` with the commit history from the [Github's API](http://developer.github.com/).
 
-Tests
-=================
 
-`Mocha` tests are included. There aren't very many and don't mock Github or npm's registry so they could be improved.
+### Inspiration
 
-```js
-$ npm test
-```
-
-About
-=====
 
 [Dylan Greene](http://github.com/dylang) built this because he was always curious what was changed when doing `npm update`.
 This module's name is inspired by listening to [TheChangelog Podcast](http://thechangelog.com/) on the way to [work](http://opower.com).
 
-License
-=====
 
-(The MIT License)
 
-Copyright (c) 2011-2013 Dylan Greene <dylang@gmail.com>
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+### About the Author
+
+Hello fellow developer! My name is [Dylan Greene](https://github.com/dylang). When
+not overwhelmed with my two kids I enjoy contributing to the open source community.
+I'm a tech lead at [Opower](http://opower.com). I lead a team using Grunt and Angular to build software that
+successfully helps people like us use less power.
+Not too long ago I co-created [Doodle or Die](http://doodleordie.com), a hilarious web game with millions of
+doodles that won us Node Knockout for the "most fun" category.
+I'm [dylang](https://twitter.com/dylang) on Twitter and other places.
+
+Some of my other Node projects:
+
+| Name | Description | Github Stars | Npm Installs |
+|---|---|--:|--:|
+| [`grunt-notify`](https://github.com/dylang/grunt-notify) | Automatic desktop notifications for Grunt errors and warnings using Growl for OS X or Windows, Mountain Lion and Mavericks Notification Center, and Notify-Send. | 619 | 52,208 |
+| [`grunt-prompt`](https://github.com/dylang/grunt-prompt) | Interactive prompt for your Grunt config using console checkboxes, text input with filtering, password fields. | 144 | 6,885 |
+| [`rss`](https://github.com/dylang/node-rss) | RSS feed generator. A really simple API to add RSS feeds to any project. | 177 | 98,802 |
+| [`shortid`](https://github.com/dylang/shortid) | Amazingly short non-sequential url-friendly unique id generator. | 129 | 22,984 |
+| [`xml`](https://github.com/dylang/node-xml) | Fast and simple xml generator. Supports attributes, CDATA, etc. Includes tests and examples. | 35 | 180,625 |
+| [`anthology`](https://github.com/dylang/anthology) | Module information and stats for any @npmjs user | _New!_ | _TBD_ |
+| [`grunt-attention`](https://github.com/dylang/grunt-attention) | Display attention-grabbing messages in the terminal | _New!_ | 336 |
+| [`observatory`](https://github.com/dylang/observatory) | Beautiful UI for showing tasks running on the command line. | _New!_ | 81 |
+| [`logging`](https://github.com/dylang/logging) | Super sexy color console logging with cluster support. | 21 | 8,793 |
+| [`grunt-cat`](https://github.com/dylang/grunt-cat) | Echo a file to the terminal. Works with text, figlets, ascii art, and full-color ansi. | _New!_ | 396 |
+
+_This list was generated using [anthology](https://github.com/dylang/anthology)._
+
+
+### License
+Copyright (c) 2014 undefined, contributors.
+
+Released under the [MIT license](https://tldrlegal.com/license/mit-license).
+
+Screenshots are [CC BY-SA](http://creativecommons.org/licenses/by-sa/4.0/) (Attribution-ShareAlike).
+
+***
+_Generated using [grunt-readme](https://github.com/assemble/grunt-readme) with [grunt-templates-dylang](https://github.com/dylang/grunt-templates-dylang) on Monday, February 10, 2014._ [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dylang/changelog/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Google Analytics](https://ga-beacon.appspot.com/UA-4820261-3/dylang/changelog)](https://github.com/igrigorik/ga-beacon)
+
+
+<!---
+
+This file was automatically generated.
+
+Use `grunt readme` to regenerate.
+
+--->

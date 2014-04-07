@@ -1,3 +1,11 @@
+1.0.5 / 2014-04-07
+==================
+
+  * updated examples
+  * update dependencies
+  * fix main, update readme
+  * update changelog
+
 1.0.4 / 2014-01-24
 ==================
 

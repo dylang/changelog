@@ -1,3 +1,7 @@
+1.0.6 / 2014-10-06
+==================
+  * Fixes for supporting invalid semver versions and out of order publishes. Fixes #9. 
+
 1.0.5 / 2014-04-07
 ==================
 

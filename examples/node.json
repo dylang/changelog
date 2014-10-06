@@ -1,605 +1,575 @@
-2014-04-06
+2014-09-30
 ==========
 
-  * src: fix use of uv_cwd, len includes the NULL byte
-  * src: update uv callbacks after API changes
-    async, timer, prepare, idle and check handles no longer get a status
-    parameter since they can never fail.
-  * deps: update libuv to v0.11.23
+  * net: remove use of arguments in Server constructor
+    The current implementation uses the arguments object in the Server()
+    constructor. Since both arguments to Server() are optional, there was a
+    high likelihood of accessing a non-existent element in arguments, which
+    carries a performance overhead. This commit replaces the arguments
+    object with named arguments.
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
 
-2014-04-02
+2014-09-16
 ==========
 
-  * util: made util.isArray a direct alias for Array.isArray
+  * Merge remote-tracking branch 'upstream/v0.12'
 
-2014-04-01
+2014-09-15
 ==========
 
-  * domain: don't crash on "throw null"
-    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
-  * lib: use triple equals
-    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
-  * node: add signature to SET_PROTOTYPE_METHOD
-    This prevents segfaults when a native method is reassigned to a
-    different object (which corrupts args.This()).  When unwrapping,
-    clients should use args.Holder() instead of args.This().
-    Closes [#6690](https://github.com/joyent/node/issues/6690).
-    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
-
-2014-03-31
-==========
-
-  * buffer: improve {read,write}{U}Int* methods
-    Increase the performance and simplify the logic of Buffer#write{U}Int*
-    and Buffer#read{U}Int* methods by placing the byte manipulation code
-    directly inline.
-    Also improve the speed of buffer-write benchmarks by creating a new
-    call directly to each method by using Function() instead of calling by
-    buff[fn].
-    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
-  * src: fix up after v8 upgrade
-    The two biggest changes are that v8::Script::New() has been removed and
-    that a v8::Script object now has to be explicitly bound to a context if
-    you want to run it from another context.
-    We can accommodate both changes without breaking the vm module's public
-    API or even the internal JS API.
-  * deps: fix up v8 postmortem codegen
-    Fix up overzealous parses, strip whitespace from class and field names.
-  * deps: upgrade v8 to 3.25.30
-  * test: make test-smalloc endian aware
-    The test/simple/test-smalloc.js has an implicit assumption
-    of the byte order of the data stored for Double and Uint32
-    values. On a big endian platform this test fails without
-    these patches.
-    Use os.endianness() to detect the endian of the platform
-    and use it to gate the static value used for comparison.
-  * v8: upgrade to 3.24.35.22
-  * configure: make --v8-options switch more robust
-    Improve on commit b55c9d6 by not requiring that switches are comma
-    separated.  This commit makes `./configure --v8-options="--foo --bar"`
-    work and takes special care to properly escape quotes in the options
-    string.
-
-2014-03-30
-==========
-
-  * fs: improve performance of all stat functions
-    By building the fs.Stats object in JS, which is returned by all fs stat
-    functions, calls to v8::Object::Set() are removed. This also includes
-    creating all associated Date objects in JS, rather than using
-    v8::Date::New(). Both these changes have significant performance gains.
-    Note that the returned value from fs.stat changes slightly for non-POSIX
-    systems. Whereas before the stats object would be missing blocks and
-    blksize keys, it now has these keys with undefined as the value.
-    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
-
-2014-03-28
-==========
-
-  * crypto: move `createCredentials` to tls
-    Move `createCredentials` to `tls` module and rename it to
-    `createSecureContext`. Make it use default values from `tls` module:
-    `DEFAULT_CIPHERS` and `DEFAULT_ECDH_CURVE`.
-    fix [#7249](https://github.com/joyent/node/issues/7249)
-  * configure: --v8-options option
-    Introduce a way to set some v8 flags at compile time, the values should
-    be separated by comma.
-
-2014-03-27
-==========
-
-  * http: better client "protocol not supported" error
-    Include the "expected protocol" in the Error message
-    string, which evaluates to "http:" for the `http`
-    core module, and "https:" for the `https` module.
-    Closes [#7355](https://github.com/joyent/node/issues/7355).
-  * deps: apply floating patch to v8
-    Original commit message below:
-    fix FunctionCallbackInfo ambiguity
-    - when compiling tools that embed v8 with g++ FunctionCallbackInfo is currently ambigous
-    - more info: https://github.com/joyent/node/issues/7337
-    - original patch is here: https://codereview.appspot.com/78770045/
-    TBR=svenpanne@chromium.org
-    Review URL: https://codereview.chromium.org/201573012
-    git-svn-id: https://v8.googlecode.com/svn/branches/bleeding_edge@20217 ce2b1a6d-e550-0410-aec6-3dcde31c8c00
-
-2014-03-26
-==========
-
-  * tls: do not call SNICallback unless present
-    When asynchronously parsing ClientHello for session resumption -
-    SNICallback may not be set. Check if it is present before invoking
-    it.
-    fix [#7010](https://github.com/joyent/node/issues/7010)
-  * tls: force readable/writable to `true`
-    These are an old and deprecated properties that was used by previous
-    stream implementation, and are still in use in some user-land modules.
-    Prior to this commit, they were read from the underlying socket, which
-    may be non-readable/non-writable while connecting or while staying
-    uninitialized.
-    Force set them to `true`, just to make sure that there will be no
-    inconsistency.
-    fix [#7152](https://github.com/joyent/node/issues/7152)
-
-2014-03-25
-==========
-
-  * crypto: fix lint
-  * Merge remote-tracking branch 'origin/v0.10'
+  * Merge remote-tracking branch 'upstream/v0.10' into v0.12
     Conflicts:
-    src/node.cc
-    src/node_crypto.cc
-    src/node_crypto.h
-  * src: ensure that openssl's PRNG is fully seeded
-    Ensure that OpenSSL has enough entropy (at least 256 bits) for its PRNG.
-    The entropy pool starts out empty and needs to fill up before the PRNG
-    can be used securely.
-    OpenSSL normally fills the pool automatically but not when someone
-    starts generating random numbers before the pool is full: in that case
-    OpenSSL keeps lowering the entropy estimate to thwart attackers trying
-    to guess the initial state of the PRNG.
-    When that happens, we wait until enough entropy is available, something
-    that normally should never take longer than a few milliseconds.
-    Fixes [#7338](https://github.com/joyent/node/issues/7338).
-  * src: seed V8's random number generator at startup
-    The default entropy source is /dev/urandom on UNIX platforms, which is
-    okay but we can do better by seeding it from OpenSSL's entropy pool.
-    On Windows we can certainly do better; on that platform, V8 seeds the
-    random number generator using only the current system time.
-    Fixes [#6250](https://github.com/joyent/node/issues/6250).
-    NB: This is a back-port of commit 7ac2391 from the master branch that
-    for some reason never got back-ported to the v0.10 branch.
-    The default on UNIX platforms in v0.10 is different and arguably worse
-    than it is with master: if no entropy source is provided, V8 3.14 calls
-    srandom() with a xor of the PID and the current time in microseconds.
-    That means that on systems with a coarse system clock, the initial
-    state of the PRNG may be easily guessable.
-    The situation on Windows is even more dire because there the PRNG is
-    seeded with only the current time... in milliseconds.
-
-2014-03-24
-==========
-
-  * npm: upgrade to 1.4.6
-    * Documentation upgrades
-    * Fix glob bug which prevents proper README publishing
-    * node-gyp upgrade to 0.13
-    * Documentation updates
-    * Add --save-exact to save an exact dep (instead of a range)
-    * alias 't' to 'test'
-  * doc: remove `agent.request()` call in example
-    The `Agent#request()` function was removed in
-    f3189ace6b5e31a874df421ac2f74da0e77cb14d, so don't
-    use it in the documentation example. The function
-    wasn't documented in the first place.
-
-2014-03-23
-==========
-
-  * http: use defaultAgent.protocol in protocol check
-    Default to the `defaultAgent.protocol` when comparing the
-    user-specified `options.protocol` string. This is so that
-    `http.Agent` instances do not need to specify their own
-    `protocol` field, since we have the relevant information
-    already from the `defaultAgent`.
-    Note that the test case could be separately cherry-picked
-    to the `v0.10` branch, since it already passes correctly.
-    Fixes [#7349](https://github.com/joyent/node/issues/7349).
-    Fixes the regression described in: http://git.io/2ds-WQ
-
-2014-03-22
-==========
-
-  * build: fix g++ 4.8 build, disable -Werror
-    Turn off -Werror when building V8, it hits -Werror=unused-local-typedefs
-    with g++ 4.8.  The warning itself is harmless so don't abort the build.
-    This was originally implemented in commit d2ab314e back in 2011 but the
-    build process has gone through a few iterations since then, that change
-    no longer works.
-
-2014-03-20
-==========
-
-  * vm: share security token between contexts
-    By default, each `v8::Context` has a different Security Token, which
-    prevents access to one context from another.
-    fix [#7140](https://github.com/joyent/node/issues/7140)
-
-2014-03-16
-==========
-
-  * pipe_wrap: use Instantiate() method
-    Retrieve a new client object via PipeWrap::Instantiate(). This method
-    performs appropriate checks to make sure everything is as it should be.
-  * headers: remove env.h from node_internals.h
-    `env.h` is an internal header file and should not be copied or exposed
-    to the users.
-    Additionally, export convenience `Throw*` methods with `v8::Isolate*` as
-    a first argument.
-  * deps: update v8 to 3.24.35.17
-  * test: update our branched weakref to v8 3.24
-
-2014-03-15
-==========
-
-  * src: fix tracing infrastructure after v8 upgrade
-    Fix up the dtrace/etw/systemtap infrastructure after the V8 upgrade in
-    commit 1c7bf24.  The win32 changes are untested but can hardly make
-    things worse because node doesn't build on windows right now.
-    Fixes [#7313](https://github.com/joyent/node/issues/7313) with some luck.
-  * src: don't call DecodeWrite() on Buffers
-    Don't call DecodeWrite() with a Buffer as its argument because it in
-    turn calls StringBytes::Write() and that method expects a Local<String>.
-    "Why then does that function take a Local<Value>?" I hear you ask.
-    Good question but I don't have the answer.  I added a CHECK for good
-    measure and what do you know, all of a sudden a large number of crypto
-    tests started failing.
-    Calling DecodeWrite(BINARY) on a buffer is nonsensical anyway: if you
-    want the contents of the buffer, just copy out the data, there is no
-    need to decode it - and that's exactly what this commit does.
-    Fixes a great many instances of the following run-time error in debug
-    builds:
-    FATAL ERROR: v8::String::Cast() Could not convert to string
-  * src: fix up smalloc weak persistent usage
-    Fix a regression that was introduced in commit ce04c726 after the
-    upgrade to V8 3.24.
-    The new weak persistent handle API no longer gives you the original
-    persistent but still requires that you clear it inside your weak
-    callback.
-    Rearrange the code in src/smalloc.cc to keep track of the persistent
-    handle with the least amount of pain and try hard to share as much
-    code as possible between the 'just free it' and 'invoke my callback'
-    versions of the smalloc API.
-    Fixes [#7309](https://github.com/joyent/node/issues/7309).
-  * src: add CHECK_{GE,GT,LE,LT} macros
-    Conform to the Google styleguide more and make cpplint happy, add more
-    CHECK macros.
-    Preemptively addresses cpplint's readability/check warnings ("Consider
-    using CHECK_GT instead of CHECK(a > b)".)
-  * src: deduplicate CHECK_EQ/CHECK_NE macros
-    DRY the macros, there is no need to define them twice depending on
-    whether NDEBUG is defined or not.
-  * src: fix segfaults, fix 32 bits integer negation
-    Make calls to v8::Isolate::AdjustAmountOfExternalAllocatedMemory() take
-    special care when negating 32 bits unsigned types like size_t.
-    Before this commit, values were negated before they got promoted to
-    64 bits, meaning that on 32 bits architectures, a value like 42 got
-    cast to 4294967254 instead of -42.
-    That in turn made the garbage collector start scavenging like crazy
-    because it thought the system was out of memory.
-    That's bad enough but calls to AdjustAmountOfExternalAllocatedMemory()
-    were made from weak callbacks, i.e. at a time when the garbage collector
-    was already busy.  It triggered asserts in debug builds and caused
-    random crashes and memory corruption in release builds.
-    The behavior in release builds is arguably a V8 bug and should perhaps
-    be reported upstream.
-    Partially fixes [#7309](https://github.com/joyent/node/issues/7309) but requires further bug fixes to src/smalloc.cc
-    that I'll address in a follow-up commit.
-  * src: squelch -Wmaybe-uninitialized warning
-    The variable isn't actually used uninitialized but g++ 4.8 doesn't know
-    that.  Set it to NULL to silence the following compiler warning:
-    ../src/string_bytes.cc:247:29: warning: 'data' may be used
-    uninitialized in this function [-Wmaybe-uninitialized]
-    unsigned a = hex2bin(src[i * 2 + 0]);
-    ^
-    ../src/string_bytes.cc:299:15: note: 'data' was declared here
-    const char* data;
-    ^
-  * src: remove unused ExternString constructor
-    Remove an unused (and unsafe) constructor.  Unsafe because it doesn't
-    initialize the data_ field.
-
-2014-03-12
-==========
-
-  * src, test: fix up ObjectWrap, `make test-addons`
-    V8 was upgraded from 3.22 to 3.24 in commit 1c7bf24.  Upgrade source
-    files in test/addons/ and automatically generated tests from
-    doc/api/addons.markdown to the new V8 API.
-    This coincidentally fixes a bug in src/node_object_wrap.h where it was
-    still using the old V8 weak persistent handle interface, which is gone
-    in 3.24.
-  * node: fix exported signatures of MakeCallback
-    fix [#7302](https://github.com/joyent/node/issues/7302)
-  * deps: allow allocations in gc epilogue/prologue
-    See https://codereview.chromium.org/177243012/
-  * deps: backport a6fed7c5 from v8's trunk
-  * src: update to v8 3.24 APIs
-  * deps: update v8 to 3.24.40
-
-2014-03-11
-==========
-
-  * readline: consider newlines for cursor position
-    Fixes [#7266](https://github.com/joyent/node/issues/7266).
-    Closes [#7279](https://github.com/joyent/node/issues/7279).
-  * Now working on 0.11.13
-  * Merge branch 'v0.11.12-release'
-
-2014-03-10
-==========
-
-  * src: accommodate uv_cwd including null on win32
-  * 2014.03.11, Version 0.11.12 (Unstable)
-    * uv: Upgrade to v0.11.22 (Timothy J Fontaine)
-    * buffer: allow toString to accept Infinity for end (Brian White)
-    * child_process: add spawnSync/execSync (Bert Belder, Timothy J Fontaine)
-    * cluster: handle bind errors on Windows (Alexis Campailla)
-    * contextify: handle infinite recursion errors (Fedor Indutny)
-    * crypto: allow custom generator for DiffieHellman (Brian White)
-    * crypto: allow setting add'l authenticated data (Brian White)
-    * crypto: fix CipherFinal return value check (Brian White)
-    * crypto: make NewSessionDoneCb public (Fedor Indutny)
-    * dgram: pass the bytes sent to the send callback (Timothy J Fontaine)
-    * dns: validate arguments in resolver (Kenan Sulayman)
-    * dns: verify argument is valid function in resolve (Kenan Sulayman)
-    * http: avoid duplicate keys in writeHead (David Björklund)
-    * net: add localPort to connect options (Timothy J Fontaine)
-    * node: do not print SyntaxError hints to stderr (Fedor Indutny)
-    * node: invoke `beforeExit` again if loop was active (Fedor Indutny)
-    * node: make AsyncListenerInst field more explicit (Trevor Norris)
-    * os: networkInterfaces include scopeid for ipv6 (Xidorn Quan)
-    * process: allow changing `exitCode` in `on('exit')` (Fedor Indutny)
-    * readline: fix `line` event, if input emit 'end' (Yazhong Liu)
-    * src: add tracing.v8.on('gc') statistics hooks (Ben Noordhuis)
-    * src: add v8.getHeapStatistics() function (Ben Noordhuis)
-    * src: emit 'beforeExit' event on process object (Ben Noordhuis)
-    * src: move AsyncListener from process to tracing (Trevor Norris)
-    * tls: fix crash in SNICallback (Fedor Indutny)
-    * tls: introduce asynchronous `newSession` (Fedor Indutny)
-    * util: show meaningful values for boxed primitives (Nathan Rajlich)
-    * vm: don't copy Proxy object from parent context (Ben Noordhuis)
-    * windows: make stdout/sterr pipes blocking (Alexis Campailla)
-    * zlib: add sync versions for convenience methods (Nikolai Vavilov)
-
-2014-03-09
-==========
-
-  * mdb_v8: update to latest version
-    * ::jsstack -v prints function defintion
-    * ::jsprint works with objects with only numeric properties
-    * update tests to use builtin mdb_v8
-    * add more symbols to postmortem script - pending upstream
-    inclusion
-  * src: update from uv_read2_start removal
-    Previously if you wanted to be notified of pending handles for pipes
-    you needed to use uv_read2_start, however in v0.11.22 you can query for
-    pending handles independently.
-  * src: adapt to API change in uv_cwd
-  * uv: Upgrade to v0.11.22
-  * Merge remote-tracking branch 'upstream/v0.10'
-    Conflicts:
-    src/node.cc
-    src/node.js
-    test/message/max_tick_depth_trace.out
-  * doc: remove an unused arg in process.stdin.
-    The argument of process.stdin's readable event handler is not used.
-  * crypto: do not lowercase cipher/hash names
-    `crypto.getCiphers()` and `crypto.getHashes()` should prefer lower-case
-    variants of names, but should not introduce them.
-    fix [#7282](https://github.com/joyent/node/issues/7282)
-  * test: timers-ordering should be more precise
-    Internally we use hrtime to schedule when a timer will fire, to avoid
-    the perils of clock drift or other external operation making time go
-    backward. The timers ordering test should use the same timing mechanism
-  * buffer: fix typo in `SlowBuffer`
-  * buffer: allow toString to accept Infinity for end
-
-2014-03-05
-==========
-
-  * deps: fix v8 valgrind warning
-    Fix the following valgrind warning:
-    Conditional jump or move depends on uninitialised value(s)
-    at 0x7D64E7: v8::internal::GlobalHandles::IterateAllRootsWithClassIds(v8::internal::ObjectVisitor*) (global-handles.cc:613)
-    by 0x94DCDC: v8::internal::NativeObjectsExplorer::FillRetainedObjects() (profile-generator.cc:2849)
-    # etc.
-    This was fixed upstream in r12903 and released in 3.15.2 but that commit
-    was never back-ported to the 3.14 branch that node.js v0.10 uses.
-    The code itself works okay; this commit simply shuffles the clauses in
-    an `if` statement to check that the node is in use before checking its
-    class id (which is uninitialized if the node is not in use.)
-
-2014-03-04
-==========
-
-  * child_process: fix sending handle twice
-    When sending a socket to a child process via IPC pipe,
-    `child_process.js` picks a raw UV handle from `_handle` property, sends
-    it, and assigns `null` to the property. Sending the same socket twice
-    was resulting in a runtime error, since we weren't handling the empty
-    `_handle` case.
-    In case of `null` `_handle` we should send just a plain text message
-    as passed it was passed to `.send()` and ignore the handle, letting
-    users handle such cases themselves instead of throwing the error at
-    runtime.
-    fix [#5469](https://github.com/joyent/node/issues/5469)
-  * test: test sending a handle twice
-    Added test-cluster-send-handle-twice.js testing to send a handle
-    twice to the parent process.
-  * src: add default visibility to NODE_MODULE
-    It's currently not really possible to compile native add-ons with
-    -fvisibility=hidden because that also hides the struct containing
-    the module definition.
-    The NODE_MODULE() and NODE_MODULE_DECL() macros are structured in
-    a way that makes it impossible to add a visibility attribute manually
-    so there is no escape hatch there.
-    That's why this commit adds an explicit visibility attribute to
-    the module definition.  It doesn't help with node.js releases that
-    are already out there but at least it improves the situation going
-    forward.
-
-2014-03-03
-==========
-
-  * crypto: allow setting add'l authenticated data
-  * crypto: fix CipherFinal return value check
-
-2014-03-02
-==========
-
-  * timer: don't reschedule timer bucket in a domain
-    If two timers run on the same tick, and the first timer uses a domain,
-    and then catches an exception and disposes of the domain, then the
-    second timer never runs. (And even if the first timer does not dispose
-    of the domain, the second timer could run under the wrong domain.)
-    This happens because timer.js uses "process.nextTick()" to schedule
-    continued processing of the timers for that tick. However, there was
-    an exception inside a domain, then "process.nextTick()" runs under
-    the domain of the first timer function, and will do nothing if
-    the domain has been disposed.
-    To avoid this, we temporarily save the value of "process.domain"
-    before calling nextTick so that it does not run inside any domain.
-  * src: domain should not replace nextTick function
-    Previously if you cached process.nextTick and then require('domain')
-    subsequent nextTick() calls would not be caught because enqueued
-    functions were taking the wrong path. This keeps nextTick to a single
-    function reference and changes the implementation details after domain
-    has been required.
-
-2014-03-01
-==========
-
-  * Merge remote-tracking branch 'origin/v0.10'
-    Conflicts:
-    configure
-    lib/_stream_readable.js
+    ChangeLog
+    deps/v8/src/hydrogen.cc
     lib/http.js
-    src/node_dtrace.cc
-  * smalloc: remove `env.h` include
-    Since `smalloc.h` is included in a `node_buffer.h`, including private
-    headers in it is strictly prohibited.
-    fix [#7206](https://github.com/joyent/node/issues/7206)
+    lib/querystring.js
+    src/node_crypto.cc
+    src/node_version.h
+    test/simple/test-querystring.js
+  * Now working on 0.10.33
+  * Merge branch 'v0.10.32-release' into v0.10
+  * 2014.09.16, Version 0.10.32 (Stable)
+    * npm: Update to 1.4.28
+    * v8: fix a crash introduced by previous release (Fedor Indutny)
+    * configure: add --openssl-no-asm flag (Fedor Indutny)
+    * crypto: use domains for any callback-taking method (Chris Dickinson)
+    * http: do not send `0rnrn` in TE HEAD responses (Fedor Indutny)
+    * querystring: fix unescape override (Tristan Berger)
+    * url: Add support for RFC 3490 separators (Mathias Bynens)
+  * npm: Update to 1.4.28
+  * http: do not send `0\r\n\r\n` in TE HEAD responses
+    When replying to a HEAD request, do not attempt to send the trailers and
+    EOF sequence (`0\r\n\r\n`). The HEAD request MUST not have body.
+    Quote from RFC:
+    The presence of a message body in a response depends on both the
+    request method to which it is responding and the response status code
+    (Section 3.1.2).  Responses to the HEAD request method (Section 4.3.2
+    of [RFC7231]) never include a message body because the associated
+    response header fields (e.g., Transfer-Encoding, Content-Length,
+    etc.), if present, indicate only what their values would have been if
+    the request method had been GET (Section 4.3.1 of [RFC7231]).
+    fix [#8361](https://github.com/joyent/node/issues/8361)
+    Reviewed-By: Timothy J Fontaine <tjfontaine@gmail.com>
+  * crypto: use domains for any callback-taking method
+    This adds domains coverage for pdbkdf2, pseudoRandomBytes, and randomBytes.
+    All others should be covered by event emitters.
+    Fixes [#5801](https://github.com/joyent/node/issues/5801).
+    Reviewed-By: Timothy J Fontaine <tjfontaine@gmail.com>
+  * lib, src: add vm.runInDebugContext()
+    Compiles and executes source code in V8's debugger context.  Provides
+    a programmatic way to get access to the debug object by executing:
+    var Debug = vm.runInDebugContext('Debug');
+    Fixes [#7886](https://github.com/joyent/node/issues/7886).
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * dns: include host name in error message if available
+    This makes errors more readable and similar to FS errors, which also
+    include file name.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
 
-2014-02-28
+2014-09-14
 ==========
 
-  * node: invoke `beforeExit` again if loop was active
-    When `setImmediate(cb)` is called in `beforeExit` event handler the
-    consequent `uv_run(..., UV_RUN_NOWAIT)` may return `0`, even if there
-    was some active handles at start.
-    Fixes simple/test-beforeexit-event.js.
+  * doc: document `process.env` better
+    Fixes [#6424](https://github.com/joyent/node/issues/6424).
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * tls: fix encoding in certificate-related functions
+    Strings are treated as UTF8 instead of one-byte strings when
+    names are processed and when OpenSSL's ..._print functions are used.
+    This commit fixes simple/test-tls-peer-certificate-encoding test.
+    fix [#8366](https://github.com/joyent/node/issues/8366)
+  * doc: fix modules require.resolve documentation
+    The behavior of the `node_modules` lookup algorithm was
+    changed in [#1177](https://github.com/joyent/node/issues/1177), but the documentation was not updated completely
+    to describe the new behavior.
+    The pseudocode of the lookup algorithm did not metion that
+    `index.json` is tried to be loaded if you require a folder.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
 
-2014-02-27
+2014-09-08
 ==========
 
-  * stream_wrap: don't write twice on uv_try_write err
-    fix [#7155](https://github.com/joyent/node/issues/7155)
-  * doc: document `beforeExit` and add more tests
-  * src: emit 'beforeExit' event on process object
-    Unlike the 'exit' event, this event allows the user to schedule more
-    work and thereby postpone the exit.  That also means that the
-    'beforeExit' event may be emitted many times, see the attached test
-    case for an example.
-    Refs [#6305](https://github.com/joyent/node/issues/6305).
-  * src: use new loop API
-    uv_loop_new and uv_loop_delete are considered deprecated now.
+  * deps: backport 60c316 from v8 trunk
+    Original commit message:
+    Extend the interceptor setter ASSERT to support the JSGlobalProxy case.
+    BUG=v8:3463
+    LOG=n
+    R=dcarney@chromium.org
+    Review URL: https://codereview.chromium.org/415973004
+    git-svn-id: https://v8.googlecode.com/svn/branches/bleeding_edge@22589 ce2b1a6d-e550-0410-aec6-3dcde31c8c00
+    Signed-off-by: Fedor Indutny <fedor@indutny.com>
+    fix [#7969](https://github.com/joyent/node/issues/7969)
+  * gyp: fix post-mortem in v0.11
+    Expose missing constants and keep symbols on OSX.
+  * deps: cherry-pick r21466 from v8 trunk
+    Check for cached transition to ExternalArray elements kind.
+    See [1] and [2] for details.
+    [1] https://code.google.com/p/v8/issues/detail?id=3337
+    [2] https://codereview.chromium.org/291193011
+    Signed-off-by: Fedor Indutny <fedor@indutny.com>
+  * deps: cherry-pick r21297 from v8 trunk
+    Changes the return value of PropertyCallbackInfo<T>::This() from
+    Local<Value> back to Local<Object>.  See [1] and [2] for background.
+    [1] https://groups.google.com/forum/#!topic/v8-users/wP2UcQ4cBW4
+    [2] https://codereview.chromium.org/285643008/
+    Signed-off-by: Fedor Indutny <fedor@indutny.com>
+  * deps: fix up v8 postmortem codegen
+    Signed-off-by: Fedor Indutny <fedor@indutny.com>
+  * v8: Upgrade 3.26.33 with 14 patches
+    V8 3.26.31 has received 14 patches since the upgrade to 3.26.33. Since
+    3.26.33 is technically a tag on the 3.27 branch, reverting back to
+    3.26.31 would remove now default functionality like WeakMaps. Because of
+    that the patches have simply been cherry-picked and squashed.
+    Here is a summary of all patches:
+    * Fix index register assignment in LoadFieldByIndex for arm, arm64, and
+    mips.
+    * Fix invalid attributes when generalizing because of incompatible map
+    change.
+    * Skip write barriers when updating the weak hash table.
+    * MIPS: Avoid HeapObject check in HStoreNamedField.
+    * Do GC if CodeRange fails to allocate a block.
+    * Array.concat: properly go to dictionary mode when required.
+    * Keep CodeRange::current_allocation_block_index_ in range.
+    * Grow heap slower if GC freed many global handles.
+    * Do not eliminate bounds checks for "<const> - x".
+    * Add missing map check to optimized f.apply(...).
+    * In GrowMode, force the value to the right representation to avoid
+    deopts between storing the length and storing the value.
+    * Reduce max executable size limit.
+    * Fix invalid condition in check elimination effects.
+    * Fix off-by-one error in Array.concat slow mode check.
+    For more information see: https://github.com/v8/v8/commits/3.26
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * tls: `checkServerIdentity` option
+    Allow overriding `checkServerIdentity` function, when connecting to a
+    TLS server.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
 
-2014-02-25
+2014-09-04
 ==========
 
-  * src: spawn_sync should close handles upon exit
-    When the exit callback is fired for the child process we should close
-    the handle associated with it.
-  * src: update to latest libuv api
-    libuv gyp builds now require you to define the library disposition
-    (static or shared).
-    Also, libuv now supports vectored IO for file system reads and writes,
-    update to those function signatures
-  * uv: Upgrade to v0.11.21
-  * http: remove the circular dependency
-    Between `ClientRequest` and `Agent`. The circular require was doing
-    weird things at load time, like making the `globalAgent` property
-    be `undefined` from within the context of the "_http_client"
-    module.
-    Removing the circular dependency completely fixes this.
-    This commit effectively removes the undocumented `Agent#request()`
-    and `Agent#get()` functions.
-  * test: update "http-*" tests to only use public API
-    Don't invoke the `agent.requst()` or `agent.get()` functions
-    directly. Instead, use the public API and pass the agent
-    instance in as the `agent` option.
-  * http, https: don't depend on `globalAgent`
-    For the `request()` and `get()` functions. I could never
-    really understand why these two functions go through agent
-    first... Especially since the user could be passing `agent: false`
-    or a different Agent instance completely, in which `globalAgent`
-    will be completely bypassed.
-    Moved the relevant logic from `Agent#request()` into the
-    `ClientRequest` constructor.
-    Incidentally, this commit fixes [#7012](https://github.com/joyent/node/issues/7012) (which was the original
-    intent of this commit).
-  * test: add failing http `agent: null` test
-    See [#7012](https://github.com/joyent/node/issues/7012).
-  * test: add `agent: null` http client request test
-    This is just the test portion from [#7012](https://github.com/joyent/node/issues/7012) / [#7189](https://github.com/joyent/node/issues/7189),
-    but targetted for the v0.10 branch.
-  * http: invoke createConnection when no agent
-    This makes it so that the user may pass in a
-    `createConnection()` option, and they don't have
-    to pass `agent: false` at the same time.
-    Also adding a test for the `createConnection` option,
-    since none was in place before.
-    See [#7014](https://github.com/joyent/node/issues/7014).
-  * test: fix async-listener-run-error-once
-    Rely on defined order of operations by closing the server and
-    destorying the client socket, instead of when setImmediate fires
-  * src: make stdout/sterr pipes blocking
-    Expose `setBlocking` on Pipe's and if a pipe is being created for stdio
-    on windows then make the pipes blocking.
-    This fixes test-stream2-stderr-sync.js on Windows.
-    Fixes [#3584](https://github.com/joyent/node/issues/3584)
-  * test: remove invalid part of stream2-stderr-sync
-    One test case in test-stream2-stderr-sync.js was creating a TTY
-    object using an undocumented constructor and passing in fd 2.
-    However, this is running in a child process and fd 2 is actually
-    a pipe, not a TTY.
-    The constructor fails on Windows and causes the handle type to be
-    left uninitialized, which later causes an assert to fail.
-    On Unix, the constructor fails to retrieve the windows size but unlike
-    on Windows, it just leaves the size fields undefined and continues
-    with initializing the stream type, yielding a semi-usable object.
-    I could make the Windows version match Unix behavior, but it
-    seems to me that the test is relying on an implementation detail of
-    an undocumented API, and the Unix behavior is not necessarily more
-    correct than the Windows one. Thus it makes more sense to remove this
-    test.
-  * tls: stop NodeBIO::Gets from reading off end of buffer
-    NodeBIO::Gets was reading off the end of a buffer if it
-    didn't find a "\n" before the EOF.  This behavior
-    was causing X509 certificates passed to `https.Agent`
-    via the "ca" option to be silently discarded. It also
-    was causing improper parsing of certs and keys
-    passed to https.Agent, but those problems were worked
-    around in cdde9a3.
-    Backed out workaround in `lib/crypto.js` from ccde9a3,
-    which now isn't needed.  But keep the test introduced
-    in that commit, which tests properly for this
-    bug.
-    This bug was first introduced in a58f93f
-    Gist containing test code, bisection log, and notes:
-    https://gist.github.com/maxtaco/9211605
+  * src: remove Environment::GetCurrentChecked()
+    There is only one call site that uses it and that can do the checks
+    itself.  Removes ~15 lines of code.
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * lib: unexport http.parsers
+    Unexport the http.parsers freelist.  It was originally exported by Ryan
+    in commit 0003c701 but the commit log doesn't mention why and it's never
+    been documented.  It's unclear if there are any users.
+    The lifecycle of parser objects changed recently and it seems better to
+    not let people shoot themselves in the foot so easily.
+    If it turns out there are actually users, we can always re-export it
+    again - probably under a slightly different name, to force people to
+    update their code to the new way of things.
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * lib: http: poison parser references after freeing
+    Make it a little harder to slip in use-after-free bugs by nulling out
+    references to the parser object after handing it off to freeParser().
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * src: update and expand comments in base-object.h
+    It's safe to call BaseObject::object() from your destructor _unless_
+    the handle is weak; then it's the weak callback that is calling your
+    destructor and the object will have been released by the time the
+    destructor runs.
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * lib, src: don't make http parser handles weak
+    Weak handles put strain on the garbage collector and the parser handle
+    doesn't need to be weak in the first place.  This change should improve
+    GC times on busy servers a little.
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * src: add ClearWrap() to util.h
+    Counterpart to Wrap(), clears the previously assigned internal field.
+    Will be used in an upcoming commit.
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * src: fix handle leak in Parser::Execute()
+    Fix a resource leak where an intermediate Local<Context> handle in
+    Environment::GetCurrent() got leaked into whatever HandleScope was
+    further up the stack.
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * lib: improved forEach object performance
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
 
-2014-02-24
+2014-09-03
 ==========
 
-  * windows: fix module registration
-    The linker was optimizing the static variables that were supposed
-    to trigger module initialization.
-    I am making them non-static, and dllexport so that they don't get
-    optimized away.
-    Fixes [#7116](https://github.com/joyent/node/issues/7116)
-  * net: fix listening on FDs on Windows
-    Fix a bug introduced by 3da36fe of a missed early return of a handle
-    that needed to be passed to listen.
-    Fixes test-net-listen-fd0.js on Windows
-  * test: internet/test-dns disable implicit ipv6
-    This ends up being too difficult to test across different deployments
-  * test: pummel/net-connect-econnrefused backoff
-    We were trying too hard to connect, and getting timeouts instead of
-    the refusals, slow down how hard we try.
-  * benchmark: update to use new wrk
-  * wrk: compile on sunos
-  * wrk: build against our distributed ssl
-  * tools: wrk update to 5b2fa06
-  * test: migrate pummel/keep-alive to wrk
+  * test: listen on exclusive port in cluster workers
+    Test that listening on exclusive ports with the cluster module works
+    correctly.
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+
+2014-09-02
+==========
+
+  * net,dgram: workers can listen on exclusive ports
+    Allow cluster workers to listen on exclusive ports for TCP and UDP,
+    instead of forcing all calls to go through the cluster master.
+    Fixes: [#3856](https://github.com/joyent/node/issues/3856)
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+    Reviewed-by: Fedor Indutny <fedor@indutny.com>
+  * src: be more intelligent about use of "arguments"
+    Use 'use strict' when there are named arguments and the arguments object
+    is passed to apply(). Also pass named arguments to call() when the named
+    argument is modified by the function.
+    Suggested in
+    https://github.com/joyent/node/pull/8302#issuecomment-54331801
+    Confirmed in
+    https://github.com/joyent/node/pull/8302#issuecomment-54364818
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+  * tls: support multiple keys/certs
+    Required to serve website with both ECDSA/RSA certificates.
+  * tls_wrap: fix use after free
+    Do not free TLSCallbacks from StreamWrap. TLSCallbacks is bound to a V8
+    object and should be collected by V8's GC.
+  * crypto: use less memory for storing keys
+    Use `BIO_new_mem_buf` where possible to reduce memory usage and
+    initialization costs.
+  * configure: add --openssl-no-asm flag
+    see [#8062](https://github.com/joyent/node/issues/8062)
+    Reviewed-By: Trevor Norris <trev.norris@gmail.com>
+  * net: Improve Socket.prototype.write()
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * stream_wrap: Add support to write binary strings
+    node::StringBytes::Write() has appropriate support to write strings with
+    'binary' encoding. So expose that API through StreamWrap and allow
+    inheriting classes to use it.
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+
+2014-09-01
+==========
+
+  * node,async-wrap: verify domain enter/exit are set
+    The REPL global object lazy loads modules by placing getters for each.
+    This causes MakeDomainCallback() to be run if a native module is loaded
+    from the REPL, but if the domain module hasn't been loaded then there
+    are no enter/exit callbacks to be called. Causing an assert() to fail.
+    Fix the issue by conditionally running the callback instead of asserting
+    it is available. Also add "addon" test to verify the fix.
+    Fixes: [#8231](https://github.com/joyent/node/issues/8231)
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+  * tests: add test for non-integer delay timers.
+    PR [#8034](https://github.com/joyent/node/issues/8034) came with a test to make sure that timers expiry is based on
+    monotonic time and not on wall-clock time. However, a bug in the
+    implementation broke timers with non-integer delays. A fix for this
+    issue was provided with PR [#8073](https://github.com/joyent/node/issues/8073), but it didn't come with a test.
+    Because [#8073](https://github.com/joyent/node/issues/8073) fixed a subtle issue that could reappear in the future,
+    and because the impact of such an issue would be significant, I suggest
+    adding this test.
+    The test would timeout after 1 minute if the issue was reproduced.
+    Otherwise it will run very quickly.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * configure: generate a fully statically linked exec
+    Allow to create an executable with no external dynamic libraries, also the
+    ones from the system. This is somewhat dependent of the used C lib, for
+    example glibc has some internal dynamic libraries loaded by itself, but for
+    other ones like eglibc or dietlib, this would produce a true static linked
+    executable. This can be of interest for embebers or resource constraints
+    platforms, but the main reason for this is to allow to use a Javascript
+    file as Linux kernel 'init' on NodeOS.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * cluster: centralize removal from workers list.
+    Currently, cluster workers can be removed from the workers list in three
+    different places:
+    - In the exit event handler for the worker process.
+    - In the disconnect event handler of the worker process.
+    - In the disconnect event handler of the cluster master.
+    However, handles for a given worker are cleaned up only in one of these
+    places: in the cluster master's disconnect event handler.
+    Because these events happen asynchronously, it is possible that the
+    workers list is empty before we even clean up one handle. This makes
+    the assert that makes sure that no handle is left when the workers
+    list is empty fail.
+    This commit removes the worker from the cluster.workers list only when
+    the worker is dead _and_ disconnected, at which point we're sure that
+    its associated handles are cleaned up.
+    Fixes [#8191](https://github.com/joyent/node/issues/8191) and [#8192](https://github.com/joyent/node/issues/8192).
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * crypto: unsigned value can't be negative
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * crypto: avoid memory leak
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * src: reading/owner/onread/onconnection for tcp
+    Initialize fields to avoid Hidden Class creation in runtime.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+
+2014-08-31
+==========
+
+  * crypto: wrap ECDH constants in HAVE_OPENSSL
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+
+2014-08-27
+==========
+
+  * tls: add DHE-RSA-AES128-SHA256 to the def ciphers
+    `!EDH` is also removed from the list in the discussion of [#8272](https://github.com/joyent/node/issues/8272)
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * tls, crypto: add DHE support
+    In case of an invalid DH parameter file, it is sliently discarded. To
+    use auto DH parameter in a server and DHE key length check in a
+    client, we need to wait for the next release of OpenSSL-1.0.2.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * crypto: introduce ECDH
+
+2014-08-26
+==========
+
+  * url: Add support for RFC 3490 separators
+    There is no need to split the host by hand in `url.js` – Punycode.js
+    takes care of it anyway. This not only simplifies the code, but also
+    adds support for RFC 3490 separators (i.e. not just U+002E, but U+3002,
+    U+FF0E, and U+FF61 as well).
+    Closes [#6055](https://github.com/joyent/node/issues/6055).
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * src: Add function name for .byteLength/.compare
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * querystring: fix unescape override
+    Documentation states that `querystring.unescape` may be overridden to
+    replace unescaper during parsing. However, the function was only
+    being used as a fallback for when the native decoder throws (on a
+    malformed URL). This patch moves the call to the native function and
+    the try/catch around it into querystring.unescape then has the parser
+    always invoke it, so that an override will always be used.
+    Fixes [#4055](https://github.com/joyent/node/issues/4055)
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+
+2014-08-25
+==========
+
+  * crypto: allow padding in RSA methods
+    Reviewed-By: Trevor Norris <trevnorris@gmail.com>
+  * gyp: use --export-dynamic on FreeBSD
+    Should help addons use OpenSSL functions.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * deps: enable ARM assembly for OpenSSL
+    fix [#8062](https://github.com/joyent/node/issues/8062)
+
+2014-08-22
+==========
+
+  * crypto: fix memory leak in Connection::New
+    Do not create `SSL` instance twice, `SSL_new` is called from `SSLBase`
+    constructor anyway.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+
+2014-08-21
+==========
+
+  * deps: fix up v8 after fd80a3
+    fd80a31e0697d6317ce8c2d289575399f4e06d21 has introduced a segfault
+    during redundant boundary check elimination ([#8208](https://github.com/joyent/node/issues/8208)).
+    The problem consists of two parts:
+    1. Abscense of instruction iterator in
+    `EliminateRedundantBoundsChecks`. It was present in recent v8, but
+    wasn't considered important at the time of backport. However, since
+    the function is changing instructions order in block, it is
+    important to not rely at `i->next()` at the end of the loop.
+    2. Too strict ASSERT in `MoveIndexIfNecessary`. It is essentially a
+    backport of a45c96ab from v8's upstream. See
+    https://github.com/v8/v8/commit/a45c96ab for details.
+    fix [#8208](https://github.com/joyent/node/issues/8208)
+
+2014-08-20
+==========
+
+  * http: avoid create difference hidden class
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+
+2014-08-19
+==========
+
+  * net,stream: add isPaused, don't read() when paused
+    net Sockets were calling read(0) to start reading, without
+    checking to see if they were paused first. This would result
+    in paused Socket objects keeping the event loop alive.
+    Fixes [#8200](https://github.com/joyent/node/issues/8200)
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * dns: throw if hostname is not string or falsey
+    Fix assertion failure from poor argument parsing logic introduced in
+    6ea5d16. Add tests to make sure arguments are properly parsed.
+    Fixes: 6ea5d16 "dns: always set variable family in lookup()"
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+
+2014-08-18
+==========
+
+  * Now working on 0.10.32
+  * Merge branch 'v0.10.31-release' into v0.10
+  * node: add missing Isolate::Scope at startup
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * src: add missing Isolate arguments
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * 2014.08.19, Version 0.10.31 (Stable)
+    * v8: backport CVE-2013-6668
+    * openssl: Update to v1.0.1i
+    * npm: Update to v1.4.23
+    * cluster: disconnect should not be synchronous (Sam Roberts)
+    * fs: fix fs.readFileSync fd leak when get RangeError (Jackson Tian)
+    * stream: fix Readable.wrap objectMode falsy values (James Halliday)
+    * timers: fix timers with non-integer delay hanging. (Julien Gilli)
+  * npm: Update to v1.4.23
+
+2014-08-17
+==========
+
+  * http: fix bailout for writeHead
+    Reported-by: Jackson Tian <shyvo1987@gmail.com>
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * gyp: preserve v8dbg syms on freebsd too
+  * Revert "gyp: preserve v8dbg syms on freebsd too"
+    This reverts commit 181b8a5d3af2e14c50dd32e1f16bf553fd3c7050.
+
+2014-08-16
+==========
+
+  * gyp: preserve v8dbg syms on freebsd too
+
+2014-08-13
+==========
+
+  * deps: backport 5f836c from v8 upstream
+    Original commit message:
+    Fix Hydrogen bounds check elimination
+    When combining bounds checks, they must all be moved before the first load/store
+    that they are guarding.
+    BUG=chromium:344186
+    LOG=y
+    R=svenpanne@chromium.org
+    Review URL: https://codereview.chromium.org/172093002
+    git-svn-id: https://v8.googlecode.com/svn/branches/bleeding_edge@19475 ce2b1a6d-e550-0410-aec6-3dcde31c8c00
+    fix [#8070](https://github.com/joyent/node/issues/8070)
+
+2014-08-12
+==========
+
+  * test: fix dns test
+    Fix a few issues in test/internet/test-dns.js:
+    - 'hint' should be 'hints'
+    - reverse name lookup is not guaranteed to return 'localhost'
+    - V4MAPPED hint requires IPV6 address family
+    Signed-off-by: Timothy J Fontaine <tjfontaine@gmail.com>
+  * tests: don't assume IPv4 only in remote addr tests
+    Tests in test-net-remote-address-port.js assume that client and server
+    sockets always use IPv4. However, depending on the OS and the network
+    interfaces setup, this is not true. This change makes the test consider
+    that both IPv4 or IPv6 sockets are valid
+    Fixes [#8096](https://github.com/joyent/node/issues/8096).
+    Signed-off-by: Timothy J Fontaine <tjfontaine@gmail.com>
+  * test: check ipv6 support before testing it
+    fix [#7983](https://github.com/joyent/node/issues/7983)
+    fix [#8049](https://github.com/joyent/node/issues/8049)
+    Signed-off-by: Timothy J Fontaine <tjfontaine@gmail.com>
+  * tests: do not hardcode service name in test-dns.
+    Instead of hard-coding http service name in test-dns, retrieve it from
+    /etc/services. This is not ideal, but it's still better than hard-coding
+    it.
+    Fixes [#8047](https://github.com/joyent/node/issues/8047).
+    Signed-off-by: Timothy J Fontaine <tjfontaine@gmail.com>
+  * tests: fix invalid hints flags dns test.
+    1 is actually a valid flag on SmartOS. More generally, hints flags'
+    values are defined by the underlying native flags, and these can have
+    different values on different systems.
+    Using (ADDRCONFIG | V4MAPPED) + 1 ensure that the flag will be invalid,
+    since it will always be different from ADDRCONFIG, V4MAPPED, ADDRCONFIG
+    | V4MAPPED,  0 and any other combination of even flags.
+    Signed-off-by: Timothy J Fontaine <tjfontaine@gmail.com>
+  * openssl: fix keypress requirement in apps on win32
+    Original source:
+    http://openssl.6102.n7.nabble.com/PATCH-s-client-Fix-keypress-requirement-with-redirected-input-on-Windows-td46787.html
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * deps: update openssl to v1.0.1i
+  * src: change kIsolateSlot to 3
+    The slot 0 and 1 had already been taken by "gin" and "blink" in Chrome,
+    and the size of isolate's slots is 4 by default, so using 3 should hopefully
+    make node work independently when embedded into other application.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * src: require EventEmitter via NativeModule
+    Fixes a recent change causing test-process-kill-pid.js to fail.
+    Fixes: 931cbc1 "lib: don't use emitter.listeners(type).length"
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+  * dgram: remove new keyword from errnoException
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * doc: typo fixes on stream, tls and http
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+
+2014-08-11
+==========
+
+  * querystring: remove prepended ? from query field
+    Fixes an issue that caused the first querystring to be parsed prepending
+    a "?" in the first variable name on relative urls with no #fragment
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * lib: don't use emitter.listeners(type).length
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+
+2014-08-10
+==========
+
+  * node: set names for prototype methods
+    Fix issue where output of a native prototype method would simply print
+    [Function]. It will now print [Function: name].
+    Signed-off-by: Trevor Norris <trev.norris@gmail.com>
+  * crypto: add RSA encryption
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * windows: fix memory leak in WinapiErrnoException
+    Fix https://github.com/joyent/node/issues/2341
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+
+2014-08-07
+==========
+
+  * dns: always set variable family in lookup()
+    Regression occurred that prevented the variable "family" from being set
+    properly when the lookup() function's "options" parameter was passed a
+    number instead of an object.
+    Also included a sanity check by setting the default value of "family" to
+    a value that will not pass verification.
+    Fixes: e643fe4 "dns: fix GetAddrInfo assert"
+    Reviewed-by: Alexis Campailla <alexis@janeasystems.com>
+    Reviewed-by: Trevor Norris <trev.norris@gmail.com>
+  * openssl: fix keypress requirement in apps on win32
+    Original source:
+    http://openssl.6102.n7.nabble.com/PATCH-s-client-Fix-keypress-requirement-with-redirected-input-on-Windows-td46787.html
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+  * build: linking CoreFoundation framework for OSX
+    Linking CoreFoundation for OSX is needed for OSX debugging features to
+    function properly.
+    For instance Instruments cannot record Heap Allocations if the
+    CoreFoundation is not linked.
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>
+
+2014-08-06
+==========
+
+  * test: fix test-process-kill-pid on Windows
+    Disabling the part of the test that relies on dispatching SIGHUP,
+    because sending SIGHUP is not supported on Windows.
+    Signed-off-by: Timothy J Fontaine <tjfontaine@gmail.com>
+  * doc: document max `new Buffer(size)`
+    Signed-off-by: Timothy J Fontaine <tjfontaine@gmail.com>
+  * Merge remote-tracking branch 'upstream/v0.12'
+  * Merge remote-tracking branch 'upstream/v0.10' into v0.12
+    Conflicts:
+    ChangeLog
+    Makefile
+    deps/uv/ChangeLog
+    deps/uv/build.mk
+    deps/uv/src/unix/darwin.c
+    deps/uv/src/unix/getaddrinfo.c
+    deps/uv/src/version.c
+    deps/v8/src/checks.h
+    deps/v8/src/isolate.h
+    lib/cluster.js
+    lib/module.js
+    lib/timers.js
+    lib/tls.js
+    src/node_version.h
+  * tests: fix child-process-fork-dgram on SmartOS.
+    Send messages until both the parent and the child process have received
+    at least one message. If at least one of them doesn't receive any
+    message, the test runner will make the test timeout.
+    Fixes [#8046](https://github.com/joyent/node/issues/8046).
+  * node: Now working on v0.13.0
+  * doc: document arguments for 'error' event on a stream
+    Fixes [#6361](https://github.com/joyent/node/issues/6361).
+  * fs: fix fs.readFileSync fd leak when get RangeError
+  * src: handle UV_EAGAIN in TryWrite
+    Reviewed-By: Fedor Indutny <fedor@indutny.com>

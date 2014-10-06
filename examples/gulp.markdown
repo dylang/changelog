@@ -1,142 +1,145 @@
-3.6.0 / 2014-03-28
+3.8.8 / 2014-09-07
 ==================
 
-  * dont exit the process or stop watching on error
-  * Merge pull request [#373](https://github.com/gulpjs/gulp/issues/373) from meleyal/patch-1
-    Update "Using coffee-script for gulpfile" recipe with link to cult
-  * Update using-coffee-script-for-gulpfile.md
-  * Merge pull request [#367](https://github.com/gulpjs/gulp/issues/367) from steida/master
-    Rename concat to merge.
-  * Rename concat to merge.
-    https://github.com/dominictarr/event-stream#merge-stream1streamn
-  * closes [#366](https://github.com/gulpjs/gulp/issues/366)
-  * Merge pull request [#351](https://github.com/gulpjs/gulp/issues/351) from tschaub/patch-1
-    Another strategy for incremental builds
-  * Another strategy for incremental builds
-    While the `gulp-changed` and `gulp-cached` plugins work great with 1:1 src:dest file mapping, they should not be used for n:1 src:dest mapping.  With plugins like `gulp-concat`, `css-sprite`, etc. that generate a single output file given many input files, you want to compare the modification time of the output file to the modification file of each input file (and use all if any are newer).
-    The `gulp-newer` plugin works with both 1:1 and n:1 src:dest mapping by comparing `mtime`.
-  * Merge pull request [#346](https://github.com/gulpjs/gulp/issues/346) from floatdrop/master
-    Actualize mocha recipe
-  * Actualize mocha recipe
-    Closes [#233](https://github.com/gulpjs/gulp/issues/233)
-  * closes [#345](https://github.com/gulpjs/gulp/issues/345)
-
-3.5.6 / 2014-03-13
-==================
-
-  * fix completion not being included
-  * Merge pull request [#342](https://github.com/gulpjs/gulp/issues/342) from thejameskyle/patch-1
-    Include completion files for npm
-  * Add completion dir to package.json files
-  * Merge pull request [#326](https://github.com/gulpjs/gulp/issues/326) from t3chnoboy/master
-    add missing spaces into function declarations
-  * Merge pull request [#327](https://github.com/gulpjs/gulp/issues/327) from stevermeister/man-update
-    + update readme - plugin example
-  * + update readme - plugin example
-  * remove spaces before '(' to follow style guide
-  * add missing spaces into function declarations
-  * Merge pull request [#323](https://github.com/gulpjs/gulp/issues/323) from gulpjs/recommend-yargs
-    Recommend `yargs` over `optimist`
-  * Recommend `yargs` over `optimist`
-    Substack has deprecated the `optimist` package, recommending the use of
-    it's successor, `yargs`.
-  * Merge pull request [#320](https://github.com/gulpjs/gulp/issues/320) from tkellen/misnamedvar
-    env.localPackage should be env.modulePackage
-  * env.localPackage should be env.modulePackage
-  * 3.5.5
-
-3.5.5 / 2014-03-01
-==================
-
-  * merge
-  * new deprecation msg, update deps
-  * Update guidelines.md
-  * Merge pull request [#313](https://github.com/gulpjs/gulp/issues/313) from ezhilvendhan/master
-    Fix typo in "Dealing With Streams" doc
-  * Fix typo in Dealing With Streams doc
-  * Merge pull request [#307](https://github.com/gulpjs/gulp/issues/307) from sindresorhus/chalk
-    use `chalk` directly
-  * use `chalk` directly
-  * recommended modules
-  * better log messages
-  * Merge pull request [#305](https://github.com/gulpjs/gulp/issues/305) from tkellen/envarg
-    receive environment as argument
-  * receive environment as argument
-  * optimistic version ranges, doc updates for gulp-util upcoming changes
-  * Merge pull request [#296](https://github.com/gulpjs/gulp/issues/296) from minibikini/patch-1
-    Update `Using coffee-script for gulpfile` recipe
-  * Update `Using coffee-script for gulpfile` recipes
-    Adds a link to coffeegulp.
-  * Merge pull request [#295](https://github.com/gulpjs/gulp/issues/295) from koistya/patch-1
+  * minor doc tweak
+  * Sexier option parsing example
+  * Merge pull request [#648](https://github.com/gulpjs/gulp/issues/648) from julien-f/patch-1
+    Fix 2 links.
+  * Fix 2 links.
+  * Merge pull request [#647](https://github.com/gulpjs/gulp/issues/647) from briandipalma/gulp.dest-doc
+    Create missing `gulp.dest` parameter docs.
+  * Create missing `gulp.dest` parameter docs.
+  * Merge pull request [#645](https://github.com/gulpjs/gulp/issues/645) from baer/browserify-recipe
+    Add browserify recipe
+  * Merge pull request [#635](https://github.com/gulpjs/gulp/issues/635) from PeterDaveHello/patch-1
+    make CI build faster
+  * Add browserify recipe
+  * Merge pull request [#643](https://github.com/gulpjs/gulp/issues/643) from stevemao/patch-1
+    add missing semicolon in browserify recipe
+  * add missing semicolon in browserify recipe
+    add missing semicolon in browserify recipe
+  * Merge pull request [#642](https://github.com/gulpjs/gulp/issues/642) from baer/patch-1
+    Correct confusing whitespace
+  * Correct confusing whitespace
+    I stared at this for a few minutes thinking there was a missing `}` but it's just some bad spacing :)
+  * Merge pull request [#637](https://github.com/gulpjs/gulp/issues/637) from sleeper/fix_recipe
+    Fix the gulp.watch example in the "Server with live-reloading and CSS injection" recipe
+  * Fix the gulp.watch example
+    gulp.watch is relative to `process.cwd()`. We thus need to indicate the `app`
+    directory as the base.
+  * make CI build faster
+  * Merge pull request [#633](https://github.com/gulpjs/gulp/issues/633) from mikaelbr/licenseHeader
+    Adds proper LICENSE file header according to MIT site
+  * Adds proper LICENSE file header according to MIT site
+  * recipes - switch out `stream-combiner` with `multistream`
+    as `stream-combiner` is streams1 while multistream is streams2.
+  * Merge pull request [#624](https://github.com/gulpjs/gulp/issues/624) from egtork/patch-1
     Update fast-browserify-builds-with-watchify.md
   * Update fast-browserify-builds-with-watchify.md
-  * docs/readme - link up gulpjs to the webchat
-    not everyone knows how to use an IRC client. this makes it supersimple.
-  * Merge pull request [#288](https://github.com/gulpjs/gulp/issues/288) from jamescrowley/updateReadmeWithStackOver
-    Update documentation: where to go for help
-  * Update documentation: where to go for help
-  * Merge pull request [#278](https://github.com/gulpjs/gulp/issues/278) from hughsk/watchify-recipe-fix
-    Improve watchify recipe.
-  * Improve watchify recipe.
-    As @andreypopp pointed out on IRC, this example was doubling up
-    on watchers when it only needed to listen to watchify's "update"
-    event.
-  * note about incremental builds
-  * clarity
-  * clean up
-  * Merge pull request [#275](https://github.com/gulpjs/gulp/issues/275) from jamescrowley/docs.filesPerFold
-    Adding recipe for running task steps per folder
-  * Update running-task-steps-per-folder.md
-  * Rename running-task-steps-per-folder to running-task-steps-per-folder.md
-  * Adding docs for running task steps per folder
-  * Merge pull request [#272](https://github.com/gulpjs/gulp/issues/272) from hughsk/watchify-recipe
-    Add watchify recipe
-  * Add watchify recipe
-    Offers considerably faster browserify builds by using the
-    watchify module and vinyl-source-stream in place of
-    gulp-browserify.
-  * Merge pull request [#263](https://github.com/gulpjs/gulp/issues/263) from mslemeri/master
-    Fixed "changed" event name to "change" on gulp.watch in docs
-  * Fixed "changed" event name to "change"
-  * more keywords
-  * Improve package.json
-    repo can use shorthand, correct homepage, remove main as it's moot when using index.js, add some keywords
-  * Merge pull request [#260](https://github.com/gulpjs/gulp/issues/260) from shinnn/master
-    Update URLs on package.json
-  * Update URLs on package.json
-  * Merge pull request [#256](https://github.com/gulpjs/gulp/issues/256) from darsain/docs-patch-1
-    Using multiple source streams in ordered fashion
-  * Forgot objectMode: true flag
-  * Using multiple source streams in ordered fashion
-  * -v removal wow this has gone back and forth like 5 times
-  * Merge pull request [#249](https://github.com/gulpjs/gulp/issues/249) from callumlocke/less-startup-logging
-    Skip "Working directory changed" log if not applicable
-  * docs on lazypipe, docs on combine streams for errors. closes [#254](https://github.com/gulpjs/gulp/issues/254) [#252](https://github.com/gulpjs/gulp/issues/252) [#251](https://github.com/gulpjs/gulp/issues/251)
-  * only chdir if necessary
-  * fix EE watch docs
-  * CLI cleanup
-  * link to contributing guide
-  * Merge branch 'master' of https://github.com/gulpjs/gulp
-  * contributing.md
-  * Merge pull request [#245](https://github.com/gulpjs/gulp/issues/245) from johnhaldson/patch-1
-    Update CLI.md
-  * Update CLI.md
-    change V to lowercase v for getting version information
-  * Merge pull request [#236](https://github.com/gulpjs/gulp/issues/236) from tkellen/liftoff
-    implement the gulp cli using node-liftoff.
+    Added browserify dependency
+  * docs - grammar
+  * Merge pull request [#623](https://github.com/gulpjs/gulp/issues/623) from sindresorhus/delete-recipe
+    add recipe for deleting files
+  * add recipe for deleting files
+  * docs - more cleanup
+  * docs - cleanup all the recipes
+    make them more consistent, grammar, code style, etc.
+  * docs - add readme index for recipes
+  * add markdown handling to .editorconfig
+  * Merge pull request [#563](https://github.com/gulpjs/gulp/issues/563) from zoombody/patch-1
+    Only output version if no tasks were specified
+  * Merge pull request [#621](https://github.com/gulpjs/gulp/issues/621) from barneycarroll/patch-1
+    API docs wording change: plugin stream support
+  * API docs wording change: plugin stream support
+    It sounds stupid, but I was struggling to grok why plugins weren't allowed to implement buffer support. The sentence came across as a directive more than a warning.
+    ```
+    - Plugins may not implement support for streams.
+    + Plugins might not implement support for streams.
+    ```
+  * Merge pull request [#620](https://github.com/gulpjs/gulp/issues/620) from maximilianschmitt/patch-1
+    Added "Get started with gulp (video series)" to README
+  * Added "Get started with gulp (video series)" to README
+  * 3.8.7
+  * update gulp-util for new errors
 
-3.5.2 / 2014-02-05
+3.8.7 / 2014-08-02
 ==================
 
-  * add guideline about shoehorning stream support
-  * implement the gulp cli using node-liftoff.
-  * fix gittip url
-  * doc fixes RE [#232](https://github.com/gulpjs/gulp/issues/232)
-  * 3.5.2
-  * change lowercase -v to -V for unix conventions
-  * temporary working gittip
-  * Merge pull request [#231](https://github.com/gulpjs/gulp/issues/231) from gdi2290/patch-1
-    update copyright year
-  * update copyright year
-  * add gittip
-  * fix coffee sample
+  * Merge pull request [#608](https://github.com/gulpjs/gulp/issues/608) from megakote/patch-3
+    Fixed recipes for new browserify/watchify
+  * Fixed recipes for new browserify/watchify
+  * Merge pull request [#604](https://github.com/gulpjs/gulp/issues/604) from samccone/sjs/remove
+    Remove explitive in gulp src
+  * Remove explitive in gulp src
+  * Merge pull request [#598](https://github.com/gulpjs/gulp/issues/598) from pkozlowski-opensource/patch-2
+    fix markdown formatting for the "silent" option
+  * fix markdown formatting for the "silent" option
+  * add silent docs
+  * Merge pull request [#595](https://github.com/gulpjs/gulp/issues/595) from pkozlowski-opensource/patch-1
+    update URL to the search plugins site
+  * update URL to the search plugins site
+    http://gulpjs.com/plugins/ probably be an "official"
+    search plugins website as it filters out black-listed ones.
+  * Merge pull request [#588](https://github.com/gulpjs/gulp/issues/588) from CaryLandholt/master
+    Add "Gulp-The Basics" screencast in documentation
+  * Merge pull request [#589](https://github.com/gulpjs/gulp/issues/589) from shakyShane/master
+    Docs: return stream & fix syntax highlighting
+  * Docs: return stream & fix syntax highlighting
+  * Add "Gulp-The Basics" screencast in documentation
+  * clean up code for [#587](https://github.com/gulpjs/gulp/issues/587) close
+  * log unknown errors. closes [#587](https://github.com/gulpjs/gulp/issues/587)
+  * Merge pull request [#567](https://github.com/gulpjs/gulp/issues/567) from AntouanK/add-new-recipe
+    Add new recipe for making streams from memory contents
+  * One var per line 
+    One var per line ( to be consistent with the guidelines )
+  * change promises to event-stream
+  * Merge pull request [#585](https://github.com/gulpjs/gulp/issues/585) from fcambus/master
+    Adding "Building With Gulp" article in documentation
+  * Adding "Building With Gulp" article in documentation
+  * Merge pull request [#582](https://github.com/gulpjs/gulp/issues/582) from appleboy/patch
+    Add BrowserSync web site link.
+  * add BrowserSync web site link.
+    Signed-off-by: Bo-Yi Wu <appleboy.tw@gmail.com>
+  * Update README.md
+  * 3.8.6
+  * dep updates
+
+3.8.6 / 2014-07-09
+==================
+
+  * Merge pull request [#580](https://github.com/gulpjs/gulp/issues/580) from shakyShane/master
+    Docs: Added server example with BrowserSync
+  * Docs: Added server example with BrowserSync
+  * Merge pull request [#576](https://github.com/gulpjs/gulp/issues/576) from cognitom/recipe-running-task-steps-per-folder
+    Update the recipe "running-task-steps-per-folder.md"
+  * No more `.apply(null, args)`
+  * Merge pull request [#573](https://github.com/gulpjs/gulp/issues/573) from jbnicolai/remove-exec-from-licence
+    Removes executable flag from LICENCE.
+  * Removes executable flag from LICENCE.
+  * Only output version if no tasks were specified
+  * remove console.log test
+  * add a recipe for starting streams with memory content ( virtual files )
+  * Merge pull request [#559](https://github.com/gulpjs/gulp/issues/559) from tkellen/patch-1
+    update liftoff
+  * Merge pull request [#560](https://github.com/gulpjs/gulp/issues/560) from crzidea/patch-1
+    Style js in README.md
+  * Style js in README.md
+  * update liftoff
+  * Merge pull request [#558](https://github.com/gulpjs/gulp/issues/558) from RnbWd/master
+    Updated Async Callback Support Readme
+  * Updated Async Callback Support Readme
+  * update docs for watchify, closes [#488](https://github.com/gulpjs/gulp/issues/488)
+  * 3.8.5
+
+3.8.5 / 2014-06-27
+==================
+
+  * fix autocomplete, closes [#539](https://github.com/gulpjs/gulp/issues/539)
+  * 3.8.4
+  * 3.8.4 - closes [#479](https://github.com/gulpjs/gulp/issues/479)
+
+3.8.4 / 2014-06-27
+==================
+
+  * use exit code 1 when a task fails
+  * 3.8.3

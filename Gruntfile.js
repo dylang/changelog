@@ -4,8 +4,10 @@
  */
 'use strict';
 
-module.exports = function (grunt) {
 
+
+module.exports = function (grunt) {
+    require('time-grunt')(grunt);
     grunt.initConfig({
         mochaTest: {
             notify: {

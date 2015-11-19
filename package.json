@@ -39,7 +39,7 @@
     "moment": "^2.5.0",
     "q": "^1.0.1",
     "request": "^2.34.0",
-    "semver": "^4.0.3",
+    "semver": "^5.1.0",
     "wordwrap": "^0.0.2"
   },
   "engines": {

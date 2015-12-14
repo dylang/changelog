@@ -32,7 +32,7 @@
     "changelog": "./bin/changelog.js"
   },
   "dependencies": {
-    "chalk": "^0.5.1",
+    "chalk": "^1.1.1",
     "cli": "^0.6.4",
     "has-color": "^0.1.1",
     "lodash": "^2.4.1",

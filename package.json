@@ -1,6 +1,6 @@
 {
   "name": "changelog",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Command line tool (and Node module) that generates a changelog in color output, markdown, or json for modules in npmjs.org's registry as well as any public github.com repo.",
   "keywords": [
     "changelog",

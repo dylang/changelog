@@ -7,6 +7,6 @@ echo Gulp as markdown
 ./bin/changelog.js gulp all --markdown  > ./examples/gulp.markdown
 
 echo Node as markdown
-./bin/changelog.js github.com/joyent/node all --markdown  > ./examples/node.json
+./bin/changelog.js github.com/joyent/node all --markdown  > ./examples/node.markdown
 
 echo Complete

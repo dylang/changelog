@@ -56,10 +56,12 @@
     "grunt-templates-dylang": "1.0.12",
     "load-grunt-tasks": "3.5.2",
     "mocha": "3.2.0",
+    "np": "2.16.0",
     "proxyquire": "1.7.10",
     "time-grunt": "1.4.0"
   },
   "scripts": {
+    "np": "np",
     "test": "grunt test"
   },
   "licenses": [

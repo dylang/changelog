@@ -1,10 +1,66 @@
+1.4.0 / 2017-07-08
+==================
+
+  * Use github-url-from-git for repo parsing ([#37](https://github.com/dylang/changelog/issues/37))
+
+1.3.1 / 2017-07-07
+==================
+
+  * fix: GitHub URL parsing ([#36](https://github.com/dylang/changelog/issues/36))
+
+    This enhances GitHub URL parsing to support:
+    - git://
+    - git+https://
+    - monropo (e.g. https://github.com/babel/babel/tree/master/packages/babel-runtime)
+
+1.3.0 / 2017-06-12
+==================
+
+  * Add np
+  * Return sha with commits
+
+1.2.1 / 2017-06-12
+==================
+
+  * Fix filename for example markdown ([#30](https://github.com/dylang/changelog/issues/30))
+  * Revert q to 1.x ([#28](https://github.com/dylang/changelog/issues/28))
+    
+    Although q has released 2.0.0 - 2.0.3, the author writes on the GitHub repo:
+    
+    > The version 2 release train introduces significant and backward-incompatible changes and is experimental at this time.
+    
+    Hence, reverting to 1.4.1.
+
+1.2.0 / unpublished?
+====================
+
+  * Upgrade and pin dependencies ([#27](https://github.com/dylang/changelog/issues/27)) & devDependencies ([#26](https://github.com/dylang/changelog/issues/26))
+  * Closes [#20](https://github.com/dylang/changelog/issues/20)
+  * Closes [#16](https://github.com/dylang/changelog/issues/16)
+  * Closes [#13](https://github.com/dylang/changelog/issues/13)
+
+1.1.0 / unpublished?
+====================
+
+  * Use GITHUB_TOKEN if present ([#24](https://github.com/dylang/changelog/issues/24))
+  * TravisCI: use versions 4 and 6 ([#25](https://github.com/dylang/changelog/issues/25))
+  * Add .editorconfig ([#23](https://github.com/dylang/changelog/issues/23))
+
+1.0.8 / unpublished?
+====================
+
+  * Support scoped npm dependencies ([#21](https://github.com/dylang/changelog/issues/21))
+  * Fixes [#18](https://github.com/dylang/changelog/issues/18)
+
 1.0.7 / 2014-10-06
 ==================
+
   * Oops, took out q. It's back now.
 
 1.0.6 / 2014-10-06
 ==================
-  * Fixes for supporting invalid semver versions and out of order publishes. Fixes #9. 
+
+  * Fixes for supporting invalid semver versions and out of order publishes. Fixes [#9](https://github.com/dylang/changelog/issues/9).
 
 1.0.5 / 2014-04-07
 ==================
@@ -26,7 +82,7 @@
     added User-Agent header to github API request
   * added User-Agent header to GitHub API request
 
-1.0.3 / 2013-09-21
+1.0.3 / 2013-09-22
 ==================
 
   * more modularization and testing
@@ -111,7 +167,7 @@
   * added changelog for changelog
   * run changelog in the root of a node project with a package.json and it will use it to create the changelog.
 
-0.0.6 / 2011-08-06
+0.0.6 / 2011-08-07
 ==================
 
   * bumped version to 0.0.6
@@ -134,7 +190,7 @@
   * using issac's semver to compare module version numbers
   * update readme
 
-0.0.3 / 2011-08-03
+0.0.3 / 2011-08-04
 ==================
 
   * update readme
@@ -143,7 +199,7 @@
   * --json support
   * update description
 
-0.0.2 / 2011-08-03
+0.0.2 / 2011-08-04
 ==================
 
   * version 0.0.2

@@ -53,8 +53,6 @@
     "grunt-contrib-watch": "1.0.0",
     "grunt-mocha-test": "0.13.3",
     "grunt-notify": "0.4.5",
-    "grunt-readme": "0.4.5",
-    "grunt-templates-dylang": "1.0.12",
     "load-grunt-tasks": "3.5.2",
     "mocha": "4.0.0",
     "np": "2.16.0",

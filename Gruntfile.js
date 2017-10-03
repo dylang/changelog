@@ -83,7 +83,7 @@ module.exports = function (grunt) {
         },
         readme: {
             options: {
-                readme: 'templates/README.md.tmpl',
+                readme: 'templates/changelog.md',
                 contributing: false
             }
         }

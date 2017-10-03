@@ -35,12 +35,12 @@
     "chalk": "2.1.0",
     "cli": "1.0.1",
     "github-url-from-git": "1.5.0",
-    "has-color": "0.1.7",
     "lodash": "4.17.4",
     "moment": "2.18.1",
     "q": "1.5.0",
     "request": "2.83.0",
     "semver": "5.4.1",
+    "supports-color": "4.4.0",
     "wordwrap": "1.0.0"
   },
   "engines": {

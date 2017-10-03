@@ -72,6 +72,9 @@ Options:
   -h, --help             Display help and usage details
 ```
 
+**Note**: on Windows and other platforms, `-c` MAY not detect a color-supporting terminal. Use `--color` instead to force changelog (which uses `chalk`) to output terminal color escape codes. See also https://github.com/chalk/supports-color.
+
+
 #### More Examples
 
 

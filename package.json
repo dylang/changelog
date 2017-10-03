@@ -32,33 +32,33 @@
     "changelog": "./bin/changelog.js"
   },
   "dependencies": {
-    "chalk": "1.1.3",
+    "chalk": "2.1.0",
     "cli": "1.0.1",
-    "github-url-from-git": "^1.5.0",
-    "has-color": "0.1.7",
+    "github-url-from-git": "1.5.0",
     "lodash": "4.17.4",
-    "moment": "2.17.1",
-    "q": "1.4.1",
-    "request": "2.79.0",
-    "semver": "5.3.0",
+    "moment": "2.18.1",
+    "q": "1.5.0",
+    "request": "2.83.0",
+    "semver": "5.4.1",
+    "supports-color": "4.4.0",
     "wordwrap": "1.0.0"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4.0"
   },
   "devDependencies": {
-    "chai": "3.5.0",
+    "chai": "4.1.2",
     "grunt": "1.0.1",
     "grunt-contrib-jshint": "1.1.0",
     "grunt-contrib-watch": "1.0.0",
-    "grunt-mocha-test": "0.13.2",
+    "grunt-mocha-test": "0.13.3",
     "grunt-notify": "0.4.5",
     "grunt-readme": "0.4.5",
     "grunt-templates-dylang": "1.0.12",
     "load-grunt-tasks": "3.5.2",
-    "mocha": "3.2.0",
+    "mocha": "4.0.0",
     "np": "2.16.0",
-    "proxyquire": "1.7.10",
+    "proxyquire": "1.8.0",
     "time-grunt": "1.4.0"
   },
   "scripts": {

@@ -47,7 +47,7 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "chai": "3.5.0",
+    "chai": "4.1.2",
     "grunt": "1.0.1",
     "grunt-contrib-jshint": "1.1.0",
     "grunt-contrib-watch": "1.0.0",
@@ -56,7 +56,7 @@
     "grunt-readme": "0.4.5",
     "grunt-templates-dylang": "1.0.12",
     "load-grunt-tasks": "3.5.2",
-    "mocha": "3.2.0",
+    "mocha": "4.0.0",
     "np": "2.16.0",
     "proxyquire": "1.7.10",
     "time-grunt": "1.4.0"

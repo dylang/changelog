@@ -1,3 +1,10 @@
+1.4.1-2 / 2017-10-04
+====================
+
+  * updated CHANGELOG using `changelog` (and hand-tweaked the output) ([#41](https://github.com/dylang/changelog/issues/41))
+  * added package-lock.json ([#40](https://github.com/dylang/changelog/issues/40))
+  * use strict ([#39](https://github.com/dylang/changelog/issues/39))
+
 1.4.0 / 2017-07-08
 ==================
 

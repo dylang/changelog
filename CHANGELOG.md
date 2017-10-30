@@ -1,9 +1,41 @@
+1.4.1-5 / 2017-10-30
+====================
+
+  * updated NPM packages, including move from deprecated has-color (not updated since 2013) to chalk-supports module (which is linked from rmp website's has-color entry). Added note to README for Windows users who run into issues around console TTY detection failing on several msys/mingw systems: `-c` vs. `--color`.
+
+1.4.1-4 / 2017-10-04
+====================
+
+  * updated package-lock.json: complete re-install of npm packages via `rm -rf node_modules; rm -f package-lock.json; npm i`
+  * chai github and npm tests ([#43](https://github.com/GerHobbelt/changelog/issues/43)) don't fail with obscure error report anymore: `expect.an.object` is not the correct use: http://chaijs.com/api/bdd/ --> `expect.an('object')`
+
+1.4.1-3 / 2017-10-04
+====================
+
+  * Now all unit tests pass (`npm test` failed for build -2 and before, after having updated to chai 4)
+  * chai github and npm tests ([#43](https://github.com/GerHobbelt/changelog/issues/43)) don't fail with obscure error report anymore: `expect.an.object` is not the correct use: http://chaijs.com/api/bdd/ --> `expect.an('object')`
+  * updated mocha + chai NPM packages; this causes [#43](https://github.com/GerHobbelt/changelog/issues/43)
+  * update TravisCI config to test all major supported Node versions: 4/5/6/7/8
+  * dependency `supports-color` doesn't support antique NodeJS (0.12 and older) due to `const` usage in the code. Discarding antiquated NodeJS support in `changelog` itself now: NodeJS versions 4 and later are supported and CI tested (adjusted TravisCI config accordingly)
+
 1.4.1-2 / 2017-10-04
 ====================
 
-  * updated CHANGELOG using `changelog` (and hand-tweaked the output) ([#41](https://github.com/dylang/changelog/issues/41))
-  * added package-lock.json ([#40](https://github.com/dylang/changelog/issues/40))
-  * use strict ([#39](https://github.com/dylang/changelog/issues/39))
+  * add "pub" publish task in npm scripts: `npm run pub'
+  * updated CHANGELOG using `changelog` (and hand-tweaked the output) ([#41](https://github.com/GerHobbelt/changelog/issues/41))
+  * added package-lock.json ([#40](https://github.com/GerHobbelt/changelog/issues/40))
+  * use strict ([#39](https://github.com/GerHobbelt/changelog/issues/39))
+  * Add note about the otherwise obscure solution to get terminal/console output with `-c` on platforms/terminals which are not recognized as color-supporting. (e.g. Windows+msys bash)
+  * sync output/markdown and output/terminal: same conditional logic around augmenting github issues with an URL.
+  * fix: has-color package is now chalk/supports-color
+  * nuke deprecated (and crashing!) grunt-readme from the task set (and consequently from the dev deps)
+  * fix: npm.org now has a different way to request info about scoped packages: via the `Npm-Scope` header. See also https://docs.npmjs.com/misc/registry
+  * bumped build revision + making this a scoped package for fast publication of updates.
+  * updated CHANGELOG using `changelog` (and hand-tweaked the output)
+  * added package-lock.json for precise dependency management straight out of the NPM box
+  * package states we support node as old as 0.10.0, so have TravisCI check 'em all.
+  * TravisCI: test all major Node versions from 4.0 onwards
+  * shut up eslint
 
 1.4.0 / 2017-07-08
 ==================

@@ -64,10 +64,5 @@
     "test": "grunt test",
     "pub": "npm publish --access public"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
-    }
-  ]
+  "license": "MIT"
 }

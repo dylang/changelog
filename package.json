@@ -1,6 +1,6 @@
 {
   "name": "@gerhobbelt/changelog",
-  "version": "1.4.1-4",
+  "version": "1.4.1-5",
   "description": "Command line tool (and Node module) that generates a changelog in color output, markdown, or json for modules in npmjs.org's registry as well as any public github.com repo.",
   "keywords": [
     "changelog",
@@ -32,15 +32,15 @@
     "changelog": "./bin/changelog.js"
   },
   "dependencies": {
-    "chalk": "2.1.0",
+    "chalk": "2.3.0",
     "cli": "1.0.1",
     "github-url-from-git": "1.5.0",
     "lodash": "4.17.4",
-    "moment": "2.18.1",
-    "q": "1.5.0",
+    "moment": "2.19.1",
+    "q": "1.5.1",
     "request": "2.83.0",
     "semver": "5.4.1",
-    "supports-color": "4.4.0",
+    "supports-color": "5.0.0",
     "wordwrap": "1.0.0"
   },
   "engines": {
@@ -54,8 +54,8 @@
     "grunt-mocha-test": "0.13.3",
     "grunt-notify": "0.4.5",
     "load-grunt-tasks": "3.5.2",
-    "mocha": "4.0.0",
-    "np": "2.16.0",
+    "mocha": "4.0.1",
+    "np": "2.16.1",
     "proxyquire": "1.8.0",
     "time-grunt": "1.4.0"
   },

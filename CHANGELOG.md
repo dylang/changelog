@@ -1,11 +1,40 @@
+1.4.1-8 / 2017-10-31
+====================
+
+  * add CLI `-a` / `--append` option to write/append to a CHANGELOG.md file:
+    - new generated data is appended to the top of an existing file.
+    - the tool searches the local directory for any file matching the 'changelog*' glob search crriterion and picks the first one it finds. When no file is found, 'CHANGELOG.md' is assumed as a default destination. This behaviour ensures that various incantations of the name do not cause any trouble in `-a`-updating, while any newly created CHANGELOG will have a github-friendly name: "CHANGELOG.md"
+  * SPDX-style license key in package.json: MIT.
+
+1.4.1-7 / 2017-10-31
+====================
+
+  * github should not just deliver commits but also **tags**: often those are in sync with npm releases, at least when they have a 'semver' format, so we collect those alongside the ones produced by the npm registry.
+    This is particularly handy to obtain a complete releases set (CLI: 'all') when a project is worked on via fork + subsequent "scoping" of that package, but that's just one(1) use case; this functionality is also useful for packages which do have releases via git tags, but have not been registered with npm, for example!
+  * kill obnoxious chai behaviour: `expects().to.be.an.object` fails, while `assert.isObject()` does what it's supposed to do.
+  * updated CHANGELOG.md using the correct repo URL (fork) now in package.json
+
+1.4.1-6 / 2017-10-31
+====================
+
+  * turns out today, npm registry requests for scoped packages has apparently reverted to old behaviour. See also commit SHA-1: 368495e38ac989f444b82867c753a7402de51b59 :: fix: npm.org now has a different way to request info about scoped packages: via the `Npm-Scope` header. See also https://docs.npmjs.com/misc/registry
+  * whoops, forgot npm dependency in there...
+  * enhancement: when you collect the changelog info for the local package, i.e. load the project name from the local package.json file, also pick up the repository URL from that file as well and apply that as the actual github URL rather than going to the NPM registry and collecting the github repo URL from the data produced by *that* one: the reason we do this is that we MAY VERY PROBABLY have adjusted the package.json file to be a scoped package or otherwise, but have not yet changed the repository URL to point to our fork/clone/derivative: it's one of those fields you only correct when you find out they matter... and now it turns out they matter for the CHANGELOG tool but then, of course, you otherwise would have to push a new NPM release just to correct this, which is ludicrous, so we have the local package.json take priority when we obtain data from it anyway. (Ergo: specifying the npm repo identifier on the command line WILL NOT take the package.json repository URL as explicit specification of the npm registry entry on the command line results in CHANGELOG not accessing any local package.json *at all*!)
+  * fix releaseRequested value: should never be NaN, just keep it 'undefined' then. Better validation in the code.
+  * allow variable number of args to log.debug & log.error: behave exactly like console.log and console.error so we can log more complex (debug) messages easily.
+  * message typo fix
+
 1.4.1-5 / 2017-10-30
 ====================
 
   * updated NPM packages, including move from deprecated has-color (not updated since 2013) to chalk-supports module (which is linked from rmp website's has-color entry). Added note to README for Windows users who run into issues around console TTY detection failing on several msys/mingw systems: `-c` vs. `--color`.
+  * updated package-lock.json: complete re-install of npm packages via `rm -rf node_modules; rm -f package-lock.json; npm i`
 
 1.4.1-4 / 2017-10-04
 ====================
 
+  * chai github and npm tests ([#43](https://github.com/GerHobbelt/changelog/issues/43)) don't fail with obscure error report anymore: `expect.an.object` is not the correct use: http://chaijs.com/api/bdd/ --> `expect.an('object')`
+  * Now all unit tests pass (`npm test` failed for build -2 and before, after having updated to chai 4)
   * updated package-lock.json: complete re-install of npm packages via `rm -rf node_modules; rm -f package-lock.json; npm i`
   * chai github and npm tests ([#43](https://github.com/GerHobbelt/changelog/issues/43)) don't fail with obscure error report anymore: `expect.an.object` is not the correct use: http://chaijs.com/api/bdd/ --> `expect.an('object')`
 

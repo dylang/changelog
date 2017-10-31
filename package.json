@@ -62,6 +62,7 @@
   },
   "scripts": {
     "np": "np",
+    "build": "grunt",
     "test": "grunt test",
     "pub": "npm publish --access public"
   },

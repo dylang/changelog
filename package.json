@@ -62,6 +62,7 @@
   },
   "scripts": {
     "np": "np",
+    "changelog": "node lib/cli.js -m -a all",
     "build": "grunt",
     "test": "grunt test",
     "pub": "npm publish --access public"

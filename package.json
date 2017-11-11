@@ -1,6 +1,6 @@
 {
   "name": "@gerhobbelt/changelog",
-  "version": "1.4.1-10",
+  "version": "1.4.2-10",
   "description": "Command line tool (and Node module) that generates a changelog in color output, markdown, or json for modules in npmjs.org's registry as well as any public github.com repo.",
   "keywords": [
     "changelog",

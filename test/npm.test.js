@@ -12,7 +12,7 @@ describe('npm', function () {
 
     it('should have something come back for pageHistory', function (done) {
         npm.packageHistory('changelog').then(function (results) {
-            expect(results).to.be.an.object;
+            expect(results).to.be.an('object');
         })
         .catch(function(err){throw err;})
         .done(done);

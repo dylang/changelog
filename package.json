@@ -32,7 +32,7 @@
     "changelog": "./bin/changelog.js"
   },
   "dependencies": {
-    "chalk": "2.3.0",
+    "chalk": "2.3.1",
     "cli": "1.0.1",
     "github-url-from-git": "^1.5.0",
     "has-color": "0.1.7",

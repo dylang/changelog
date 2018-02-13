@@ -56,7 +56,7 @@
     "grunt-readme": "0.4.5",
     "grunt-templates-dylang": "1.0.12",
     "load-grunt-tasks": "3.5.2",
-    "mocha": "5.0.0",
+    "mocha": "5.0.1",
     "np": "2.19.0",
     "proxyquire": "1.8.0",
     "time-grunt": "1.4.0"

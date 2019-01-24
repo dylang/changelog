@@ -57,7 +57,7 @@
     "grunt-templates-dylang": "1.0.12",
     "load-grunt-tasks": "3.5.2",
     "mocha": "5.0.1",
-    "np": "2.19.0",
+    "np": "4.0.2",
     "proxyquire": "1.8.0",
     "time-grunt": "1.4.0"
   },

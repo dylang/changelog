@@ -1,9 +1,26 @@
-1.4.1-8 / 2017-10-31
+`v1.4.1-10 / 2017-11-06
+===================
+
+  * support empty repo urls ([#48](https://github.com/GerHobbelt/changelog/issues/48))
+
+    Some non-open-source npm packages like
+    https://www.npmjs.com/package/bitmovin-player contain repository fields
+    with empty URLs. This commit handles this case which previously would
+    throw an error.
+  * for changelog developers: `npm run changelog` will append the CHANGELOG.md file with everything (in case you don't trust the 'single release changelog entries only'-behaviour yet...)
+  * for changelog developers: `npm run build` task will execute `grunt` and have it do everything: lint, test, etc.
+
+1.4.1-9 / 2017-10-31
 ====================
 
+  * improved debug logging, including inspection of proper OAuth transfer to github
   * add CLI `-a` / `--append` option to write/append to a CHANGELOG.md file:
     - new generated data is appended to the top of an existing file.
     - the tool searches the local directory for any file matching the 'changelog*' glob search crriterion and picks the first one it finds. When no file is found, 'CHANGELOG.md' is assumed as a default destination. This behaviour ensures that various incantations of the name do not cause any trouble in `-a`-updating, while any newly created CHANGELOG will have a github-friendly name: "CHANGELOG.md"
+
+1.4.1-8 / 2017-10-31
+====================
+
   * SPDX-style license key in package.json: MIT.
 
 1.4.1-7 / 2017-10-31
@@ -46,14 +63,14 @@
   * updated mocha + chai NPM packages; this causes [#43](https://github.com/GerHobbelt/changelog/issues/43)
   * update TravisCI config to test all major supported Node versions: 4/5/6/7/8
   * dependency `supports-color` doesn't support antique NodeJS (0.12 and older) due to `const` usage in the code. Discarding antiquated NodeJS support in `changelog` itself now: NodeJS versions 4 and later are supported and CI tested (adjusted TravisCI config accordingly)
-
-1.4.1-2 / 2017-10-04
-====================
-
   * add "pub" publish task in npm scripts: `npm run pub'
   * updated CHANGELOG using `changelog` (and hand-tweaked the output) ([#41](https://github.com/GerHobbelt/changelog/issues/41))
   * added package-lock.json ([#40](https://github.com/GerHobbelt/changelog/issues/40))
   * use strict ([#39](https://github.com/GerHobbelt/changelog/issues/39))
+
+1.4.1-2 / 2017-10-03
+====================
+
   * Add note about the otherwise obscure solution to get terminal/console output with `-c` on platforms/terminals which are not recognized as color-supporting. (e.g. Windows+msys bash)
   * sync output/markdown and output/terminal: same conditional logic around augmenting github issues with an URL.
   * fix: has-color package is now chalk/supports-color
@@ -86,11 +103,16 @@
 
   * Add np
   * Return sha with commits
-
-1.2.1 / 2017-06-12
-==================
-
   * Fix filename for example markdown ([#30](https://github.com/dylang/changelog/issues/30))
+
+1.2.2 / 2017-03-16
+===================
+
+  * nil
+
+1.2.1 / 2017-01-17
+===================
+
   * Revert q to 1.x ([#28](https://github.com/dylang/changelog/issues/28))
     
     Although q has released 2.0.0 - 2.0.3, the author writes on the GitHub repo:

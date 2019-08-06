@@ -32,33 +32,33 @@
     "changelog": "./bin/changelog.js"
   },
   "dependencies": {
-    "chalk": "2.3.0",
+    "chalk": "2.4.2",
     "cli": "1.0.1",
     "github-url-from-git": "1.5.0",
-    "glob": "7.1.2",
-    "lodash": "4.17.4",
-    "moment": "2.19.1",
+    "glob": "7.1.4",
+    "lodash": "4.17.15",
+    "moment": "2.24.0",
     "q": "1.5.1",
-    "request": "2.83.0",
-    "semver": "5.4.1",
-    "supports-color": "5.0.0",
+    "request": "2.88.0",
+    "semver": "6.3.0",
+    "supports-color": "7.0.0",
     "wordwrap": "1.0.0"
   },
   "engines": {
     "node": ">= 4.0"
   },
   "devDependencies": {
-    "chai": "4.1.2",
-    "grunt": "1.0.1",
-    "grunt-contrib-jshint": "1.1.0",
-    "grunt-contrib-watch": "1.0.0",
+    "chai": "4.2.0",
+    "grunt": "1.0.4",
+    "grunt-contrib-jshint": "2.1.0",
+    "grunt-contrib-watch": "1.1.0",
     "grunt-mocha-test": "0.13.3",
     "grunt-notify": "0.4.5",
-    "load-grunt-tasks": "3.5.2",
-    "mocha": "4.0.1",
-    "np": "2.16.1",
-    "proxyquire": "1.8.0",
-    "time-grunt": "1.4.0"
+    "load-grunt-tasks": "5.1.0",
+    "mocha": "6.2.0",
+    "np": "5.0.3",
+    "proxyquire": "2.1.1",
+    "time-grunt": "2.0.0"
   },
   "scripts": {
     "np": "np",

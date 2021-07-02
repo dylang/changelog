@@ -1,6 +1,12 @@
+sudo: false
 language: node_js
 node_js:
-  - "4"
-  - "6"
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - node
+   
 before_script:
   - npm install -g grunt-cli

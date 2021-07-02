@@ -1,6 +1,6 @@
 {
-  "name": "changelog",
-  "version": "1.4.2",
+  "name": "@gerhobbelt/changelog",
+  "version": "1.4.2-14",
   "description": "Command line tool (and Node module) that generates a changelog in color output, markdown, or json for modules in npmjs.org's registry as well as any public github.com repo.",
   "keywords": [
     "changelog",
@@ -17,7 +17,7 @@
   "author": "Dylan Greene <dylang@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dylang/changelog.git"
+    "url": "https://github.com/GerHobbelt/changelog.git"
   },
   "bugs": {
     "mail": "dylang@gmail.com",
@@ -32,43 +32,40 @@
     "changelog": "./bin/changelog.js"
   },
   "dependencies": {
-    "chalk": "2.3.1",
+    "chalk": "4.1.1",
     "cli": "1.0.1",
-    "github-url-from-git": "^1.5.0",
-    "has-color": "0.1.7",
-    "lodash": "4.17.5",
-    "moment": "2.20.1",
+    "github-url-from-git": "1.5.0",
+    "glob": "7.1.7",
+    "lodash": "4.17.21",
+    "moment": "2.29.1",
     "q": "1.5.1",
-    "request": "2.83.0",
-    "semver": "5.5.0",
+    "request": "2.88.2",
+    "semver": "7.3.5",
+    "supports-color": "9.0.1",
     "wordwrap": "1.0.0"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 12.20"
   },
   "devDependencies": {
-    "chai": "3.5.0",
-    "grunt": "1.0.2",
-    "grunt-contrib-jshint": "1.1.0",
-    "grunt-contrib-watch": "1.0.0",
+    "chai": "4.3.4",
+    "grunt": "1.4.1",
+    "grunt-contrib-jshint": "3.0.0",
+    "grunt-contrib-watch": "1.1.0",
     "grunt-mocha-test": "0.13.3",
     "grunt-notify": "0.4.5",
-    "grunt-readme": "0.4.5",
-    "grunt-templates-dylang": "1.0.12",
-    "load-grunt-tasks": "3.5.2",
-    "mocha": "5.0.1",
-    "np": "2.19.0",
-    "proxyquire": "1.8.0",
-    "time-grunt": "1.4.0"
+    "load-grunt-tasks": "5.1.0",
+    "mocha": "9.0.1",
+    "np": "7.5.0",
+    "proxyquire": "2.1.3",
+    "time-grunt": "2.0.0"
   },
   "scripts": {
     "np": "np",
-    "test": "grunt test"
+    "changelog": "node lib/cli.js -m -a all",
+    "build": "grunt",
+    "test": "grunt test",
+    "pub": "npm publish --access public"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/dylang/changelog/raw/master/LICENSE"
-    }
-  ]
+  "license": "MIT"
 }

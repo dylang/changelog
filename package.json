@@ -45,7 +45,7 @@
     "wordwrap": "1.0.0"
   },
   "engines": {
-    "node": ">= 8.0"
+    "node": ">= 12.20"
   },
   "devDependencies": {
     "chai": "4.3.4",

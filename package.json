@@ -40,7 +40,7 @@
     "moment": "2.20.1",
     "q": "1.5.1",
     "request": "2.83.0",
-    "semver": "5.5.0",
+    "semver": "7.6.0",
     "wordwrap": "1.0.0"
   },
   "engines": {
